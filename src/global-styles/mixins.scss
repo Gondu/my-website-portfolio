@@ -1,0 +1,30 @@
+// These are the media query breakpoints
+// $media_query_breakpoint_mobile: 0;
+$media_query_breakpoint_tabletp: 768px;
+$media_query_breakpoint_tabletl: 1024px;
+$media_query_breakpoint_desktop: 1440px;
+
+// These are the media query mixins
+// @mixin mobile {
+//   @media only screen and (min-width: $media_query_breakpoint_mobile) {
+//     @content;
+//   }
+// }
+
+@mixin tabletp {
+  @media only screen and (min-width: $media_query_breakpoint_tabletp) {
+    @content;
+  }
+}
+
+@mixin tabletl {
+  @media only screen and (min-width: $media_query_breakpoint_tabletl) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $media_query_breakpoint_desktop) {
+    @content;
+  }
+}
