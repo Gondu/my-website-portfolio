@@ -8,24 +8,24 @@
 		// 	background-color: $aqua;
 		// }
 
-    @include tabletp {
+		@include tabletp {
 			background-color: green;
 		}
 
-    @include tabletl {
+		@include tabletl {
 			background-color: grey;
 		}
 
-    @include desktop {
+		@include desktop {
 			background-color: violet;
 		}
 
 	}
 
-  // .btn2 {
-  //   @include mobile {
-  //     // background-color: mx.$aqua;
-  //     background-color: red;
-  //   }
-  // }
+	// .btn2 {
+	//   @include mobile {
+	//     // background-color: mx.$aqua;
+	//     background-color: red;
+	//   }
+	// }
 }

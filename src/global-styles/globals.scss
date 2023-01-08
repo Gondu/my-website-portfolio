@@ -13,6 +13,7 @@ $pink: pink;
 :export {
   testingvar2: $testingvar2;
   testingvar3: $testingvar3;
+  blue: $blue;
 }
 
 * {
@@ -25,6 +26,7 @@ $pink: pink;
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  // background-color: $blue;
 }
 
 // This class can be used on any html component in any javascript file

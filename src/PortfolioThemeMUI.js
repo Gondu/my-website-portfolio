@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import testExportVariable from "./global-styles/globals.scss";
+import g from "./global-styles/globals.scss";
 
 export const PortfolioTheme = createTheme({
   //Breakpoints of the grid system
@@ -22,7 +22,7 @@ export const PortfolioTheme = createTheme({
   // spacing: 8,
   palette: {
     primary: {
-      main: testExportVariable.testingvar2,
+      main: g.testingvar2,
     },
     secondary: {
       light: '#0066ff',
