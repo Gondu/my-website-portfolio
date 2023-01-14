@@ -22,7 +22,7 @@ export const PortfolioTheme = createTheme({
   // spacing: 8,
   palette: {
     primary: {
-      main: g.testingvar2,
+      main: g.aqua,
     },
     secondary: {
       light: '#0066ff',
@@ -41,7 +41,7 @@ export const PortfolioTheme = createTheme({
   },
 });
 
-console.log('theme.spacing', PortfolioTheme);
+// console.log('theme.spacing', PortfolioTheme);
 
 
 

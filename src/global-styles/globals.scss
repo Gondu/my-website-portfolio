@@ -1,19 +1,23 @@
-// @forward will import mixins.scss inside globals.scss so we only need to @use globals.scss in the other files and mixins.scss will be also be imported as well
+// @forward will import mixins.scss and fonts.scss inside globals.scss so we only need to @use globals.scss in the other 
+// files and mixins.scss, fonts, etc will be also be imported as well
 @forward "./mixins.scss"; 
+@forward "./fonts.scss"; 
 
 /* These are the global css variables */
 $white: #ffffff; // to use these variables in other scss files just @use index.scss as g in those files and use g.$white 
+$black: #000000;
 $blue: #151A36;
 $aqua: #00FFFF;
-$testingvar2: #1AF232;
-$testingvar3: pink;
-$pink: pink;
+// $testingvar2: #1AF232;
+// $testingvar3: pink;
+// $pink: pink;
 
 // This is used to export the variable testingvar into javascript files
 :export {
-  testingvar2: $testingvar2;
-  testingvar3: $testingvar3;
+  // testingvar2: $testingvar2;
+  // testingvar3: $testingvar3;
   blue: $blue;
+  aqua: $aqua;
 }
 
 * {
@@ -23,15 +27,24 @@ $pink: pink;
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   // background-color: $blue;
 }
 
 // This class can be used on any html component in any javascript file
-.testGlobalSCSSVariable {
-  padding: 40px;
-  // roboto is the google font that is used in android
-  font-family: "roboto";
-}
+// .testGlobalSCSSVariable {
+//   padding: 40px;
+//   // roboto is the google font that is used in android
+//   font-family: "roboto";
+// }
