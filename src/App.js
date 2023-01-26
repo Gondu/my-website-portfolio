@@ -1,7 +1,6 @@
 // import TestChildComponent from "./TestChildComponent";
 // Import Libraries
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Particles from "./Particles";
 import styles from "./App.module.scss";
 import { ThemeProvider } from "@mui/material/styles";
@@ -10,6 +9,7 @@ import { CssBaseline, Container } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 // Import Pages
 import LoadingScreen from "./pages/LoadingScreen";
+import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import About from "./pages/About";
@@ -34,7 +34,7 @@ function App() {
 
   // This will run one time after the component mounts
   useEffect(() => {
-    setTimeout(() => setFakeLoaded(true), 300000);
+    setTimeout(() => setFakeLoaded(true), 3000);
     // console.log("loaded", loaded);
     // console.log("fakeloaded", fakeLoaded);
     // Check if the page has already loaded
@@ -98,8 +98,11 @@ function App() {
               maxWidth={false}
               className={styles.App}
             >
-              <BrowserRouter>
-                {/* <Routes>
+                <header>
+                  <Navbar />
+                </header>
+                <main>
+                  {/* <Routes>
                   <Route path="/" element={<Navbar />}>
                     <Route index element={<Home />} />
                     <Route path="work" element={<Work />} />
@@ -108,12 +111,20 @@ function App() {
                     <Route path="*" element={<Page404 />} />
                   </Route>
                 </Routes> */}
-                <Home />
-                <Work />
-                <About />
-                <Contact />
-              </BrowserRouter>
-{/* 
+                  <Home />
+                  <Work />
+                  <About />
+                  <Contact />
+                </main>
+                <footer>
+                  Footer
+                  <button
+                    className={`${styles.btn} ${styles.btn2} testGlobalSCSSVariable`}
+                    onClick={() => alert("I am globally styled")}
+                  ></button>
+                </footer>
+
+              {/* 
               <Button color="primary" variant="contained">
                 MUI Button
               </Button> */}

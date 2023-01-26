@@ -1,12 +1,15 @@
-
+import styles from "./About.module.scss";
 
 const About = () => {
-    return (
-      <div style={{height: 500, backgroundColor: "#0000ff"}} id="about">
-          THIS IS THE About PAGE!!!!!!!!!!!!!
-      </div>
-    );
-  };
-  
-  export default About;
-  
+  return (
+    <section
+      className={styles.about_section}
+      style={{ backgroundColor: "#0000ff" }}
+      id="about"
+    >
+      <div>THIS IS THE About PAGE!!!!!!!!!!!!!</div>
+    </section>
+  );
+};
+
+export default About;

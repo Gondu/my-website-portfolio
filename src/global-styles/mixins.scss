@@ -11,18 +11,22 @@ $media_query_breakpoint_desktop: 1440px;
 //   }
 // }
 
+// Without adding a media query the scss rules will apply from 0 to 767px and up
+// For tabletp rule, the scss rules will apply from 768px to 1023px and up
 @mixin tabletp {
   @media only screen and (min-width: $media_query_breakpoint_tabletp) {
     @content;
   }
 }
 
+// For tabletl rule, the scss rules will apply from 1024px to 1439px and up
 @mixin tabletl {
   @media only screen and (min-width: $media_query_breakpoint_tabletl) {
     @content;
   }
 }
 
+// For desktop rule, the scss rules will apply from 1440px up
 @mixin desktop {
   @media only screen and (min-width: $media_query_breakpoint_desktop) {
     @content;

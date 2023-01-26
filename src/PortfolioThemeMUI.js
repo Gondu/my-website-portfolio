@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import g from "./global-styles/globals.scss";
 
+
 export const PortfolioTheme = createTheme({
   //Breakpoints of the grid system
   breakpoints: {
@@ -12,13 +13,13 @@ export const PortfolioTheme = createTheme({
     },
   },
   // after this breakpoint value, the container is not fluid anymore and is fixed to this max-width value
-  containerBreakpointMaxWidth: '1320px',
-  rowGutters: '8px', //4px for padding-top, 4px for padding-bottom
-  columnGuttersDownMd: '16px', //8px for padding-left, 8px for padding-right
-  columnGuttersUpMd: '24px',
-  marginsContainerXs: '16px',
-  marginsContainerSm: '24px',
-  marginsContainerMd: '32px',
+  containerBreakpointMaxWidth: g.containerBreakpointMaxWidth,
+  rowGutters: g.rowGutters, //4px for padding-top, 4px for padding-bottom
+  columnGuttersDownMd: g.columnGuttersDownMd, //8px for padding-left, 8px for padding-right
+  columnGuttersUpMd: g.columnGuttersUpMd,
+  marginsContainerXs: g.marginsContainerXs,
+  marginsContainerSm: g.marginsContainerSm,
+  marginsContainerMd: g.marginsContainerMd,
   // spacing: 8,
   palette: {
     primary: {
@@ -42,6 +43,8 @@ export const PortfolioTheme = createTheme({
 });
 
 // console.log('theme.spacing', PortfolioTheme);
+// console.log("g.breakpoints_sm", g.breakpoints_sm);
+
 
 
 

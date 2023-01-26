@@ -12,7 +12,7 @@ const ParticlesComponent = (props) => {
     return {
       fpsLimit: 60,
       background: {
-        color: g.white,
+        color: g.blue,
       },
       fullScreen: {
         enable: true,

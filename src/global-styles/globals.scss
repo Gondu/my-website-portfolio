@@ -8,20 +8,40 @@ $white: #ffffff; // to use these variables in other scss files just @use index.s
 $black: #000000;
 $blue: #151A36;
 $aqua: #00FFFF;
+
+$navbar_height: 104px;
+
+// These are the Material UI breakpoints and theme variables
+$containerBreakpointMaxWidth: 1320px; // after this breakpoint value, the container is not fluid and is fixed to this max-width value
+$rowGutters: 8px; //4px for padding-top, 4px for padding-bottom
+$columnGuttersDownMd: 16px; //column gutters for the grid - 8px for padding-left, 8px for padding-right
+$columnGuttersUpMd: 24px;
+$marginsContainerXs: 16px; //container margins for the grid - 8px for margin-right, 8px for margin-left
+$marginsContainerSm: 24px;
+$marginsContainerMd: 32px;
+
 // $testingvar2: #1AF232;
 // $testingvar3: pink;
 // $pink: pink;
 
-// This is used to export the variable testingvar into javascript files
+// This is used to export the scss variables into javascript files
 :export {
-  // testingvar2: $testingvar2;
-  // testingvar3: $testingvar3;
   blue: $blue;
   aqua: $aqua;
+  containerBreakpointMaxWidth: $containerBreakpointMaxWidth;
+  rowGutters: $rowGutters;
+  columnGuttersDownMd: $columnGuttersDownMd;
+  columnGuttersUpMd: $columnGuttersUpMd;
+  marginsContainerXs: $marginsContainerXs;
+  marginsContainerSm: $marginsContainerSm;
+  marginsContainerMd: $marginsContainerMd;
+  navbar_height: $navbar_height;
+  // testingvar2: $testingvar2;
+  // testingvar3: $testingvar3;
 }
 
 * {
-  font-family: sans-serif;
+  font-family: "Garamond Regular", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

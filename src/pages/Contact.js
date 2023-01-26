@@ -1,26 +1,17 @@
-
+import styles from "./Contact.module.scss";
 
 const Contact = () => {
     return (
-      <div style={{height: 500, backgroundColor: "#00ff00"}} id="contact">
-          THIS IS THE Contact PAGE!!!!!!!!!!!!!
-          <div>
-        <div>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-          <h1 style={{ color: "#000000" }}>PROVAAAAAAAAAAAAAAAAA</h1>
-        </div>
-        <div>PROVA 3333333333333333333333333333</div>
-        <div>PROVA 3333333333333333333333333333</div>
-        <div>PROVA 3333333333333333333333333333</div>
-      </div>
-      </div>
+      <section
+      className={styles.contact_section}
+      style={{ backgroundColor: "#00ff00" }}
+      id="contact"
+    >
+      <div>THIS IS THE Contact PAGE!!!!!!!!!!!!!</div>
+    </section>
     );
   };
   
   export default Contact;
+
   
