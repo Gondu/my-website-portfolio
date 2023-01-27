@@ -1,4 +1,4 @@
-@use "../global-styles/globals.scss" as *;
+@use "../../global-styles/globals.scss" as *;
 
 .home_section {
   height: calc(100vh - $navbar_height);

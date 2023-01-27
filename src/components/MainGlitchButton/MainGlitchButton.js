@@ -2,7 +2,7 @@ import styles from "./MainGlitchButton.module.scss";
 import { useGlitch } from "react-powerglitch";
 import { HashLink as Link } from "react-router-hash-link";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { PortfolioTheme } from "../PortfolioThemeMUI";
+import { PortfolioTheme } from "../../PortfolioThemeMUI";
 
 let glitch;
 

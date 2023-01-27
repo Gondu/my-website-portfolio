@@ -1,12 +1,12 @@
 // import Navbar from "./Navbar";
-import Paper from "@mui/material/Paper";
+// import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
-import { PortfolioTheme } from "../PortfolioThemeMUI";
+import { PortfolioTheme } from "../../PortfolioThemeMUI";
 import styles from "./Home.module.scss";
-import MainGlitchButton from "./MainGlitchButton";
-import ScrollDown from "./ScrollDown";
+import MainGlitchButton from "../../components/MainGlitchButton/MainGlitchButton";
+import ScrollDownButton from "../../components/ScrollDownButton/ScrollDownButton";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <section className={styles.home_section} id="home">
         <div>
@@ -44,7 +44,7 @@ const Home = () => {
             </Grid> */}
           </Grid>
         </div>
-        <ScrollDown />
+        <ScrollDownButton burgerNavIsOpen={props.burgerNavIsOpen}/>
     </section>
   );
 };

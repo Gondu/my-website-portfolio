@@ -8,12 +8,12 @@ import { PortfolioTheme } from "./PortfolioThemeMUI";
 import { CssBaseline, Container } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 // Import Pages
-import LoadingScreen from "./pages/LoadingScreen";
-import Navbar from "./pages/Navbar";
-import Home from "./pages/Home";
-import Work from "./pages/Work";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import Work from "./pages/Work/Work";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 // import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
 // import imageTest from "./imageTest.jpg";
@@ -31,6 +31,7 @@ function App() {
 
   const [loaded, setLoaded] = useState(false);
   const [fakeLoaded, setFakeLoaded] = useState(false);
+  const [burgerNavIsOpen, setburgerNavIsOpen] = useState(false);
 
   // This will run one time after the component mounts
   useEffect(() => {
@@ -99,7 +100,7 @@ function App() {
               className={styles.App}
             >
                 <header>
-                  <Navbar />
+                  <Navbar burgerNavIsOpen={burgerNavIsOpen} setburgerNavIsOpen={setburgerNavIsOpen}/>
                 </header>
                 <main>
                   {/* <Routes>
@@ -111,7 +112,7 @@ function App() {
                     <Route path="*" element={<Page404 />} />
                   </Route>
                 </Routes> */}
-                  <Home />
+                  <Home burgerNavIsOpen={burgerNavIsOpen}/>
                   <Work />
                   <About />
                   <Contact />

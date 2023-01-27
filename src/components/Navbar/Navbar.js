@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import styles from "./Navbar.module.scss";
-import NavbarIcon from "./NavbarIcon";
+import HamburgerNavbarIcon from "../HamburgerNavbarIcon/HamburgerNavbarIcon";
 import { useGlitch } from "react-powerglitch";
-import logo from "../logo_victor.svg";
-import MainGlitchButton from "./MainGlitchButton";
+import logo from "../../assets/svg/logo_victor.svg";
+import MainGlitchButton from "../MainGlitchButton/MainGlitchButton";
 
-const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => {
-    setClick(!click);
+const Navbar = (props) => {
+  const handleburgerNavIsOpen = () => {
+    props.setburgerNavIsOpen(!props.burgerNavIsOpen);
   };
+
+  useEffect(() => {
+    // Hide scrollbar when hamburger navbar is open
+    props.burgerNavIsOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
+  });
 
   const glitchNormalNavButtons = useGlitch({
     playMode: "hover",
@@ -112,9 +116,9 @@ const Navbar = () => {
         <nav
           className={styles.hamburger_navbar__nav}
           style={
-            click
-              ? { width: "100%", opacity: "1" }
-              : { width: "0", opacity: "0" }
+            props.burgerNavIsOpen
+              ? { width: "100%", opacity: "1"}
+              : { width: "0", opacity: "0"}
           }
         >
           <ul className={styles.hamburger_navbar__nav__ul}>
@@ -122,7 +126,7 @@ const Navbar = () => {
               <Link
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
-                onClick={handleClick}
+                onClick={handleburgerNavIsOpen}
                 to="#home"
               >
                 Home
@@ -132,7 +136,7 @@ const Navbar = () => {
               <Link
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
-                onClick={handleClick}
+                onClick={handleburgerNavIsOpen}
                 to="#work"
               >
                 Work
@@ -142,7 +146,7 @@ const Navbar = () => {
               <Link
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
-                onClick={handleClick}
+                onClick={handleburgerNavIsOpen}
                 to="#about"
               >
                 About
@@ -152,7 +156,7 @@ const Navbar = () => {
               <Link
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
-                onClick={handleClick}
+                onClick={handleburgerNavIsOpen}
                 to="#contact"
               >
                 Contact
@@ -175,14 +179,14 @@ const Navbar = () => {
         <label
           htmlFor="navi-toggle"
           className={styles.hamburger_navbar__button_toggler}
-          onClick={handleClick}
+          onClick={handleburgerNavIsOpen}
         ></label>
         <div
           className={styles.hamburger_navbar__background_toggler}
-          style={click ? { transform: "scale(80)" } : { transform: "scale(0)" }}
+          style={props.burgerNavIsOpen ? { transform: "scale(80)" } : { transform: "scale(0)" }}
         ></div>
 
-        <NavbarIcon click={click} handleClick={handleClick} />
+        <HamburgerNavbarIcon burgerNavIsOpen={props.burgerNavIsOpen} handleburgerNavIsOpen={handleburgerNavIsOpen} />
       </div>
     </>
   );

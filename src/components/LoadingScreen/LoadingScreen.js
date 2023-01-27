@@ -1,4 +1,4 @@
-import logo from "../logo_victor.svg";
+import logo from "../../assets/svg/logo_victor.svg";
 import styles from "./LoadingScreen.module.scss";
 import { useGlitch } from "react-powerglitch";
 
