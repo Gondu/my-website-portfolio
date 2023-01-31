@@ -5,16 +5,19 @@ import HamburgerNavbarIcon from "../HamburgerNavbarIcon/HamburgerNavbarIcon";
 import { useGlitch } from "react-powerglitch";
 import logo from "../../assets/svg/logo_victor.svg";
 import MainGlitchButton from "../MainGlitchButton/MainGlitchButton";
+import GridWrapper from "../GridWrapper/GridWrapper";
 
 const Navbar = (props) => {
+  useEffect(() => {
+    // Hide scrollbar when hamburger navbar is open
+    props.burgerNavIsOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "visible");
+  });
+
   const handleburgerNavIsOpen = () => {
     props.setburgerNavIsOpen(!props.burgerNavIsOpen);
   };
-
-  useEffect(() => {
-    // Hide scrollbar when hamburger navbar is open
-    props.burgerNavIsOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
-  });
 
   const glitchNormalNavButtons = useGlitch({
     playMode: "hover",
@@ -73,7 +76,7 @@ const Navbar = (props) => {
   });
 
   return (
-    <>
+    <GridWrapper>
       {/* Navbar for desktop and tablet landscape */}
       <div className={styles.normal_navbar}>
         <div className={styles.normal_navbar__icon}>
@@ -117,8 +120,8 @@ const Navbar = (props) => {
           className={styles.hamburger_navbar__nav}
           style={
             props.burgerNavIsOpen
-              ? { width: "100%", opacity: "1"}
-              : { width: "0", opacity: "0"}
+              ? { width: "100%", opacity: "1" }
+              : { width: "0", opacity: "0" }
           }
         >
           <ul className={styles.hamburger_navbar__nav__ul}>
@@ -183,12 +186,19 @@ const Navbar = (props) => {
         ></label>
         <div
           className={styles.hamburger_navbar__background_toggler}
-          style={props.burgerNavIsOpen ? { transform: "scale(80)" } : { transform: "scale(0)" }}
+          style={
+            props.burgerNavIsOpen
+              ? { transform: "scale(80)" }
+              : { transform: "scale(0)" }
+          }
         ></div>
 
-        <HamburgerNavbarIcon burgerNavIsOpen={props.burgerNavIsOpen} handleburgerNavIsOpen={handleburgerNavIsOpen} />
+        <HamburgerNavbarIcon
+          burgerNavIsOpen={props.burgerNavIsOpen}
+          handleburgerNavIsOpen={handleburgerNavIsOpen}
+        />
       </div>
-    </>
+    </GridWrapper>
   );
 };
 

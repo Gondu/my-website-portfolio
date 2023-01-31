@@ -3,7 +3,7 @@
 .home_section {
   height: calc(100vh - $navbar_height);
   min-height: calc(100vh - $navbar_height);
-  background-color: green;
+  // background-color: transparent;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

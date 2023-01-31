@@ -1,6 +1,35 @@
 @use "./global-styles/globals.scss" as *;
 
 .App {
+
+	@include tabletl {
+		.header_ctn {
+			position: sticky;
+			transition-property: all; 
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			transition-duration: 500ms;
+			// background-color: $aqua;
+			// background-color: rgba(10, 25, 47, 0.75);
+		
+			&__show_top {
+				background-color: transparent;
+				box-shadow: none;
+			}
+			
+			&__show {
+				background-color: rgba(13, 16 ,35, 0.7);
+				box-shadow: 0 8px 15px -10px $blue;
+				top: 0;
+			}
+		
+			&__hide {
+				background-color: transparent;
+				box-shadow: none;
+				top: -200px;
+			}
+		}	
+	}
+
 	.btn {
 		background-color: red;
 		width: 100px;

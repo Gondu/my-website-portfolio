@@ -1,14 +1,21 @@
 // @forward will import mixins.scss and fonts.scss inside globals.scss so we only need to @use globals.scss in the other 
 // files and mixins.scss, fonts, etc will be also be imported as well
-@forward "./mixins.scss"; 
-@forward "./fonts.scss"; 
+@forward "./mixins.scss";
+@forward "./fonts.scss";
 
 /* These are the global css variables */
+// Colors
 $white: #ffffff; // to use these variables in other scss files just @use index.scss as g in those files and use g.$white 
 $black: #000000;
+$grey: #484848;
 $blue: #151A36;
+$darkblue: #020513;
+$lightblue: #0A0E24;
 $aqua: #00FFFF;
+$darkaqua: #008080;
+$lightaqua: #31FFFF;
 
+// Layout spacing
 $navbar_height: 104px;
 
 // These are the Material UI breakpoints and theme variables
@@ -20,26 +27,6 @@ $marginsContainerXs: 16px; //container margins for the grid - 8px for margin-rig
 $marginsContainerSm: 24px;
 $marginsContainerMd: 32px;
 
-// $testingvar2: #1AF232;
-// $testingvar3: pink;
-// $pink: pink;
-
-// This is used to export the scss variables into javascript files
-:export {
-  blue: $blue;
-  aqua: $aqua;
-  containerBreakpointMaxWidth: $containerBreakpointMaxWidth;
-  rowGutters: $rowGutters;
-  columnGuttersDownMd: $columnGuttersDownMd;
-  columnGuttersUpMd: $columnGuttersUpMd;
-  marginsContainerXs: $marginsContainerXs;
-  marginsContainerSm: $marginsContainerSm;
-  marginsContainerMd: $marginsContainerMd;
-  navbar_height: $navbar_height;
-  // testingvar2: $testingvar2;
-  // testingvar3: $testingvar3;
-}
-
 * {
   font-family: "Garamond Regular", sans-serif;
   box-sizing: border-box;
@@ -49,6 +36,37 @@ $marginsContainerMd: 32px;
 
 html {
   height: 100%;
+
+  // Custom scrollbar style for most of the browsers except Firefox
+  ::-webkit-scrollbar-button {
+    background-color: $blue;
+    height: 3px;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $blue;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $grey;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $darkaqua;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: $aqua;
+  }
+
+  // Firefox compatibility for custom scrollbar
+  scrollbar-face-color: $grey;
+  /* Firefox 63 compatibility */
+  scrollbar-track-color: $blue;
+  /* Firefox 63 compatibility */
+  scrollbar-color: $grey $blue;
+  scrollbar-width: thin;
 }
 
 #root {
@@ -59,7 +77,26 @@ body {
   height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  // background-color: $blue;
+  background-color: $blue;
+}
+
+// This is used to export the scss variables into javascript files
+:export {
+  blue: $blue;
+  aqua: $aqua;
+  grey: $grey;
+  darkblue: $darkblue;
+  lightblue: $lightblue;
+  darkaqua: $darkaqua;
+  lightaqua: $lightaqua;
+  containerBreakpointMaxWidth: $containerBreakpointMaxWidth;
+  rowGutters: $rowGutters;
+  columnGuttersDownMd: $columnGuttersDownMd;
+  columnGuttersUpMd: $columnGuttersUpMd;
+  marginsContainerXs: $marginsContainerXs;
+  marginsContainerSm: $marginsContainerSm;
+  marginsContainerMd: $marginsContainerMd;
+  navbar_height: $navbar_height;
 }
 
 // This class can be used on any html component in any javascript file

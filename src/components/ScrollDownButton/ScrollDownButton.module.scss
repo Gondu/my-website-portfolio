@@ -1,11 +1,11 @@
 @use "../../global-styles/globals.scss" as *;
 
-$button_size: 7px;
+$button_size: 8px;
 
 .scroll_down {
 	width: 100%;
 	position: relative;
-	margin-bottom: 60px;
+	margin-bottom: 65px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

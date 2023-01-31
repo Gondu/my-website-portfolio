@@ -44,7 +44,7 @@ const Home = (props) => {
             </Grid> */}
           </Grid>
         </div>
-        <ScrollDownButton burgerNavIsOpen={props.burgerNavIsOpen}/>
+        <ScrollDownButton scrollDirection={props.scrollDirection} burgerNavIsOpen={props.burgerNavIsOpen}/>
     </section>
   );
 };

@@ -2,7 +2,6 @@ import "./TestChildComponent.module.scss";
 import { useTheme } from "@mui/material/styles";
 import { Box, Button } from "@mui/material";
 
-
 const TestChildComponent = ({children}) => {
   const theme = useTheme();
   return (
