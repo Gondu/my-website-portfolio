@@ -15,7 +15,7 @@
 	}
 
 	.text {
-		font-family: "ProximaNova Thin";
+		font-family: "Garamond Regular";
 		padding-top: 16px;
 		padding-left: 16px;
 		--f-size: 15;
@@ -23,7 +23,7 @@
 		--f: calc(var(--f-size) * var(--f-unit));
 		--bg: #181717;
 		line-height: .75;
-		font-size: 24px;
+		font-size: 36px;
 		color: $aqua;
 		text-align: center;
 		transform: scaleX(var(--scale, 1));

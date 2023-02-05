@@ -14,6 +14,8 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import useScrollDirection from "./hooks/useScrollDirection";
 import GridWrapper from "./components/GridWrapper/GridWrapper";
+import ScrollDownButton from "./components/ScrollDownButton/ScrollDownButton";
+
 // import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
 // import imageTest from "./imageTest.jpg";
@@ -69,6 +71,7 @@ function App() {
               <Navbar
                 burgerNavIsOpen={burgerNavIsOpen}
                 setburgerNavIsOpen={setburgerNavIsOpen}
+                scrollDirection={scrollDirection}
               />
             </header>
             <GridWrapper>
@@ -82,10 +85,7 @@ function App() {
                     <Route path="*" element={<Page404 />} />
                   </Route>
                 </Routes> */}
-                <Home
-                  burgerNavIsOpen={burgerNavIsOpen}
-                  scrollDirection={scrollDirection}
-                />
+                <Home burgerNavIsOpen={burgerNavIsOpen}/>
                 <Work />
                 <About />
                 <Contact />
@@ -147,6 +147,7 @@ function App() {
                 </Grid>
               </Grid> */}
             </GridWrapper>
+            <ScrollDownButton scrollDirection={scrollDirection} burgerNavIsOpen={burgerNavIsOpen}/>
           </ThemeProvider>
         </div>
       ) : (

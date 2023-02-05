@@ -16,11 +16,11 @@ $darkaqua: #008080;
 $lightaqua: #31FFFF;
 
 // Layout spacing
-$navbar_height: 104px;
+$navbar_height: 88px;
 
 // These are the Material UI breakpoints and theme variables
 $containerBreakpointMaxWidth: 1320px; // after this breakpoint value, the container is not fluid and is fixed to this max-width value
-$rowGutters: 8px; //4px for padding-top, 4px for padding-bottom
+$rowGutters: 0; //4px for padding-top, 4px for padding-bottom
 $columnGuttersDownMd: 16px; //column gutters for the grid - 8px for padding-left, 8px for padding-right
 $columnGuttersUpMd: 24px;
 $marginsContainerXs: 16px; //container margins for the grid - 8px for margin-right, 8px for margin-left
@@ -78,6 +78,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: $blue;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
 // This is used to export the scss variables into javascript files

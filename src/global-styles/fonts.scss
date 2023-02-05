@@ -1,9 +1,29 @@
-// Fonts -VT323
-// @font-face {
-//   font-family: "VT323";
-//   src: local("VT323-Regular"),
-//     url("../assets/fonts/VT323-Regular.ttf") format("truetype");
-// }
+// Fonts - Avalon
+@font-face {
+  font-family: "Avalon Regular";
+  src: local("Avalon_Regular"),
+    url("../assets/fonts/Avalon/Avalon_Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avalon ExtraLight";
+  src: local("Avalon-ExtraLight"),
+    url("../assets/fonts/Avalon/Avalon-ExtraLight.ttf") format("truetype");
+}
+
+// Fonts - Elianto
+@font-face {
+  font-family: "Elianto";
+  src: local("Elianto-Regular"),
+    url("../assets/fonts/Elianto-Regular.ttf") format("truetype");
+}
+
+// Fonts - VT323
+@font-face {
+  font-family: "VT323";
+  src: local("VT323-Regular"),
+    url("../assets/fonts/VT323-Regular.ttf") format("truetype");
+}
 
 // Fonts - Cormorant Garamond
 @font-face {

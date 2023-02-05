@@ -18,7 +18,8 @@
     justify-content: center;
 
     &__img {
-      height: 52px;
+      // height: 46px;
+      height: 100%;
     }
   }
 
@@ -29,15 +30,18 @@
 
     ul {
       list-style: none;
+      display: flex;
+      gap: 24px;
 
       li {
         display: inline;
 
         a {
-          margin-left: 24px;
-          font-family: 'Garamond Light';
+          // font-family: 'Garamond SemiBold';
+          // font-size: 18px;
+          font-family: 'Elianto';
+          font-size: 16px;
           color: $white;
-          font-size: 18px;
           text-decoration: none;
         }
 
@@ -57,6 +61,8 @@
 .hamburger_navbar {
   height: $navbar_height;
   display: block;
+  // position: relative;
+  // z-index: 9000;
 
   @include tabletl {
     display: none;
@@ -82,8 +88,10 @@
 
       &__link {
         display: inline-block;
-        font-family: "Garamond Bold";
-        font-size: 24px;
+        // font-family: "Garamond Bold";
+        // font-size: 24px;
+        font-family: "Elianto";
+        font-size: 18px;
         cursor: default;
         text-decoration: none;
         color: $blue;
@@ -105,12 +113,31 @@
 
   &__icon {
     top: 24px;
-    left: 24px;
+    left: 16px;
     position: fixed;
     z-Index: 100;
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    @include tabletp {
+      left: 24px;
+    }
+
+    &__show_top {
+      top: 24px;
+    }
+
+    &__show {
+      top: 24px;
+    }
+
+    &__hide {
+      top: -100px;
+    }
 
     &__img {
-      height: 52px;
+      height: 46px;
     }
   }
 
@@ -126,10 +153,25 @@
     z-index: 100;
     box-shadow: 0 1rem 3rem rgba(0, 255, 255, 0.3);
     text-align: center;
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
 
     @include tabletp {
       top: 24px;
       right: $marginsContainerSm;
+    }
+
+    &__show_top {
+      top: 24px;
+    }
+
+    &__show {
+      top: 24px;
+    }
+
+    &__hide {
+      top: -100px;
     }
   }
 

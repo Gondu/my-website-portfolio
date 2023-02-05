@@ -39,6 +39,13 @@ const ParticlesComponent = (props) => {
         },
       },
       particles: {
+        number: {
+          value: 40,
+          // density: {
+          //   enable: true,
+          //   value_area: 800
+          // }
+        },
         links: {
           enable: true,
           color: "#00FFFF",

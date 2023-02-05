@@ -5,17 +5,38 @@
   display: inline-block;
   border: 1px solid $aqua;
   color: $aqua;
-  padding: 10px 13px;
+  // padding: 10px 13px;
+  padding: 16px 18px;
   min-width: 136px;
-  line-height: 1.5em;
+  line-height: 1;
+  // line-height: 1.5em;
   white-space: no-wrap;
   text-align: left;
   cursor: pointer;
 
+  .text {
+    padding-right: 16px;
+  }
+
+  .decoration {
+    font-family: "Elianto";
+    position: relative;
+    top: 1px;
+
+    @include tabletp {
+      top: 2px;
+    }
+  }
+
   .text,
   .text_decoration {
-    font-family: "Garamond Light";
+    // font-family: "Garamond Light";
+    font-family: "Elianto";
     font-size: 18px;
+  }
+
+  .text_decoration {
+    padding-right: 10px;
   }
 
   .text,
@@ -31,7 +52,8 @@
     height: 16px;
     width: 16px;
     position: absolute;
-    top: 35%;
+    // top: 35%;
+    top: 32%;
     right: 10%;
     fill: $aqua;
   }

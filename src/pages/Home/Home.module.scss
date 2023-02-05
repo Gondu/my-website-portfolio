@@ -1,10 +1,106 @@
 @use "../../global-styles/globals.scss" as *;
 
 .home_section {
-  height: calc(100vh - $navbar_height);
-  min-height: calc(100vh - $navbar_height);
+  height: 100vh;
+  min-height: 100vh;
+  // height: calc(100vh - $navbar_height);
+  // min-height: calc(100vh - $navbar_height);
   // background-color: transparent;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+
+  &__top {
+    .text {
+      color: $white;
+      font-family: "Garamond Light";
+      // font-family: "VT323";
+      // font-family: "Avalon ExtraLight";
+      // font-size: 18px;
+      font-size: 16px;
+      padding-bottom: 24px;
+      line-height: 1;
+
+      @include tabletl {
+        // font-size: 22px;
+        font-size: 20px;
+        padding-bottom: 28px;
+      }
+    }
+  
+    .title {
+      color: $aqua;
+      font-family: "Garamond Bold";
+      // font-family: "VT323";
+      // font-family: "Elianto";
+      // text-transform: uppercase;
+
+      font-size: 64px;
+      padding-bottom: 20px;
+      line-height: 0.9;
+
+      @include tabletp {
+        font-size: 70px;
+        line-height: 0.7;
+      }
+
+      @include tabletl {
+        padding-bottom: 24px;
+        // font-size: 88px;
+        font-size: 94px;
+        line-height: 0.6;
+      }
+    }
+  
+    // .subtitle {
+    //   color: $white;
+    //   font-family: "Garamond SemiBold";
+    //   font-style: italic;
+    //   // font-size: 40px;
+    //   font-size: 20px;
+    //   padding-bottom: 28px;
+    //   line-height: 0.7;
+    // }
+
+    .description {
+      color: $white;
+      max-width: 360px;
+      font-family: "Garamond Light";
+      // font-family: "VT323";
+      // font-family: "Avalon ExtraLight";
+      
+
+      font-size: 16px;
+      padding-bottom: 36px;
+      line-height: 1.5;
+
+      @include tabletp {
+        max-width: 460px;
+        line-height: 1.4;
+      }
+
+      @include tabletl {
+        font-size: 20px;
+        padding-bottom: 40px;
+        max-width: 560px;
+      }
+
+      &__role {
+        color: $aqua;
+        font-size: 18px;
+        font-family: "Garamond Regular";
+        // font-family: "VT323";
+        // font-family: "Avalon ExtraLight";
+        font-style: italic;
+
+        @include tabletl {
+          font-size: 22px;
+        }
+      }
+    }
+
+    // .main_button_home {
+    //   position: relative;
+    // }
+  }
 }

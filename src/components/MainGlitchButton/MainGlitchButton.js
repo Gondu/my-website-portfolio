@@ -111,8 +111,8 @@ const MainGlitchButton = (props) => {
           ref={glitch.ref}
         >
           {/*eslint-disable-next-line*/}
-          <span className={styles.text}>// {props.text}</span>
-          <span className={styles.text_decoration}>_</span>
+          <span className={styles.text}>{props.text}</span>
+          {/* <span className={styles.text_decoration}>_</span> */}
           <span className={styles.decoration}>&rArr;</span>
         </Link>
       ) : (
@@ -125,8 +125,8 @@ const MainGlitchButton = (props) => {
           ref={glitch.ref}
         >
           {/*eslint-disable-next-line*/}
-          <span className={styles.text}>// {props.text}</span>
-          <span className={styles.text_decoration}>_</span>
+          <span className={styles.text}>{props.text}</span>
+          {/* <span className={styles.text_decoration}>_</span> */}
           <svg
             className={styles.download_svg}
             fill="#000000"

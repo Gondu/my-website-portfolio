@@ -30,7 +30,13 @@ const HamburgerNavbarIcon = (props) => {
             onClick={props.handleburgerNavIsOpen}
           >
             <svg
-              className={styles.burger}
+              className={`${styles.burger} ${
+                props.scrollDirection === "scrolled top"
+                  ? styles.burger__show_top
+                  : props.scrollDirection === "scrolling up"
+                  ? styles.burger__show
+                  : styles.burger__hide
+              }`}
               version="1.1"
               height="100"
               width="100"

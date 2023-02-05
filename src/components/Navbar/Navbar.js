@@ -24,21 +24,21 @@ const Navbar = (props) => {
     createContainers: true,
     hideOverflow: false,
     timing: {
-      duration: 3950,
+      duration: 4000,
       iterations: Infinity,
     },
     glitchTimeSpan: {
-      start: 0,
+      start: -0.4,
       end: 1,
     },
     shake: {
-      velocity: 15,
-      amplitudeX: 0.06,
-      amplitudeY: 0.06,
+      velocity: 22,
+      amplitudeX: 0.07,
+      amplitudeY: 0.07,
     },
     slice: {
-      count: 4,
-      velocity: 4,
+      count: 5,
+      velocity: 5,
       minHeight: 0.02,
       maxHeight: 0.1,
       hueRotate: true,
@@ -80,11 +80,13 @@ const Navbar = (props) => {
       {/* Navbar for desktop and tablet landscape */}
       <div className={styles.normal_navbar}>
         <div className={styles.normal_navbar__icon}>
-          <img
-            className={styles.normal_navbar__icon__img}
-            src={logo}
-            alt="Logo Victor Semencenco"
-          />
+          <Link reloadDocument ref={glitchNormalNavButtons.ref}>
+            <img
+              className={styles.normal_navbar__icon__img}
+              src={logo}
+              alt="Logo Victor Semencenco"
+            />
+          </Link>
         </div>
         <nav className={styles.normal_navbar__nav}>
           <ul>
@@ -171,18 +173,33 @@ const Navbar = (props) => {
           </ul>
         </nav>
 
-        <div className={styles.hamburger_navbar__icon}>
-          <img
+        <div
+            className={`${styles.hamburger_navbar__icon}  ${
+              props.scrollDirection === "scrolled top"
+                ? styles.hamburger_navbar__icon__show_top
+                : props.scrollDirection === "scrolling up"
+                ? styles.hamburger_navbar__icon__show
+                : styles.hamburger_navbar__icon__hide
+            }`}>
+          <Link reloadDocument ref={glitchNormalNavButtons.ref}>
+            <img
             className={styles.hamburger_navbar__icon__img}
             src={logo}
             alt="Logo Victor Semencenco"
-          />
+            />
+          </Link>
         </div>
 
         <label
           htmlFor="navi-toggle"
-          className={styles.hamburger_navbar__button_toggler}
           onClick={handleburgerNavIsOpen}
+          className={`${styles.hamburger_navbar__button_toggler}  ${
+            props.scrollDirection === "scrolled top"
+              ? styles.hamburger_navbar__button_toggler__show_top
+              : props.scrollDirection === "scrolling up"
+              ? styles.hamburger_navbar__button_toggler__show
+              : styles.hamburger_navbar__button_toggler__hide
+          }`}
         ></label>
         <div
           className={styles.hamburger_navbar__background_toggler}
@@ -196,6 +213,7 @@ const Navbar = (props) => {
         <HamburgerNavbarIcon
           burgerNavIsOpen={props.burgerNavIsOpen}
           handleburgerNavIsOpen={handleburgerNavIsOpen}
+          scrollDirection={props.scrollDirection}
         />
       </div>
     </GridWrapper>
