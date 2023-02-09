@@ -11,6 +11,16 @@
   flex-direction: column;
 
   &__top {
+    height: 360px;
+
+    @include tabletp {
+      height: 265px;
+    }
+
+    @include tabletl {
+      height: 300px;
+    }
+
     .text {
       color: $white;
       font-family: "Garamond Light";
@@ -35,7 +45,7 @@
       // font-family: "Elianto";
       // text-transform: uppercase;
 
-      font-size: 64px;
+      font-size: 65px;
       padding-bottom: 20px;
       line-height: 0.9;
 
@@ -51,56 +61,50 @@
         line-height: 0.6;
       }
     }
-  
-    // .subtitle {
-    //   color: $white;
-    //   font-family: "Garamond SemiBold";
-    //   font-style: italic;
-    //   // font-size: 40px;
-    //   font-size: 20px;
-    //   padding-bottom: 28px;
-    //   line-height: 0.7;
-    // }
 
     .description {
-      color: $white;
       max-width: 360px;
-      font-family: "Garamond Light";
-      // font-family: "VT323";
-      // font-family: "Avalon ExtraLight";
-      
-
-      font-size: 16px;
       padding-bottom: 36px;
       line-height: 1.5;
 
       @include tabletp {
-        max-width: 460px;
+        max-width: 500px;
         line-height: 1.4;
       }
 
       @include tabletl {
-        font-size: 20px;
         padding-bottom: 40px;
-        max-width: 560px;
+        max-width: 680px;
       }
 
       &__role {
         color: $aqua;
-        font-size: 18px;
-        font-family: "Garamond Regular";
+        font-size: 16px;
+        font-family: "Garamond Bold";
+        // display: inline;
         // font-family: "VT323";
         // font-family: "Avalon ExtraLight";
-        font-style: italic;
-
+        // font-style: italic;
+  
         @include tabletl {
-          font-size: 22px;
+          font-size: 20px;
+        }
+      }
+  
+      &__info {
+        display: inline;
+        color: $white;
+        // max-width: 360px;
+        font-family: "Garamond Light";
+        // font-family: "VT323";
+        // font-family: "Avalon ExtraLight";
+        font-size: 16px;
+        // line-height: 1.5;
+  
+        @include tabletl {
+          font-size: 20px;
         }
       }
     }
-
-    // .main_button_home {
-    //   position: relative;
-    // }
   }
 }

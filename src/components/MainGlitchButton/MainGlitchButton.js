@@ -36,35 +36,6 @@ const MainGlitchButton = (props) => {
     },
   });
 
-  // const glitch_click = useGlitch({
-  //   playMode: "click",
-  //   createContainers: true,
-  //   hideOverflow: false,
-  //   timing: {
-  //     duration: 1000,
-  //     iterations: 1,
-  //   },
-  //   glitchTimeSpan: {
-  //     start: 0,
-  //     end: 1,
-  //   },
-  //   shake: {
-  //     velocity: 15,
-  //     amplitudeX: 0.05,
-  //     amplitudeY: 0.05,
-  //   },
-  //   slice: {
-  //     count: 4,
-  //     velocity: 4,
-  //     minHeight: 0.02,
-  //     maxHeight: 0.1,
-  //     hueRotate: true,
-  //   },
-  //   pulse: {
-  //     scale: 1,
-  //   },
-  // });
-
   const glitch_always = useGlitch({
     playMode: "always",
     createContainers: true,
