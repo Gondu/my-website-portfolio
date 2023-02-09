@@ -6,10 +6,50 @@ import { useGlitch } from "react-powerglitch";
 import logo from "../../assets/svg/logo_victor.svg";
 import MainGlitchButton from "../MainGlitchButton/MainGlitchButton";
 import GridWrapper from "../GridWrapper/GridWrapper";
+import GlitchedWriter from "glitched-writer";
+import {
+  navbarGlitchWritingOptions,
+  glitch_loading_navbar_data,
+  glitch_loading_logoAndResume_data,
+  glitch_desktop_navItems,
+  glitch_mobile_navItems,
+} from "./NavbarData";
 
 const Navbar = (props) => {
+  // Glitch Writer after loading completed
   useEffect(() => {
-    // Hide scrollbar when hamburger navbar is open
+    const myHomeNavbarWriter = new GlitchedWriter(
+      "#homeNavbarGlitchWriting",
+      navbarGlitchWritingOptions
+    );
+
+    const myWorkNavbarWriter = new GlitchedWriter(
+      "#workNavbarGlitchWriting",
+      navbarGlitchWritingOptions
+    );
+
+    const myAboutNavbarWriter = new GlitchedWriter(
+      "#aboutNavbarGlitchWriting",
+      navbarGlitchWritingOptions
+    );
+
+    const myContactNavbarWriter = new GlitchedWriter(
+      "#contactNavbarGlitchWriting",
+      navbarGlitchWritingOptions
+    );
+
+    const beginNavbarGlitchWriting = () => {
+      myHomeNavbarWriter.write("Home");
+      myWorkNavbarWriter.write("Work");
+      myAboutNavbarWriter.write("About");
+      myContactNavbarWriter.write("Contact");
+    };
+
+    beginNavbarGlitchWriting();
+  }, []);
+
+  // Hide scrollbar when hamburger navbar is open
+  useEffect(() => {
     props.burgerNavIsOpen
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
@@ -19,67 +59,19 @@ const Navbar = (props) => {
     props.setburgerNavIsOpen(!props.burgerNavIsOpen);
   };
 
-  const glitchNormalNavButtons = useGlitch({
-    playMode: "hover",
-    createContainers: true,
-    hideOverflow: false,
-    timing: {
-      duration: 4000,
-      iterations: Infinity,
-    },
-    glitchTimeSpan: {
-      start: -0.4,
-      end: 1,
-    },
-    shake: {
-      velocity: 22,
-      amplitudeX: 0.07,
-      amplitudeY: 0.07,
-    },
-    slice: {
-      count: 5,
-      velocity: 5,
-      minHeight: 0.02,
-      maxHeight: 0.1,
-      hueRotate: true,
-    },
-    pulse: {
-      scale: 1,
-    },
-  });
-
-  const glitchHamburgerNavButtons = useGlitch({
-    playMode: "always",
-    createContainers: true,
-    hideOverflow: false,
-    timing: {
-      duration: 4500,
-      easing: "ease-in-out",
-    },
-    glitchTimeSpan: {
-      start: 0.9,
-      end: 1,
-    },
-    shake: {
-      velocity: 15,
-      amplitudeX: 0.04,
-      amplitudeY: 0.04,
-    },
-    slice: {
-      count: 6,
-      velocity: 15,
-      minHeight: 0.02,
-      maxHeight: 0.15,
-      hueRotate: true,
-    },
-    pulse: false,
-  });
+  const glitch_loading_navbar = useGlitch(glitch_loading_navbar_data);
+  const glitch_loading_logoAndResume = useGlitch(glitch_loading_logoAndResume_data);
+  const glitchNormalNavButtons = useGlitch(glitch_desktop_navItems);
+  const glitchHamburgerNavButtons = useGlitch(glitch_mobile_navItems);
 
   return (
     <GridWrapper>
       {/* Navbar for desktop and tablet landscape */}
       <div className={styles.normal_navbar}>
-        <div className={styles.normal_navbar__icon}>
+        <div
+          className={styles.normal_navbar__icon}
+          ref={glitch_loading_logoAndResume.ref}
+        >
           <Link reloadDocument ref={glitchNormalNavButtons.ref}>
             <img
               className={styles.normal_navbar__icon__img}
@@ -91,27 +83,58 @@ const Navbar = (props) => {
         <nav className={styles.normal_navbar__nav}>
           <ul>
             <li>
-              <Link to="#home" smooth ref={glitchNormalNavButtons.ref}>
-                Home
-              </Link>
+              <div ref={glitch_loading_navbar.ref}>
+                <Link
+                  to="#home"
+                  id="homeNavbarGlitchWriting"
+                  smooth
+                  ref={glitchNormalNavButtons.ref}
+                >
+                  Home
+                </Link>
+              </div>
             </li>
             <li>
-              <Link to="#work" smooth ref={glitchNormalNavButtons.ref}>
-                Work
-              </Link>
+              <div ref={glitch_loading_navbar.ref}>
+                <Link
+                  to="#work"
+                  id="workNavbarGlitchWriting"
+                  smooth
+                  ref={glitchNormalNavButtons.ref}
+                >
+                  Work
+                </Link>
+              </div>
             </li>
             <li>
-              <Link to="#about" smooth ref={glitchNormalNavButtons.ref}>
-                About
-              </Link>
+              <div ref={glitch_loading_navbar.ref}>
+                <Link
+                  to="#about"
+                  id="aboutNavbarGlitchWriting"
+                  smooth
+                  ref={glitchNormalNavButtons.ref}
+                >
+                  About
+                </Link>
+              </div>
             </li>
             <li>
-              <Link to="#contact" smooth ref={glitchNormalNavButtons.ref}>
-                Contact
-              </Link>
+              <div ref={glitch_loading_navbar.ref}>
+                <Link
+                  to="#contact"
+                  id="contactNavbarGlitchWriting"
+                  smooth
+                  ref={glitchNormalNavButtons.ref}
+                >
+                  Contact
+                </Link>
+              </div>
             </li>
           </ul>
-          <div className={styles.normal_navbar__nav__resume_button}>
+          <div
+            className={styles.normal_navbar__nav__resume_button}
+            ref={glitch_loading_logoAndResume.ref}
+          >
             <MainGlitchButton text="Resume" />
           </div>
         </nav>
@@ -174,18 +197,19 @@ const Navbar = (props) => {
         </nav>
 
         <div
-            className={`${styles.hamburger_navbar__icon}  ${
-              props.scrollDirection === "scrolled top"
-                ? styles.hamburger_navbar__icon__show_top
-                : props.scrollDirection === "scrolling up"
-                ? styles.hamburger_navbar__icon__show
-                : styles.hamburger_navbar__icon__hide
-            }`}>
+          className={`${styles.hamburger_navbar__icon}  ${
+            props.scrollDirection === "scrolled top"
+              ? styles.hamburger_navbar__icon__show_top
+              : props.scrollDirection === "scrolling up"
+              ? styles.hamburger_navbar__icon__show
+              : styles.hamburger_navbar__icon__hide
+          }`}
+        >
           <Link reloadDocument ref={glitchNormalNavButtons.ref}>
             <img
-            className={styles.hamburger_navbar__icon__img}
-            src={logo}
-            alt="Logo Victor Semencenco"
+              className={styles.hamburger_navbar__icon__img}
+              src={logo}
+              alt="Logo Victor Semencenco"
             />
           </Link>
         </div>

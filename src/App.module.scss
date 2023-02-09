@@ -3,34 +3,35 @@
 .App {
 
 	// @include tabletl {
-		.header_ctn {
-			position: fixed;
-			width: 100%;
-			transition-property: all; 
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 500ms;
-			// background-color: $aqua;
-			// background-color: rgba(10, 25, 47, 0.75);
-		
-			&__show_top {
-				background-color: transparent;
-				box-shadow: none;
-				top: 0;
-			}
-			
-			&__show {
-				background-color: rgba(13, 16 ,35, 0.7);
-				box-shadow: 0 8px 15px -10px $blue;
-				top: 0;
-			}
-		
-			&__hide {
-				// display: none;
-				background-color: transparent;
-				box-shadow: none;
-				top: -200px;
-			}
-		}	
+	.header_ctn {
+		position: fixed;
+		width: 100%;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 500ms;
+		// background-color: $aqua;
+		// background-color: rgba(10, 25, 47, 0.75);
+
+		&__show_top {
+			background-color: transparent;
+			box-shadow: none;
+			top: 0;
+		}
+
+		&__show {
+			background-color: rgba(13, 16, 35, 0.7);
+			box-shadow: 0 8px 15px -10px $blue;
+			top: 0;
+		}
+
+		&__hide {
+			// display: none;
+			background-color: transparent;
+			box-shadow: none;
+			top: -200px;
+		}
+	}
+
 	// }
 
 	.btn {
@@ -62,4 +63,26 @@
 	//     background-color: red;
 	//   }
 	// }
+}
+
+.home_screen_glitch1 {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	// z-index: 1000 !important;
+	background-color: $blue;
+	opacity: 0;
+	height: 100%;
+}
+
+.home_screen_glitch2 {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	// z-index: 1000 !important;
+	background-color: $blue;
+	opacity: 0;
+	height: 100%;
 }

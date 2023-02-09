@@ -8,136 +8,69 @@ import { useEffect, useState } from "react";
 import { useGlitch } from "react-powerglitch";
 import { wait } from "glitched-writer";
 import GlitchedWriter from "glitched-writer";
+import {
+  glitch_loading_home_button_data,
+  home_text_glitch_writer_data,
+  glitch_loading_home_title_data1,
+  glitch_loading_home_title_data2,
+  glitch_loading_home_title_data3,
+  glitch_loading_home_title_hover_data1,
+  glitch_loading_home_title_hover_data2,
+  home_name_glitch_writer_data,
+  home_role_glitch_writer_data,
+  home_info_glitch_writer_data,
+} from "./HomeData";
 
 const Home = (props) => {
   const [showButton, setShowButton] = useState(false);
 
-  const glitch_once = useGlitch({
-    playMode: "always",
-    createContainers: true,
-    hideOverflow: true,
-    timing: {
-      duration: 1300,
-      iterations: 1,
-    },
-    glitchTimeSpan: {
-      start: 0,
-      end: 1,
-    },
-    shake: {
-      velocity: 35,
-      amplitudeX: 0.01,
-      amplitudeY: 0.05,
-    },
-    slice: {
-      count: 5,
-      velocity: 5,
-      minHeight: 0.04,
-      maxHeight: 0.13,
-      hueRotate: true,
-    },
-    pulse: {
-      scale: 1,
-    },
-  });
+  const glitch_loading_home_button = useGlitch(glitch_loading_home_button_data);
+  const glitch_loading_home_title1 = useGlitch(glitch_loading_home_title_data1);
+  const glitch_loading_home_title2 = useGlitch(glitch_loading_home_title_data2);
+  const glitch_loading_home_title3 = useGlitch(glitch_loading_home_title_data3);
+  const glitch_loading_home_title_hover1 = useGlitch(
+    glitch_loading_home_title_hover_data1
+  );
+  const glitch_loading_home_title_hover2 = useGlitch(
+    glitch_loading_home_title_hover_data2
+  );
 
   useEffect(() => {
-    setTimeout(() => setShowButton(true), 9400);
+    setTimeout(() => setShowButton(true), 8800);
 
-    const myWriter1 = new GlitchedWriter(
+    const myTextWriter = new GlitchedWriter(
       "#homeTextGlitchWriting",
-      {
-        maxGhosts: 0.3,
-        ghostChance: 0.1,
-        changeChance: 0.6,
-        steps: 8,
-        interval: 10,
-        delay: [0, 200],
-        oneAtATime: 1,
-        glyphs:
-          "一二三四五六七八九十百千上下左右中大小月日年早木林山川土空田天生花草虫犬人名女男子目耳口手足見音力気円入出立休先夕本文字学校村町森正水火玉王石竹糸貝車金雨赤青白数多少万半形太細広長点丸交光角計直線矢弱強高同親母父姉兄弟妹自友体毛頭顔首心時曜朝昼夜分週春夏秋冬今新古間方北南東西遠近前後内外場地国園谷野原里市京風雪雲池海岩星室戸家寺通門道話言答声聞語読書記紙画絵図工教晴思考知才理算作元食肉馬牛魚鳥羽鳴麦米茶色黄黒来行帰歩走止活店買売午汽弓回会組船明社切電毎合当台楽公引科歌刀番用何",
-        fillSpace: true,
-        glyphsFromText: true,
-        mode: "normal",
-      }
+      home_text_glitch_writer_data
     );
 
-    const myWriter2 = new GlitchedWriter(
+    const myNameWriter = new GlitchedWriter(
       "#homeNameGlitchWriting",
-      {
-        maxGhosts: 0,
-        ghostChance: 0,
-        changeChance: 0.8,
-        steps: 4,
-        interval: 10,
-        delay: [0, 20],
-        oneAtATime: 1,
-        glyphs:
-          "一二三四五六七八九十百千上下左右中大小月日年早木林山川土空田天生花草虫犬人名女男子目耳口手足見音力気円入出立休先夕本文字学校村町森正水火玉王石竹糸貝車金雨赤青白数多少万半形太細広長点丸交光角計直線矢弱強高同親母父姉兄弟妹自友体毛頭顔首心時曜朝昼夜分週春夏秋冬今新古間方北南東西遠近前後内外場地国園谷野原里市京風雪雲池海岩星室戸家寺通門道話言答声聞語読書記紙画絵図工教晴思考知才理算作元食肉馬牛魚鳥羽鳴麦米茶色黄黒来行帰歩走止活店買売午汽弓回会組船明社切電毎合当台楽公引科歌刀番用何",
-        mode: "normal",
-      }
+      home_name_glitch_writer_data
     );
 
-    const myWriter3 = new GlitchedWriter(
+    const myRoleWriter = new GlitchedWriter(
       "#homeRoleGlitchWriting",
-      {
-        interval: [0, 50],
-        delay: 0,
-        steps: 80,
-        ghostChance: 0,
-        maxGhosts: 0,
-        changeChance: 0.8,
-        oneAtATime: 0,
-        glyphs:
-          "一二三四五六七八九十百千上下左右中大小月日年早木林山川土空田天生花草虫犬人名女男子目耳口手足見音力気円入出立休先夕本文字学校村町森正水火玉王石竹糸貝車金雨赤青白数多少万半形太細広長点丸交光角計直線矢弱強高同親母父姉兄弟妹自友体毛頭顔首心時曜朝昼夜分週春夏秋冬今新古間方北南東西遠近前後内外場地国園谷野原里市京風雪雲池海岩星室戸家寺通門道話言答声聞語読書記紙画絵図工教晴思考知才理算作元食肉馬牛魚鳥羽鳴麦米茶色黄黒来行帰歩走止活店買売午汽弓回会組船明社切電毎合当台楽公引科歌刀番用何",
-        fillSpace: false,
-        mode: "normal",
-      }
+      home_role_glitch_writer_data
     );
 
-    const myWriter4 = new GlitchedWriter(
+    const myInfoWriter = new GlitchedWriter(
       "#homeInfoGlitchWriting",
-      {
-        interval: [0, 50],
-        delay: [0, 400],
-        steps: 40,
-        ghostChance: 0,
-        maxGhosts: 0,
-        changeChance: 0.3,
-        oneAtATime: 0,
-        glyphs:
-          "一二三四五六七八九十百千上下左右中大小月日年早木林山川土空田天生花草虫犬人名女男子目耳口手足見音力気円入出立休先夕本文字学校村町森正水火玉王石竹糸貝車金雨赤青白数多少万半形太細広長点丸交光角計直線矢弱強高同親母父姉兄弟妹自友体毛頭顔首心時曜朝昼夜分週春夏秋冬今新古間方北南東西遠近前後内外場地国園谷野原里市京風雪雲池海岩星室戸家寺通門道話言答声聞語読書記紙画絵図工教晴思考知才理算作元食肉馬牛魚鳥羽鳴麦米茶色黄黒来行帰歩走止活店買売午汽弓回会組船明社切電毎合当台楽公引科歌刀番用何",
-        fillSpace: false,
-        mode: "normal",
-      }
+      home_info_glitch_writer_data
     );
 
-    const beginTextGlitchWriting = async () => {
-      await wait(500); 
-      await myWriter1.write("Hi, my name is");
-    };
-
-    const beginNameGlitchWriting = async () => {
-      await wait(5000);
-      await myWriter2.write("Victor Semencenco");
-    };
-
-    const beginRoleGlitchWriting = async () => {
-      await wait(7000);
-      await myWriter3.write("Front-end Developer ");
-    };
-
-    const beginInfoGlitchWriting = async () => {
-      await wait(7000);
-      await myWriter4.write(
+    const beginGlitchWriting = async () => {
+      await wait(800);
+      await myTextWriter.write("Hi, my name is");
+      await wait(950);
+      await myNameWriter.write("Victor Semencenco");
+      await wait(400);
+      myRoleWriter.write("Front-end Developer ");
+      myInfoWriter.write(
         "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
       );
     };
 
-    beginTextGlitchWriting();
-    beginNameGlitchWriting();
-    beginRoleGlitchWriting();
-    beginInfoGlitchWriting();
+    beginGlitchWriting();
   }, []);
 
   return (
@@ -173,7 +106,43 @@ const Home = (props) => {
             lgOffset={1}
             lg={11}
           >
-            <h1 id="homeNameGlitchWriting" className={styles.title}></h1>
+            {/* Title animations and glitches */}
+            <div ref={glitch_loading_home_title1.ref} className={styles.title}>
+              <div
+                className={styles.title__outer}
+                ref={glitch_loading_home_title_hover1.ref}
+              >
+                <div
+                  ref={glitch_loading_home_title1.ref}
+                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.blue}`}
+                >
+                  Victor Semencenco
+                </div>
+                <div
+                  ref={glitch_loading_home_title2.ref}
+                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
+                >
+                  Victor Semencenco
+                </div>
+                <div
+                  ref={glitch_loading_home_title3.ref}
+                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
+                >
+                  Victor Semencenco
+                </div>
+                <h1
+                  ref={glitch_loading_home_title_hover2.ref}
+                  aria-label="Victor Semencenco"
+                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
+                >
+                  Victor Semencenco
+                </h1>
+                <div
+                  id="homeNameGlitchWriting"
+                  className={styles.title__outer__inner}
+                ></div>
+              </div>
+            </div>
           </Grid>
           <Grid
             xs={4}
@@ -185,14 +154,18 @@ const Home = (props) => {
             lg={11}
           >
             <div className={styles.description}>
-              <span className={styles.description__role} id="homeRoleGlitchWriting">
-              </span>
-              <p className={styles.description__info} id="homeInfoGlitchWriting">
-              </p>
+              <span
+                className={styles.description__role}
+                id="homeRoleGlitchWriting"
+              ></span>
+              <p
+                className={styles.description__info}
+                id="homeInfoGlitchWriting"
+              ></p>
             </div>
           </Grid>
           <Grid
-            style={props.burgerNavIsOpen ? { zIndex: -1 } : {}}
+            style={props.burgerNavIsOpen ? { zIndex: -100 } : {}}
             className={styles.main_button_home}
             xs={4}
             smOffset={1}
@@ -203,7 +176,7 @@ const Home = (props) => {
             lg={11}
           >
             {showButton && (
-              <div ref={glitch_once.ref}>
+              <div ref={glitch_loading_home_button.ref}>
                 <MainGlitchButton
                   showButton={showButton}
                   text="Contact me"

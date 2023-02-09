@@ -15,6 +15,7 @@ import Contact from "./pages/Contact/Contact";
 import useScrollDirection from "./hooks/useScrollDirection";
 import GridWrapper from "./components/GridWrapper/GridWrapper";
 import ScrollDownButton from "./components/ScrollDownButton/ScrollDownButton";
+import { useGlitch } from "react-powerglitch";
 
 // import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
@@ -24,25 +25,71 @@ import ScrollDownButton from "./components/ScrollDownButton/ScrollDownButton";
 // import g from "./global-styles/globals.scss";
 
 function App() {
-  // console.log("testingExportvarFromMixin.scss2", g.testingvar3);
-
   // Use array destructuring
   const [scrollDirection] = useScrollDirection();
   const [burgerNavIsOpen, setburgerNavIsOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [fakeLoaded, setFakeLoaded] = useState(false);
 
+  const glitch_loading_home_screen1 = useGlitch({
+    playMode: "always",
+    createContainers: true,
+    hideOverflow: true,
+    timing: {
+      duration: 4000,
+      iterations: 3,
+    },
+    glitchTimeSpan: {
+      start: 0.15,
+      end: 0.25,
+    },
+    shake: {
+      velocity: 90,
+      amplitudeX: 0.01,
+      amplitudeY: 0.03,
+    },
+    slice: {
+      count: 3,
+      velocity: 5,
+      minHeight: 0.01,
+      maxHeight: 0.02,
+      hueRotate: true,
+    },
+  });
+
+  const glitch_loading_home_screen2 = useGlitch({
+    playMode: "always",
+    createContainers: true,
+    hideOverflow: true,
+    timing: {
+      duration: 4000,
+      iterations: 1,
+    },
+    glitchTimeSpan: {
+      start: 0.75,
+      end: 0.95,
+    },
+    shake: {
+      velocity: 90,
+      amplitudeX: 0.01,
+      amplitudeY: 0.03,
+    },
+    slice: {
+      count: 5,
+      velocity: 5,
+      minHeight: 0.01,
+      maxHeight: 0.02,
+      hueRotate: true,
+    },
+  });
+
   // This will run one time after the component mounts
   useEffect(() => {
     setTimeout(() => setFakeLoaded(true), 3000);
-    // console.log("loaded", loaded);
-    // console.log("fakeloaded", fakeLoaded);
     // Check if the page has already loaded
     if (document.readyState === "complete") {
-      // console.log("readystate is completed");
       setLoaded(true);
     } else {
-      // console.log("adding eventlistener load event");
       window.addEventListener("load", setLoaded(true), false);
       // Remove the event listener when component unmounts
       return () => window.removeEventListener("load", setLoaded(true));
@@ -51,6 +98,14 @@ function App() {
 
   return (
     <>
+      <div
+        ref={glitch_loading_home_screen1.ref}
+        className={styles.home_screen_glitch1}
+      ></div>
+      <div
+        ref={glitch_loading_home_screen2.ref}
+        className={styles.home_screen_glitch2}
+      ></div>
       {loaded && fakeLoaded ? (
         <div className={styles.App}>
           <Particles
@@ -85,7 +140,7 @@ function App() {
                     <Route path="*" element={<Page404 />} />
                   </Route>
                 </Routes> */}
-                <Home burgerNavIsOpen={burgerNavIsOpen}/>
+                <Home burgerNavIsOpen={burgerNavIsOpen} />
                 <Work />
                 <About />
                 <Contact />
@@ -147,7 +202,10 @@ function App() {
                 </Grid>
               </Grid> */}
             </GridWrapper>
-            <ScrollDownButton scrollDirection={scrollDirection} burgerNavIsOpen={burgerNavIsOpen}/>
+            <ScrollDownButton
+              scrollDirection={scrollDirection}
+              burgerNavIsOpen={burgerNavIsOpen}
+            />
           </ThemeProvider>
         </div>
       ) : (

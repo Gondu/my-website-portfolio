@@ -32,35 +32,68 @@
       line-height: 1;
 
       @include tabletl {
-        // font-size: 22px;
         font-size: 20px;
-        padding-bottom: 28px;
+        // padding-bottom: 28px; Before
+        padding-bottom: 16px;
       }
     }
-  
+
     .title {
-      color: $aqua;
-      font-family: "Garamond Bold";
-      // font-family: "VT323";
-      // font-family: "Elianto";
-      // text-transform: uppercase;
-
-      font-size: 65px;
-      padding-bottom: 20px;
-      line-height: 0.9;
-
-      @include tabletp {
-        font-size: 70px;
-        line-height: 0.7;
-      }
+      z-index: -1;
 
       @include tabletl {
-        padding-bottom: 24px;
-        // font-size: 88px;
-        font-size: 94px;
-        line-height: 0.6;
+        z-index: 1;
+      }
+
+      &__outer {
+        position: relative;
+        color: $aqua;
+        width: fit-content;
+        font-family: "Garamond Bold";
+        font-size: 65px;
+        padding-bottom: 20px;
+        line-height: 0.9;
+
+        @include tabletp {
+          font-size: 70px;
+          line-height: 0.7;
+        }
+
+        @include tabletl {
+          // padding-bottom: 24px; Before
+          padding-bottom: 8px;
+          font-size: 94px;
+          // line-height: 0.6; Before
+          line-height: 1;
+        }
+
+        &__inner {
+          color: $aqua;
+          font-family: "Garamond Bold";
+          // position: relative;
+          // z-index: -1;
+        }
+
+        &__inner_hidden {
+          color: $aqua;
+          height: 100%;
+          font-family: "Garamond Bold";
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+
+        .blue {
+          color: $blue;
+        }
+
+        .dark_aqua {
+          color: $darkaqua;
+        }
       }
     }
+
 
     .description {
       max-width: 360px;
@@ -85,12 +118,12 @@
         // font-family: "VT323";
         // font-family: "Avalon ExtraLight";
         // font-style: italic;
-  
+
         @include tabletl {
           font-size: 20px;
         }
       }
-  
+
       &__info {
         display: inline;
         color: $white;
@@ -100,7 +133,7 @@
         // font-family: "Avalon ExtraLight";
         font-size: 16px;
         // line-height: 1.5;
-  
+
         @include tabletl {
           font-size: 20px;
         }
