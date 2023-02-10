@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useGlitch } from "react-powerglitch";
 import GlitchedWriter from "glitched-writer";
 
-const LoadingScreen = () => {
+const LoadingScreen = (props) => {
   const glitch = useGlitch({
     playMode: "always",
     createContainers: true,
@@ -34,22 +34,19 @@ const LoadingScreen = () => {
   });
 
   useEffect(() => {
-    const myWriter1 = new GlitchedWriter(
-      "#loadingScreenGlitchWriting",
-      {
-        interval: [30, 100],
-        delay: [0, 500],
-        steps: [7, 10],
-        maxGhosts: 0.2,
-        ghostChance: 0.2,
-        changeChance: 0.6,
-        glyphs: "!<>-_\\/[]{}—=+*^?#________",
-        mode: "normal",
-        oneAtATime: 0,
-        fillSpace: true,
-        glyphsFromText: true,
-      }
-    );
+    const myWriter1 = new GlitchedWriter("#loadingScreenGlitchWriting", {
+      interval: [30, 100],
+      delay: [0, 500],
+      steps: [7, 10],
+      maxGhosts: 0.2,
+      ghostChance: 0.2,
+      changeChance: 0.6,
+      glyphs: "!<>-_\\/[]{}—=+*^?#________",
+      mode: "normal",
+      oneAtATime: 0,
+      fillSpace: true,
+      glyphsFromText: true,
+    });
 
     const beginGlitchWriting = async () => {
       await myWriter1.write("Loading...");
@@ -58,15 +55,26 @@ const LoadingScreen = () => {
     beginGlitchWriting();
   }, []);
 
+  if (props.fakeLoadedFadeOut) {
+    glitch.stopGlitch();
+  }
+
   return (
-    <div className={styles.preloader_container}>
+    <div
+      className={`${styles.preloader_container} ${props.fakeLoadedFadeOut && styles.preloader_container_fade_out}`}
+    >
       <img
-        className={styles.icon}
+      className={`${styles.icon} ${props.fakeLoadedFadeOut && styles.icon_fade_out}`}
+        // className={styles.icon}
         ref={glitch.ref}
         src={logo}
         alt="Logo Victor Semencenco"
       />
-      <div className={styles.text} data-text="Loading..." id="loadingScreenGlitchWriting"></div>
+      <div
+        className={`${styles.text} ${props.fakeLoadedFadeOut && styles.text_fade_out}`}
+        data-text="Loading..."
+        id="loadingScreenGlitchWriting"
+      ></div>
     </div>
   );
 };

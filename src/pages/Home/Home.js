@@ -36,7 +36,7 @@ const Home = (props) => {
   );
 
   useEffect(() => {
-    setTimeout(() => setShowButton(true), 8800);
+    setTimeout(() => setShowButton(true), 8500);
 
     const myTextWriter = new GlitchedWriter(
       "#homeTextGlitchWriting",
@@ -59,7 +59,7 @@ const Home = (props) => {
     );
 
     const beginGlitchWriting = async () => {
-      await wait(800);
+      await wait(900);
       await myTextWriter.write("Hi, my name is");
       await wait(950);
       await myNameWriter.write("Victor Semencenco");

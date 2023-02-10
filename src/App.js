@@ -30,6 +30,7 @@ function App() {
   const [burgerNavIsOpen, setburgerNavIsOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [fakeLoaded, setFakeLoaded] = useState(false);
+  const [fakeLoadedFadeOut, setFakeLoadedFadeOut] = useState(false);
 
   const glitch_loading_home_screen1 = useGlitch({
     playMode: "always",
@@ -85,7 +86,8 @@ function App() {
 
   // This will run one time after the component mounts
   useEffect(() => {
-    setTimeout(() => setFakeLoaded(true), 3000);
+    setTimeout(() => setFakeLoaded(true), 3300);
+    setTimeout(() => setFakeLoadedFadeOut(true), 3000);
     // Check if the page has already loaded
     if (document.readyState === "complete") {
       setLoaded(true);
@@ -106,12 +108,13 @@ function App() {
         ref={glitch_loading_home_screen2.ref}
         className={styles.home_screen_glitch2}
       ></div>
+      <Particles id="tsparticles" style={{ height: "100%", width: "100%" }} />
       {loaded && fakeLoaded ? (
         <div className={styles.App}>
-          <Particles
+          {/* <Particles
             id="tsparticles"
             style={{ height: "100%", width: "100%" }}
-          />
+          /> */}
           <ThemeProvider theme={PortfolioTheme}>
             <CssBaseline enableColorScheme />
             <header
@@ -209,7 +212,7 @@ function App() {
           </ThemeProvider>
         </div>
       ) : (
-        <LoadingScreen />
+        <LoadingScreen fakeLoadedFadeOut={fakeLoadedFadeOut}/>
       )}
     </>
   );

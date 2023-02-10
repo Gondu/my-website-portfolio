@@ -34,34 +34,48 @@
 
 	// }
 
-	.btn {
-		background-color: red;
-		width: 100px;
-		height: 100px;
+	// .btn {
+	// 	background-color: red;
+	// 	width: 100px;
+	// 	height: 100px;
 
-		// @include mobile {
-		// 	background-color: $aqua;
-		// }
+	// 	// @include mobile {
+	// 	// 	background-color: $aqua;
+	// 	// }
 
-		@include tabletp {
-			background-color: green;
-		}
+	// 	@include tabletp {
+	// 		background-color: green;
+	// 	}
 
-		@include tabletl {
-			background-color: grey;
-		}
+	// 	@include tabletl {
+	// 		background-color: grey;
+	// 	}
 
-		@include desktop {
-			background-color: violet;
-		}
+	// 	@include desktop {
+	// 		background-color: violet;
+	// 	}
 
-	}
+	// }
 
 	// .btn2 {
 	//   @include mobile {
 	//     // background-color: mx.$aqua;
 	//     background-color: red;
 	//   }
+	// }
+
+	// animation: transitionIn ease 1.6s;
+	// animation-iteration-count: 1;
+	// animation-fill-mode: forwards;
+
+	// @keyframes transitionIn {
+	// 	0% {
+	// 		opacity: 0;
+	// 	}
+
+	// 	100% {
+	// 		opacity: 1;
+	// 	}
 	// }
 }
 
