@@ -14,6 +14,7 @@ $lightblue: #0A0E24;
 $aqua: #00FFFF;
 $darkaqua: #008080;
 $lightaqua: #31FFFF;
+$red: #e0287d;
 
 // Layout spacing
 $navbar_height: 88px;
@@ -94,6 +95,7 @@ h1,h2,h3,h4,h5,h6 {
   lightblue: $lightblue;
   darkaqua: $darkaqua;
   lightaqua: $lightaqua;
+  red: $red;
   containerBreakpointMaxWidth: $containerBreakpointMaxWidth;
   rowGutters: $rowGutters;
   columnGuttersDownMd: $columnGuttersDownMd;

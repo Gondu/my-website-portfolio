@@ -27,7 +27,7 @@ export const glitch_loading_home_button_data = {
   },
 };
 
-export const glitch_loading_home_title_data1 = {
+export const glitch_loading_home_title_data = {
   playMode: "always",
   createContainers: true,
   hideOverflow: true,
@@ -53,85 +53,7 @@ export const glitch_loading_home_title_data1 = {
   },
 };
 
-export const glitch_loading_home_title_data2 = {
-  playMode: "always",
-  createContainers: true,
-  hideOverflow: true,
-  timing: {
-    duration: 10000,
-    iterations: Infinity,
-  },
-  glitchTimeSpan: {
-    start: 0.5,
-    end: 0.75,
-  },
-  shake: {
-    velocity: 4,
-    amplitudeX: 0.005,
-    amplitudeY: 0.005,
-  },
-  slice: {
-    count: 1,
-    velocity: 2,
-    minHeight: 0.01,
-    maxHeight: 0.08,
-    hueRotate: true,
-  },
-};
-
-export const glitch_loading_home_title_data3 = {
-  playMode: "always",
-  createContainers: true,
-  hideOverflow: true,
-  timing: {
-    duration: 15500,
-    iterations: Infinity,
-  },
-  glitchTimeSpan: {
-    start: 0.14,
-    end: 0.2,
-  },
-  shake: {
-    velocity: 35,
-    amplitudeX: 0.019,
-    amplitudeY: 0.032,
-  },
-  slice: {
-    count: 1,
-    velocity: 8,
-    minHeight: 0.14,
-    maxHeight: 0.21,
-    hueRotate: true,
-  },
-};
-
-export const glitch_loading_home_title_hover_data1 = {
-  playMode: "hover",
-  createContainers: true,
-  hideOverflow: true,
-  timing: {
-    duration: 8000,
-    iterations: Infinity,
-  },
-  glitchTimeSpan: {
-    start: -0.1,
-    end: 1,
-  },
-  shake: {
-    velocity: 20,
-    amplitudeX: 0.0035,
-    amplitudeY: 0.02,
-  },
-  slice: {
-    count: 1,
-    velocity: 2,
-    minHeight: 0.03,
-    maxHeight: 0.06,
-    hueRotate: true,
-  },
-};
-
-export const glitch_loading_home_title_hover_data2 = {
+export const glitch_loading_home_title_hover_data = {
   playMode: "hover",
   createContainers: true,
   hideOverflow: true,
@@ -165,12 +87,11 @@ export const home_text_glitch_writer_data = {
   maxGhosts: 0.3,
   ghostChance: 0.1,
   changeChance: 0.6,
-  steps: 8,
+  steps: 4,
   interval: 10,
-  delay: [0, 200],
+  delay: [0, 20],
   oneAtATime: 1,
-  glyphs:
-    "!<>-_/[]{}—=+*^?#________大左",
+  glyphs: "!<>-_/[]{}—=+*^?#________大左",
   fillSpace: true,
   glyphsFromText: true,
   mode: "normal",
@@ -180,41 +101,38 @@ export const home_name_glitch_writer_data = {
   maxGhosts: 0,
   ghostChance: 0,
   changeChance: 0.8,
-  steps: 4,
+  steps: 3,
   interval: 10,
-  delay: [0, 20],
+  delay: [0, 15],
   oneAtATime: 1,
   glyphsFromText: true,
-  glyphs:
-    "!<>-_/[]{}—=+*^?#________大左",
+  glyphs: "!<>-_/[]{}—=+*^?#________大左",
   mode: "normal",
 };
 
 export const home_role_glitch_writer_data = {
-  interval: [0, 50],
+  interval: [0, 30],
   delay: 0,
-  steps: 80,
+  steps: 60,
   ghostChance: 0,
   maxGhosts: 0,
   changeChance: 0.8,
   oneAtATime: 0,
-  glyphs:
-    "!<>-_/[]{}—=+*^?#________大左",
+  glyphs: "!<>-_/[]{}—=+*^?#________大左",
   fillSpace: false,
   glyphsFromText: false,
   mode: "normal",
 };
 
 export const home_info_glitch_writer_data = {
-  interval: [0, 50],
-  delay: [0, 400],
-  steps: 40,
+  interval: [0, 30],
+  delay: [0, 300],
+  steps: 25,
   ghostChance: 0,
   maxGhosts: 0,
   changeChance: 0.3,
   oneAtATime: 0,
-  glyphs:
-    "!<>-_/[]{}—=+*^?#________大左",
+  glyphs: "!<>-_/[]{}—=+*^?#________大左",
   fillSpace: false,
   glyphsFromText: false,
   mode: "normal",

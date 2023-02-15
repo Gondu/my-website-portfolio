@@ -10,12 +10,9 @@ import { wait } from "glitched-writer";
 import GlitchedWriter from "glitched-writer";
 import {
   glitch_loading_home_button_data,
+  glitch_loading_home_title_data,
+  glitch_loading_home_title_hover_data,
   home_text_glitch_writer_data,
-  glitch_loading_home_title_data1,
-  glitch_loading_home_title_data2,
-  glitch_loading_home_title_data3,
-  glitch_loading_home_title_hover_data1,
-  glitch_loading_home_title_hover_data2,
   home_name_glitch_writer_data,
   home_role_glitch_writer_data,
   home_info_glitch_writer_data,
@@ -23,21 +20,15 @@ import {
 
 const Home = (props) => {
   const [showButton, setShowButton] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
 
   const glitch_loading_home_button = useGlitch(glitch_loading_home_button_data);
-  const glitch_loading_home_title1 = useGlitch(glitch_loading_home_title_data1);
-  const glitch_loading_home_title2 = useGlitch(glitch_loading_home_title_data2);
-  const glitch_loading_home_title3 = useGlitch(glitch_loading_home_title_data3);
-  const glitch_loading_home_title_hover1 = useGlitch(
-    glitch_loading_home_title_hover_data1
-  );
-  const glitch_loading_home_title_hover2 = useGlitch(
-    glitch_loading_home_title_hover_data2
+  const glitch_loading_home_title = useGlitch(glitch_loading_home_title_data);
+  const glitch_loading_home_title_hover = useGlitch(
+    glitch_loading_home_title_hover_data
   );
 
   useEffect(() => {
-    setTimeout(() => setShowButton(true), 8500);
-
     const myTextWriter = new GlitchedWriter(
       "#homeTextGlitchWriting",
       home_text_glitch_writer_data
@@ -59,15 +50,19 @@ const Home = (props) => {
     );
 
     const beginGlitchWriting = async () => {
-      await wait(900);
+      await wait(350);
       await myTextWriter.write("Hi, my name is");
-      await wait(950);
+      await wait(350);
       await myNameWriter.write("Victor Semencenco");
-      await wait(400);
+      await wait(350);
       myRoleWriter.write("Front-end Developer ");
       myInfoWriter.write(
         "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
       );
+      await wait(1100);
+      setShowButton(true);
+      await wait(1000);
+      setShowTitle(true);
     };
 
     beginGlitchWriting();
@@ -107,40 +102,25 @@ const Home = (props) => {
             lg={11}
           >
             {/* Title animations and glitches */}
-            <div ref={glitch_loading_home_title1.ref} className={styles.title}>
-              <div
-                className={styles.title__outer}
-                ref={glitch_loading_home_title_hover1.ref}
-              >
-                <div
-                  ref={glitch_loading_home_title1.ref}
-                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.blue}`}
-                >
-                  Victor Semencenco
-                </div>
-                <div
-                  ref={glitch_loading_home_title2.ref}
-                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
-                >
-                  Victor Semencenco
-                </div>
-                <div
-                  ref={glitch_loading_home_title3.ref}
-                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
-                >
-                  Victor Semencenco
-                </div>
-                <h1
-                  ref={glitch_loading_home_title_hover2.ref}
-                  aria-label="Victor Semencenco"
-                  className={`${styles.title__outer__inner_hidden} ${styles.title__outer__inner} ${styles.dark_aqua}`}
-                >
-                  Victor Semencenco
-                </h1>
-                <div
-                  id="homeNameGlitchWriting"
-                  className={styles.title__outer__inner}
-                ></div>
+            <div ref={glitch_loading_home_title.ref} className={styles.title}>
+              <div className={styles.title__outer}>
+                {showTitle && (
+                  <div
+                    ref={glitch_loading_home_title_hover.ref}
+                    className={`${styles.title__outer__glitch_title} ${styles.glitch} ${styles.layers}`}
+                    data-text="Victor Semencenco"
+                  >
+                    <h1 className={styles.title__outer__glitch_title__text}>
+                      Victor Semencenco
+                    </h1>
+                  </div>
+                )}
+                {!showTitle && (
+                  <div
+                    id="homeNameGlitchWriting"
+                    className={styles.title__outer__inner}
+                  ></div>
+                )}
               </div>
             </div>
           </Grid>

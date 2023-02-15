@@ -37,8 +37,8 @@ function App() {
     createContainers: true,
     hideOverflow: true,
     timing: {
-      duration: 4000,
-      iterations: 3,
+      duration: 3000,
+      iterations: 1,
     },
     glitchTimeSpan: {
       start: 0.15,
@@ -63,7 +63,7 @@ function App() {
     createContainers: true,
     hideOverflow: true,
     timing: {
-      duration: 4000,
+      duration: 3000,
       iterations: 1,
     },
     glitchTimeSpan: {
@@ -86,8 +86,8 @@ function App() {
 
   // This will run one time after the component mounts
   useEffect(() => {
-    setTimeout(() => setFakeLoaded(true), 3300);
-    setTimeout(() => setFakeLoadedFadeOut(true), 3000);
+    setTimeout(() => setFakeLoaded(true), 2300);
+    setTimeout(() => setFakeLoadedFadeOut(true), 2000);
     // Check if the page has already loaded
     if (document.readyState === "complete") {
       setLoaded(true);
