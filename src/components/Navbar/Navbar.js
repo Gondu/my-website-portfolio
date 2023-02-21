@@ -97,24 +97,24 @@ const Navbar = (props) => {
             <li>
               <div ref={glitch_loading_navbar.ref}>
                 <Link
-                  to="#work"
-                  id="workNavbarGlitchWriting"
-                  smooth
-                  ref={glitchNormalNavButtons.ref}
-                >
-                  Work
-                </Link>
-              </div>
-            </li>
-            <li>
-              <div ref={glitch_loading_navbar.ref}>
-                <Link
                   to="#about"
                   id="aboutNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
                 >
                   About
+                </Link>
+              </div>
+            </li>
+            <li>
+              <div ref={glitch_loading_navbar.ref}>
+                <Link
+                  to="#work"
+                  id="workNavbarGlitchWriting"
+                  smooth
+                  ref={glitchNormalNavButtons.ref}
+                >
+                  Work
                 </Link>
               </div>
             </li>
@@ -165,9 +165,9 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#work"
+                to="#about"
               >
-                Work
+                About
               </Link>
             </li>
             <li>
@@ -175,9 +175,9 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#about"
+                to="#work"
               >
-                About
+                Work
               </Link>
             </li>
             <li>

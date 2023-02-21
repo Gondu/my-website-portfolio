@@ -144,8 +144,8 @@ function App() {
                   </Route>
                 </Routes> */}
                 <Home burgerNavIsOpen={burgerNavIsOpen} />
-                <Work />
                 <About />
+                <Work />
                 <Contact />
               </main>
               <footer>

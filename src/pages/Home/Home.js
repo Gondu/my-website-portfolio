@@ -14,7 +14,7 @@ import {
   glitch_loading_home_title_hover_data,
   home_text_glitch_writer_data,
   home_name_glitch_writer_data,
-  home_role_glitch_writer_data,
+  // home_role_glitch_writer_data,
   home_info_glitch_writer_data,
 } from "./HomeData";
 
