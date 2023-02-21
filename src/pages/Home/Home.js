@@ -41,7 +41,8 @@ const Home = (props) => {
 
     const myRoleWriter = new GlitchedWriter(
       "#homeRoleGlitchWriting",
-      home_role_glitch_writer_data
+      // home_role_glitch_writer_data
+      home_info_glitch_writer_data
     );
 
     const myInfoWriter = new GlitchedWriter(
@@ -52,14 +53,14 @@ const Home = (props) => {
     const beginGlitchWriting = async () => {
       await wait(350);
       await myTextWriter.write("Hi, my name is");
-      await wait(350);
+      await wait(450);
       await myNameWriter.write("Victor Semencenco");
-      await wait(350);
+      await wait(300);
       myRoleWriter.write("Front-end Developer ");
       myInfoWriter.write(
         "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
       );
-      await wait(1100);
+      await wait(800);
       setShowButton(true);
       await wait(1000);
       setShowTitle(true);
