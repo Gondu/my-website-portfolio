@@ -8,8 +8,11 @@
 $white: #ffffff; // to use these variables in other scss files just @use index.scss as g in those files and use g.$white 
 $black: #000000;
 $grey: #484848;
+$lightgrey: #F5F5F5;
 $blue: #151A36;
-$darkblue: #020513;
+// $darkblue: #020513;
+$darkblue: #03071B;
+
 $lightblue: #0A0E24;
 $aqua: #00FFFF;
 $darkaqua: #008080;
@@ -21,7 +24,7 @@ $navbar_height: 88px;
 
 // These are the Material UI breakpoints and theme variables
 $containerBreakpointMaxWidth: 1320px; // after this breakpoint value, the container is not fluid and is fixed to this max-width value
-$rowGutters: 0; //4px for padding-top, 4px for padding-bottom
+$rowGutters: 2px; //4px for padding-top, 4px for padding-bottom
 $columnGuttersDownMd: 16px; //column gutters for the grid - 8px for padding-left, 8px for padding-right
 $columnGuttersUpMd: 24px;
 $marginsContainerXs: 16px; //container margins for the grid - 8px for margin-right, 8px for margin-left
@@ -76,7 +79,8 @@ html {
 
 body {
   height: 100%;
-  line-height: 1.5;
+  // line-height: 1.5;
+  line-height: normal;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,6 +95,7 @@ h1,h2,h3,h4,h5,h6 {
   blue: $blue;
   aqua: $aqua;
   grey: $grey;
+  lightgrey: $lightgrey;
   darkblue: $darkblue;
   lightblue: $lightblue;
   darkaqua: $darkaqua;

@@ -14,6 +14,7 @@
     "glitched-writer": "^2.0.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.107",
     "react-powerglitch": "^1.0.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",

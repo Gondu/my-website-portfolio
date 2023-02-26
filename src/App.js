@@ -212,7 +212,7 @@ function App() {
           </ThemeProvider>
         </div>
       ) : (
-        <LoadingScreen fakeLoadedFadeOut={fakeLoadedFadeOut}/>
+        <LoadingScreen fakeLoadedFadeOut={fakeLoadedFadeOut} />
       )}
     </>
   );

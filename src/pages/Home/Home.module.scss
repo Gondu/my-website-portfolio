@@ -21,7 +21,7 @@
     .text {
       color: $white;
       font-family: "Garamond Light";
-      font-size: 16px;
+      font-size: 18px;
       padding-bottom: 24px;
       line-height: 1;
 
@@ -135,7 +135,10 @@
     }
 
     .description {
-      max-width: 360px;
+      min-width: 310px;
+      max-width: 490px;
+      // font-size: 18px;
+      // padding-right: 16px;
       padding-bottom: 36px;
       line-height: 1.5;
 
@@ -151,7 +154,7 @@
 
       &__role {
         color: $aqua;
-        font-size: 16px;
+        font-size: 18px;
         font-family: "Garamond Bold";
 
         @include tabletl {
@@ -163,7 +166,7 @@
         display: inline;
         color: $white;
         font-family: "Garamond Light";
-        font-size: 16px;
+        font-size: 18px;
 
         @include tabletl {
           font-size: 20px;

@@ -48,12 +48,12 @@ const Navbar = (props) => {
     beginNavbarGlitchWriting();
   }, []);
 
-  // Hide scrollbar when hamburger navbar is open
-  useEffect(() => {
-    props.burgerNavIsOpen
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "visible");
-  });
+  // Hide scrollbar when hamburger navbar is open -> this causes a bug when opening the hamburger navbar iit jumps to the top
+  // useEffect(() => {
+  //   props.burgerNavIsOpen
+  //     ? (document.body.style.overflow = "hidden")
+  //     : (document.body.style.overflow = "visible");
+  // });
 
   const handleburgerNavIsOpen = () => {
     props.setburgerNavIsOpen(!props.burgerNavIsOpen);
@@ -198,7 +198,7 @@ const Navbar = (props) => {
 
         <div
           className={`${styles.hamburger_navbar__icon}  ${
-            props.scrollDirection === "scrolled top"
+            props.scrollDirection === "scrolled top" || props.burgerNavIsOpen
               ? styles.hamburger_navbar__icon__show_top
               : props.scrollDirection === "scrolling up"
               ? styles.hamburger_navbar__icon__show
@@ -218,7 +218,7 @@ const Navbar = (props) => {
           htmlFor="navi-toggle"
           onClick={handleburgerNavIsOpen}
           className={`${styles.hamburger_navbar__button_toggler}  ${
-            props.scrollDirection === "scrolled top"
+            props.scrollDirection === "scrolled top" || props.burgerNavIsOpen
               ? styles.hamburger_navbar__button_toggler__show_top
               : props.scrollDirection === "scrolling up"
               ? styles.hamburger_navbar__button_toggler__show

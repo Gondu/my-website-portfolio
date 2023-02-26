@@ -1,6 +1,151 @@
 @use "../../global-styles/globals.scss" as *;
 
 .about_section {
-  height: 100vh;
+  // height: 100vh;
+  width: 100%;
+  // margin-top: 80px;
   // min-height: 100vh;
+
+  @include tabletl {
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-family: 'Garamond Bold';
+    color: $aqua;
+    text-align: center;
+    margin-bottom: 32px;
+    border-bottom: 3px solid $darkaqua;
+
+    @include tabletp {
+      font-size: 40px;
+    }
+
+    @include tabletl {
+      font-size: 48px;
+    }
+  }
+
+  &__image_ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    max-width: 350px;
+    // height: 312px;
+    filter: sepia(70%) hue-rotate(160deg) drop-shadow(5px 6px 6px $darkblue) contrast(0.8) opacity(0.8);
+
+    @include tabletp {
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    @include tabletl {
+      // max-height: 304px;
+      // max-width: 304px;
+      height: 312px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @include desktop {
+      height: 320px;
+    }
+  }
+
+  &__image_hover {
+    transition: all 0.1s;
+    filter: none;
+  }
+
+  &__text {
+    background-color: $darkblue;
+    font-family: 'Garamond Light';
+    color: $lightgrey;
+    padding: 24px;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.3;
+    height: 100%;
+    filter: drop-shadow(5px 6px 6px $darkblue);
+
+    @include tabletp {
+      margin-top: 24px;
+    }
+
+    @include tabletl {
+      margin: 0;
+      padding: 24px;
+      line-height: 1.25;
+      font-size: 16px;
+      min-height: 312px;
+    }
+
+    @include desktop {
+      padding: 20px;
+      font-size: 18px;
+      height: 320px;
+      line-height: normal;
+    }
+  }
+
+  &__skills {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 24px;
+
+    @include tabletp {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      padding-top: 8px;
+
+      &__icon {
+        height: 100%;
+        width: 100%;
+        width: 35px;
+        height: 35px;
+
+        @include tabletp {
+          width: 35px;
+        }
+
+        @include tabletl {
+          width: 45px;
+        }
+      }
+
+      &__text_icon {
+        font-family: "Garamond Regular";
+        font-size: 16px;
+        padding-top: 6px;
+        color: $lightgrey;
+
+        // @include tabletl {
+        //   font-size: 14px;
+
+        // }
+      }
+    }
+  }
 }
