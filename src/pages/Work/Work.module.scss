@@ -1,6 +1,37 @@
 @use "../../global-styles/globals.scss" as *;
 
 .work_section {
-  height: 100vh;
+  margin-top: 100px;
+  // height: 100vh;
   // min-height: 100vh;
+
+  @include tabletl {
+    margin-top: 150px;
+  }
+
+  @include desktop {
+    margin-top: 200px;
+  }
+
+  &__title {
+    font-family: "Garamond Bold";
+    color: $aqua;
+    font-size: 48px;
+    text-align: center;
+    border-bottom: 3px solid $darkaqua;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 100px;
+    font-size: 18px;
+    text-align: center;
+    // font-family: "ProximaNova Thin";
+    font-family: "Garamond Light";
+  }
+
+  &__image {
+    width: 100%;
+    height: 408px  
+  }
 }
