@@ -76,20 +76,21 @@
 
           &__text {
             animation: paths 5s step-end infinite;
-            color: $aqua;
-            font-family: "Garamond Bold";
-            font-size: 65px;
-            line-height: 0.9;
+            // @extend .h1;
+            // color: $aqua;
+            // font-family: "Garamond Bold";
+            // font-size: 65px;
+            // line-height: 0.9;
 
-            @include tabletp {
-              font-size: 70px;
-              line-height: 0.7;
-            }
+            // @include tabletp {
+            //   font-size: 70px;
+            //   line-height: 0.7;
+            // }
 
-            @include tabletl {
-              font-size: 94px;
-              line-height: 1;
-            }
+            // @include tabletl {
+            //   font-size: 94px;
+            //   line-height: 1;
+            // }
           }
         }
 
@@ -165,11 +166,14 @@
       &__info {
         display: inline;
         color: $white;
-        font-family: "Garamond Light";
+        // font-family: "Garamond Light";
         font-size: 18px;
+        line-height: 1.3;
+
 
         @include tabletl {
           font-size: 20px;
+          line-height: 1.4;
         }
       }
     }

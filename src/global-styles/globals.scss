@@ -1,7 +1,9 @@
-// @forward will import mixins.scss and fonts.scss inside globals.scss so we only need to @use globals.scss in the other 
-// files and mixins.scss, fonts, etc will be also be imported as well
-@forward "./mixins.scss";
+// @forward will import media-queries.scss and fonts.scss inside globals.scss so we only need to @use globals.scss in the other 
+// files and media-queries.scss, fonts, etc will be also be imported as well
+@forward "./media-queries.scss";
 @forward "./fonts.scss";
+@use "media-queries" as *; 
+// @use "./fonts.scss";
 
 /* These are the global css variables */
 // Colors
@@ -12,7 +14,6 @@ $lightgrey: #F5F5F5;
 $blue: #151A36;
 // $darkblue: #020513;
 $darkblue: #03071B;
-
 $lightblue: #0A0E24;
 $aqua: #00FFFF;
 $darkaqua: #008080;
@@ -31,8 +32,79 @@ $marginsContainerXs: 16px; //container margins for the grid - 8px for margin-rig
 $marginsContainerSm: 24px;
 $marginsContainerMd: 32px;
 
+// Reset styles
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+// Heading styles
+h1 {
+  font-size: 65px;
+  font-family: "Garamond Bold";
+  color: $aqua;
+  line-height: 0.9;
+
+  @include tabletp {
+    font-size: 70px;
+    line-height: 0.7;
+  }
+
+  @include tabletl {
+    font-size: 94px;
+    line-height: 1;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Garamond Bold';
+  color: $aqua;
+
+  @include tabletp {
+    font-size: 40px;
+  }
+
+  @include tabletl {
+    font-size: 48px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  // font-family: 'Garamond SemiBold';
+  font-family: 'Garamond Medium';
+  color: $aqua;
+
+  @include tabletp {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    font-size: 28px;
+  }
+}
+
+p {
+  font-size: 18px;
+  font-family: 'Garamond Light';
+  color: $lightgrey;
+  line-height: 1.3;
+
+  @include tabletl {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  @include desktop {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
 * {
-  font-family: "Garamond Regular", sans-serif;
+  // font-family: "Garamond Regular", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -80,14 +152,8 @@ html {
 body {
   height: 100%;
   // line-height: 1.5;
-  line-height: normal;
+  // line-height: normal;
   -webkit-font-smoothing: antialiased;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
 }
 
 // This is used to export the scss variables into javascript files

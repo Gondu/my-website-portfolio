@@ -102,25 +102,25 @@ const About = () => {
             tiltMaxAngleY={5}
           >
             <div className={styles.about_section__text}>
-              <div>
+              <p>
                 Hi! I'm Victor, a Front-end developer with a passion for
                 creating interesting and unique web applications. I'm a
                 trilingual with a master degree in computer engineering and I've
                 had the privilege of working with awesome people on enterprise
                 level projects for important automotive brands such as Maserati,
                 Toyota, Dodge, Fiat, Opel and many others.
-              </div>
+              </p>
               <br />
-              <div>
+              <p>
                 I'm a curious and determined person with high attention to
                 detail. I love reading books, playing sports and apart from web
                 development I'm also passionate about game development.
-              </div>
+              </p>
               <br />
-              <div>
+              <p>
                 If you're interested in knowing some of the technologies I've
                 been working with, please take a look below.
-              </div>
+              </p>
             </div>
           </Tilt>
         </Grid>
@@ -128,7 +128,7 @@ const About = () => {
         <Grid xs={4} sm={8} mdOffset={1} md={10} lgOffset={2} lg={8}>
           <div className={styles.about_section__skills}>
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -146,7 +146,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -164,7 +164,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -182,7 +182,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -200,7 +200,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -218,7 +218,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -236,7 +236,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -254,7 +254,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -272,7 +272,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -290,7 +290,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -308,7 +308,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
@@ -326,7 +326,7 @@ const About = () => {
             </Tilt>
 
             <Tilt
-              scale={1.3}
+              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
               transitionSpeed={1000}
               tiltMaxAngleX={0}
               tiltMaxAngleY={0}
