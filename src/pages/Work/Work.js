@@ -88,7 +88,8 @@ const Work = () => {
         />
 
         <ProjectCard
-          number={"01"}
+          reverse
+          number={"02"}
           title={"Stellantis Websites"}
           text={
             "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
@@ -112,7 +113,7 @@ const Work = () => {
         />
 
         <ProjectCard
-          number={"01"}
+          number={"03"}
           title={"Stellantis Websites"}
           text={
             "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
@@ -136,7 +137,8 @@ const Work = () => {
         />
 
         <ProjectCard
-          number={"01"}
+          reverse
+          number={"04"}
           title={"Stellantis Websites"}
           text={
             "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."

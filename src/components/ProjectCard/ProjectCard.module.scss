@@ -35,6 +35,8 @@
 
 		&__title {
 			display: flex;
+			position: relative;
+			z-index: 10;
 			align-items: center;
 			justify-content: flex-start;
 			flex-direction: row;
@@ -61,12 +63,10 @@
 			&__text {
 				padding-left: 8px;
 			}
-
 		}
 
 		&__text {
 			position: absolute;
-			// top: 395px;
 			top: 108vw;
 
 			@media only screen and (min-width: 680px) {
@@ -74,7 +74,6 @@
 			}
 
 			@include tabletp {
-				// top: 330px;
 				top: 42vw;
 			}
 
@@ -91,6 +90,8 @@
 				filter: drop-shadow(5px 6px 6px $darkblue);
 
 				@include tabletl {
+					position: relative;
+					z-index: 10;
 					margin-top: 0;
 					height: 188px;
 					display: flex;
@@ -101,18 +102,13 @@
 				@include desktop {
 					display: block;
 					height: 100%;
-					padding: 20px;
+					padding: 24px;
 				}
-
-				&__info {}
 			}
 
 			&__tech {
-				// display: flex;
-				// align-items: center;
-				// flex-wrap: wrap;
-				// justify-content: space-between;
-				// gap: 8px;
+				position: relative;
+				z-index: 10;
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
 				grid-template-rows: auto;
@@ -126,6 +122,10 @@
 					grid-template-columns: repeat(8, 1fr);
 				}
 
+				@include tabletl {
+					border-top: 1px solid lightgrey;
+				}
+
 				&__item {
 					font-family: "Garamond Regular";
 					font-size: 14px;
@@ -133,6 +133,11 @@
 					align-items: center;
 					justify-content: center;
 					color: $lightgrey;
+
+					@include tabletl {
+						color: $white;
+						font-family: "Garamond SemiBold";
+					}
 
 					@include desktop {
 						font-size: 16px;
@@ -142,13 +147,10 @@
 		}
 
 		&__image {
-			// width: 100%;
-			// height: 400px; 
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-bottom: 100px;
-			// margin-bottom: 700px;
+			margin-bottom: 140px;
 
 			@include tabletp {
 				display: block;
@@ -169,14 +171,22 @@
 				}
 
 				@include tabletl {
+					position: relative;
+					filter: sepia(70%) hue-rotate(160deg) drop-shadow(5px 6px 6px #03071B) contrast(0.8) opacity(0.8) brightness(0.5);
 					max-height: 406px;
-					// margin-top: -270px;
-					// margin-top: findCardCenter(, );
+					transition: all 0.65s cubic-bezier(.25,.95,.09,.9);
 				}
 
 				@include desktop {
 					max-height: 100%;
 				}
+			}
+
+			&__img_hover {
+				position: relative;
+				z-index: 250;
+				filter: none;
+				transform: scale(1.02);
 			}
 		}
 	}

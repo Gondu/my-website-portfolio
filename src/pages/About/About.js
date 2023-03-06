@@ -71,7 +71,7 @@ const About = () => {
           className={styles.about_section__image_ctn}
         >
           <Tilt
-            scale={currentResolution === "xs" ? 1.001 : 1.1}
+            scale={currentResolution === "xs" ? 1.001 : 1.05}
             transitionSpeed={2000}
             tiltMaxAngleX={5}
             tiltMaxAngleY={5}
@@ -95,7 +95,7 @@ const About = () => {
         <Grid xs={4} sm={8} md={6} lg={5}>
           <Tilt
             scale={
-              currentResolution === "sm" || currentResolution === "xs" ? 1 : 1.1
+              currentResolution === "sm" || currentResolution === "xs" ? 1 : 1.05
             }
             transitionSpeed={2000}
             tiltMaxAngleX={5}
