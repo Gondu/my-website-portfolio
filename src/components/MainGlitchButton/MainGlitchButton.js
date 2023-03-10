@@ -83,13 +83,14 @@ const MainGlitchButton = (props) => {
         >
           {/*eslint-disable-next-line*/}
           <span className={styles.text}>{props.text}</span>
-          {/* <span className={styles.text_decoration}>_</span> */}
           <span className={styles.decoration}>&rArr;</span>
         </Link>
       ) : (
         // Download Button
         <a
-          href={process.env.PUBLIC_URL + "/resume.pdf"}
+          href={`${
+            props.mail ? props.mail : process.env.PUBLIC_URL + "/resume.pdf"
+          }`}
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.btn_glitch_fill} ${
@@ -99,17 +100,20 @@ const MainGlitchButton = (props) => {
         >
           {/*eslint-disable-next-line*/}
           <span className={styles.text}>{props.text}</span>
-          {/* <span className={styles.text_decoration}>_</span> */}
-          <svg
-            className={styles.download_svg}
-            fill="#000000"
-            width="24px"
-            height="24px"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M7.293,13.707a1,1,0,1,1,1.414-1.414L11,14.586V3a1,1,0,0,1,2,0V14.586l2.293-2.293a1,1,0,0,1,1.414,1.414l-4,4a1,1,0,0,1-.325.216.986.986,0,0,1-.764,0,1,1,0,0,1-.325-.216ZM22,12a1,1,0,0,0-1,1v7H3V13a1,1,0,0,0-2,0v8a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V13A1,1,0,0,0,22,12Z" />
-          </svg>
+          {props.mail ? (
+            <span className={styles.decoration}>&rArr;</span>
+          ) : (
+            <svg
+              className={styles.download_svg}
+              fill="#000000"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7.293,13.707a1,1,0,1,1,1.414-1.414L11,14.586V3a1,1,0,0,1,2,0V14.586l2.293-2.293a1,1,0,0,1,1.414,1.414l-4,4a1,1,0,0,1-.325.216.986.986,0,0,1-.764,0,1,1,0,0,1-.325-.216ZM22,12a1,1,0,0,0-1,1v7H3V13a1,1,0,0,0-2,0v8a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V13A1,1,0,0,0,22,12Z" />
+            </svg>
+          )}
         </a>
       )}
     </>

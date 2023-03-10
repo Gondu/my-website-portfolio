@@ -8,11 +8,10 @@ let currentResolution = "";
 
 const ProjectCard = (props) => {
   // Object destructuring, number -> number of project (es: 01, 02, etc), reverse -> reverse the project card
-  const { number, title, text, technologies, images, reverse } = props;
-
+  const { number, title, text, technologies, images, url, reverse } = props;
   const [hoveringImage, setHoveringImage] = useState(false);
-
   const PortfolioTheme = useTheme();
+
   if (useMediaQuery(PortfolioTheme.breakpoints.only("lg"))) {
     currentResolution = "lg";
   }
@@ -104,30 +103,46 @@ const ProjectCard = (props) => {
         </div>
         {/* Technologies */}
         <div className={styles.project_card__project__text__tech}>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[0]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[1]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[2]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[3]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[4]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[5]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[6]}
-          </div>
-          <div className={styles.project_card__project__text__tech__item}>
-            {technologies[7]}
-          </div>
+          { technologies[0] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[0]}
+            </div>
+          }
+          { technologies[1] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[1]}
+            </div>
+          }
+          { technologies[2] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[2]}
+            </div>
+          }
+          { technologies[3] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[3]}
+            </div>
+          }
+          { technologies[4] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[4]}
+            </div>
+          }
+          { technologies[5] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[5]}
+            </div>
+          }
+          { technologies[6] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[6]}
+            </div>
+          }
+          { technologies[7] &&
+            <div className={styles.project_card__project__text__tech__item}>
+              {technologies[7]}
+            </div>
+          }
         </div>
       </Grid>
 
@@ -141,34 +156,39 @@ const ProjectCard = (props) => {
         md={6}
         className={styles.project_card__project__image}
       >
-        <picture>
-          <source srcSet={images[3]} media="(min-width: 1440px)" />
-          <source srcSet={images[2]} media="(min-width: 1024px)" />
-          <source srcSet={images[1]} media="(min-width: 768px)" />
-          <img
-            onMouseEnter={() => {
-              setHoveringImage(true);
-            }}
-            onMouseLeave={() => {
-              setHoveringImage(false);
-            }}
-            className={`${
-              hoveringImage &&
-              (currentResolution === "md" || currentResolution === "lg") &&
-              styles.project_card__project__image__img_hover
-            } ${styles.project_card__project__image__img}`}
-            // to find the right negative margin to center the image -> height_text_card + ((height_img - height_text_card)/2)
-            style={
-              currentResolution === "md"
-                ? { marginTop: -353 }
-                : currentResolution === "lg"
-                ? { marginTop: -315 }
-                : { marginTop: 0 }
-            }
-            src={images[0]}
-            alt={`Project ${number}`}
-          />
-        </picture>
+        <a href={url} target="_blank" rel="noreferrer">
+          <picture>
+            <source srcSet={images[3]} media="(min-width: 1440px)" />
+            <source srcSet={images[2]} media="(min-width: 1024px)" />
+            <source srcSet={images[1]} media="(min-width: 768px)" />
+            <img
+              onMouseEnter={() => {
+                setHoveringImage(true);
+              }}
+              onMouseLeave={() => {
+                setHoveringImage(false);
+              }}
+              className={`${
+                hoveringImage &&
+                (currentResolution === "md" || currentResolution === "lg") &&
+                styles.project_card__project__image__img_hover
+              } ${styles.project_card__project__image__img}`}
+              // to find the right negative margin to center the image -> height_text_card + ((height_img - height_text_card)/2)
+              style={
+                currentResolution === "md"
+                  ? { marginTop: -353 }
+                  : currentResolution === "lg"
+                  ? { marginTop: -315 }
+                  : { marginTop: 0 }
+              }
+              src={images[0]}
+              alt={`Project ${number}`}
+              // id="img"
+            />
+            {/* <span className={styles.clipPath}>
+            </span> */}
+          </picture>
+        </a>
       </Grid>
     </div>
   );

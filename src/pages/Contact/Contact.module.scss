@@ -1,6 +1,55 @@
 @use "../../global-styles/globals.scss" as *;
 
 .contact_section {
-  height: 100vh;
-  // min-height: 100vh;
+  // height: 100vh;
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 140px;
+
+  @include tabletl {
+    margin-top: 35px;
+  }
+
+  @include desktop {
+    margin-top: 85px;
+  }
+
+  &__title {
+    text-align: center;
+    border-bottom: 3px solid $darkaqua;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 32px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Garamond Light";
+
+    @include tabletl {
+      margin-bottom: 40px;
+    }
+
+    &__contact {
+      color: $aqua;
+      font-size: 18px;
+      font-family: "Garamond Bold";
+
+      @include tabletl {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
+
+

@@ -14,7 +14,6 @@ import {
   glitch_loading_home_title_hover_data,
   home_text_glitch_writer_data,
   home_name_glitch_writer_data,
-  // home_role_glitch_writer_data,
   home_info_glitch_writer_data,
 } from "./HomeData";
 
@@ -41,7 +40,6 @@ const Home = (props) => {
 
     const myRoleWriter = new GlitchedWriter(
       "#homeRoleGlitchWriting",
-      // home_role_glitch_writer_data
       home_info_glitch_writer_data
     );
 
@@ -160,8 +158,8 @@ const Home = (props) => {
               <div ref={glitch_loading_home_button.ref}>
                 <MainGlitchButton
                   showButton={showButton}
-                  text="Contact me"
-                  link="#contact"
+                  text="My Projects"
+                  link="#work"
                 />
               </div>
             )}

@@ -84,6 +84,32 @@ function App() {
     },
   });
 
+  const glitch_socials_hover = useGlitch({
+    playMode: "hover",
+    createContainers: true,
+    hideOverflow: true,
+    timing: {
+      duration: 2000,
+      iterations: Infinity,
+    },
+    glitchTimeSpan: {
+      start: 0,
+      end: 1,
+    },
+    shake: {
+      velocity: 20,
+      amplitudeX: 0.005,
+      amplitudeY: 0.015,
+    },
+    slice: {
+      count: 3,
+      velocity: 5,
+      minHeight: 0.005,
+      maxHeight: 0.085,
+      hueRotate: true,
+    },
+  });
+
   // This will run one time after the component mounts
   useEffect(() => {
     setTimeout(() => setFakeLoaded(true), 2300);
@@ -149,11 +175,70 @@ function App() {
                 <Contact />
               </main>
               <footer>
-                Footer
-                <button
+                <div className={styles.footer}>
+                  <div className={styles.footer__socials}>
+                    <div className={styles.footer__socials_item}>
+                      <a
+                        ref={glitch_socials_hover.ref}
+                        href="https://www.linkedin.com/in/victor-semencenco/"
+                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__linkedin}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <i>
+                          <span></span>
+                        </i>
+                      </a>
+                    </div>
+                    <div className={styles.footer__socials_item}>
+                      <a
+                        ref={glitch_socials_hover.ref}
+                        href="https://github.com/Gondu"
+                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__github}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <i>
+                          <span></span>
+                        </i>
+                      </a>
+                    </div>
+                    <div className={styles.footer__socials_item}>
+                      <a
+                        ref={glitch_socials_hover.ref}
+                        href="https://www.facebook.com/victor.semencenco"
+                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__facebook}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <i>
+                          <span></span>
+                        </i>
+                      </a>
+                    </div>
+                    <div className={styles.footer__socials_item}>
+                      <a
+                        style={{ overflow: "visible" }}
+                        ref={glitch_socials_hover.ref}
+                        href="mailto:victor.semencenco@gmail.com"
+                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__email}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <i>
+                          <span></span>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                  <div className={styles.footer__copyright}>
+                    Designed & Built by Victor Semencenco &#169; 2023
+                  </div>
+                </div>
+                {/* <button
                   className={`${styles.btn} ${styles.btn2} testGlobalSCSSVariable`}
                   onClick={() => alert("I am globally styled")}
-                ></button>
+                ></button> */}
               </footer>
 
               {/* 

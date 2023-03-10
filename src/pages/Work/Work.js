@@ -3,7 +3,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
 // import Tilt from "react-parallax-tilt";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-// Project 1 images
+// Import project 1 images 
 import maseratiMobileImage from "../../assets/images/maserati_project_mobile.jpeg";
 import maseratiTabletPImage from "../../assets/images/maserati_project_tabletP.jpeg";
 import maseratiTabletLImage from "../../assets/images/maserati_project_tabletL.jpeg";
@@ -61,11 +61,9 @@ const Work = () => {
         {/* <div style={{ width: "100%", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}> */}
         {/* <div style={{ width: "100%", display: "flex", flexWrap: "wrap" }}> */}
 
-
-
         <ProjectCard
           number={"01"}
-          title={"Stellantis Websites"}
+          title={"Stellantis"}
           text={
             "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
           }
@@ -85,24 +83,25 @@ const Work = () => {
             maseratiTabletLImage,
             maseratiDesktopLgImage,
           ]}
+          url={"https://connect.maserati.com/us/en/login"}
         />
 
         <ProjectCard
           reverse
           number={"02"}
-          title={"Stellantis Websites"}
+          title={"Oliba"}
           text={
-            "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
+            "Oliba is a consulting company that provides scientific and strategic advice in the healthcare and pharmaceuticals sectors. I have been in charge of building the frontend side of their new health-related information website. The website provides articles about non-communicable diseases, how to prevent them and the risk factors and symptoms associated with them. Users can search for specific articles, filter and read them. For development I have primarily used React, JavaScript, Bootstrap, HTML and SCSS."
           }
           technologies={[
-            "Angular",
-            "TypeScript",
+            "React",
+            "JavaScript",
+            "MUI",
+            "Bootstrap",
             "HTML",
             "SCSS",
-            "Bootstrap",
-            "FCA API",
-            "PSA API",
-            "Invision",
+            "Git",
+            "Figma",
           ]}
           images={[
             maseratiMobileImage,
@@ -114,19 +113,19 @@ const Work = () => {
 
         <ProjectCard
           number={"03"}
-          title={"Stellantis Websites"}
+          title={"Toyota"}
           text={
-            "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
+            "I have been part of the frontend development team for Toyota's new dealer portal. The portal serves as a hub area where all the company apps that are used by their internal employees are displayed. Toyota dealers can easily search for any apps and download them. It also shows their future appointments, reports and documents. Moreover it allows them to display, manage and edit various information about their clients. For development we have used React with CSS Modules, TypeScript and Fluent UI."
           }
           technologies={[
-            "Angular",
+            "React",
             "TypeScript",
+            "Fluent UI",
+            "Bootstrap",
             "HTML",
             "SCSS",
-            "Bootstrap",
-            "FCA API",
-            "PSA API",
-            "Invision",
+            "Git",
+            "Figma",
           ]}
           images={[
             maseratiMobileImage,
@@ -139,19 +138,43 @@ const Work = () => {
         <ProjectCard
           reverse
           number={"04"}
-          title={"Stellantis Websites"}
+          title={"Ancient instrument"}
           text={
-            "Stellantis is the fifth largest automaker in the world and includes vehicle brands such Maserati, Dodge, Fiat, Peugeot, Jeep, Opel and many others. Following the Scrum and SAFe agile frameworks, I have been part of Stellantis' web development team and have had a major role in the creation and implementation of key features for their websites, such as the Appstore, the Google Maps integration and the Vehicle Status widgets. These features have been implemented in EMEA, NAFTA, LATAM and APAC regions."
+            "In 1984, an ancient Roman musical instrument was discovered during an excavation in the Italian city of Voghenza. Today, its remains are on display at the Civic Museum of Belriguardo. To help people learn more about this unique instrument, I created a website that showcases its history, virtually reconstructed 3D models, and simulated sounds. The website was built using JavaScript and jQuery, and I used the Unity Engine and C# programming language to create the 3D models and simulate the sounds."
           }
           technologies={[
-            "Angular",
-            "TypeScript",
+            "JavaScript",
+            "jQuery",
+            "C#",
+            "Unity",
             "HTML",
-            "SCSS",
+            "CSS",
             "Bootstrap",
-            "FCA API",
-            "PSA API",
-            "Invision",
+            "Audacity",
+          ]}
+          images={[
+            maseratiMobileImage,
+            maseratiTabletPImage,
+            maseratiTabletLImage,
+            maseratiDesktopLgImage,
+          ]}
+        />
+
+        <ProjectCard
+          number={"05"}
+          title={"Unity Game"}
+          text={
+            "During my Erasmus period in Denmark I collaborated with my university colleagues to design and develop a Unity 2D game called 'A Fox's Journey', using the C# programming language. The game's main objective is to increase players' motivation and sense of agency in order to address the issue of climate change. In the game, the arctic tundra has been affected by climate change, and the player must guide a little arctic fox back to her family while avoiding hostile predators and human-made pollution."
+          }
+          technologies={[
+            "Unity",
+            "C#",
+            "Illustrator",
+            "Blender",
+            "Animator",
+            "Photoshop",
+            "Trello",
+            "Discord",
           ]}
           images={[
             maseratiMobileImage,
