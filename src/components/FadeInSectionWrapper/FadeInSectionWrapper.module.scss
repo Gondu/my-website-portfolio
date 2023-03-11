@@ -1,0 +1,25 @@
+.fade_bottom_to_top {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(30%);
+}
+
+.fade_left_to_right {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(5%);
+}
+
+.fade_right_to_left {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-5%);
+}
+
+.fadeInVisible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+    transition: all 0.7s ease-out;
+}
+

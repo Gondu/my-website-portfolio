@@ -5,6 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Tilt from "react-parallax-tilt";
 import aboutMeImage from "../../assets/images/victor_semencenco_photo.jpg";
+import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
 
 // Icons
 import angularIcon from "../../assets/svg/angular_icon.svg";
@@ -57,7 +58,9 @@ const About = () => {
           lgOffset={2}
           lg={8}
         >
-          <h2 className={styles.about_section__title}>About me</h2>
+          <FadeInSectionWrapper fadeBottomToTop delay="300ms">
+            <h2 className={styles.about_section__title}>About me</h2>
+          </FadeInSectionWrapper>
         </Grid>
         {/* Image */}
         <Grid
@@ -70,278 +73,369 @@ const About = () => {
           lg={3}
           className={styles.about_section__image_ctn}
         >
-          <Tilt
-            scale={currentResolution === "xs" ? 1.001 : 1.05}
-            transitionSpeed={2000}
-            tiltMaxAngleX={5}
-            tiltMaxAngleY={5}
-          >
-            <img
-              onMouseEnter={() => {
-                setHoveringImage(true);
-              }}
-              onMouseLeave={() => {
-                setHoveringImage(false);
-              }}
-              className={`${
-                hoveringImage && styles.about_section__image_hover
-              } ${styles.about_section__image}`}
-              alt="Victor Semencenco"
-              src={aboutMeImage}
-            />
-          </Tilt>
+          <FadeInSectionWrapper fadeBottomToTop delay="300ms">
+            <Tilt
+              scale={currentResolution === "xs" ? 1.001 : 1.05}
+              transitionSpeed={2000}
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+            >
+              <img
+                onMouseEnter={() => {
+                  setHoveringImage(true);
+                }}
+                onMouseLeave={() => {
+                  setHoveringImage(false);
+                }}
+                className={`${
+                  hoveringImage && styles.about_section__image_hover
+                } ${styles.about_section__image}`}
+                alt="Victor Semencenco"
+                src={aboutMeImage}
+              />
+            </Tilt>
+          </FadeInSectionWrapper>
         </Grid>
         {/* Text */}
         <Grid xs={4} sm={8} md={6} lg={5}>
-          <Tilt
-            scale={
-              currentResolution === "sm" || currentResolution === "xs" ? 1 : 1.05
-            }
-            transitionSpeed={2000}
-            tiltMaxAngleX={5}
-            tiltMaxAngleY={5}
-          >
-            <div className={styles.about_section__text}>
-              <p>
-                Hi! I'm Victor, a Front-end developer with a passion for
-                creating interesting and unique web applications. I'm a
-                trilingual with a master degree in computer engineering and I've
-                had the privilege of working with awesome people on enterprise
-                level projects for important automotive brands such as Maserati,
-                Toyota, Dodge, Fiat, Opel and many others.
-              </p>
-              <br />
-              <p>
-                I'm a curious and determined person with high attention to
-                detail. I love reading books, playing sports and apart from web
-                development I'm also passionate about game development.
-              </p>
-              <br />
-              <p>
-                If you're interested in knowing some of the technologies I've
-                been working with, please take a look below.
-              </p>
-            </div>
-          </Tilt>
+          <FadeInSectionWrapper fadeBottomToTop delay="300ms">
+            <Tilt
+              scale={
+                currentResolution === "sm" || currentResolution === "xs"
+                  ? 1
+                  : 1.05
+              }
+              transitionSpeed={2000}
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+            >
+              <div className={styles.about_section__text}>
+                <p>
+                  Hi! I'm Victor, a Front-end developer with a passion for
+                  creating interesting and unique web applications. I'm a
+                  trilingual with a master degree in computer engineering and
+                  I've had the privilege of working with awesome people on
+                  enterprise level projects for important automotive brands such
+                  as Maserati, Toyota, Dodge, Fiat, Opel and many others.
+                </p>
+                <br />
+                <p>
+                  I'm a curious and determined person with high attention to
+                  detail. I love reading books, playing sports and apart from
+                  web development I'm also passionate about game development.
+                </p>
+                <br />
+                <p>
+                  If you're interested in knowing some of the technologies I've
+                  been working with, please take a look below.
+                </p>
+              </div>
+            </Tilt>
+          </FadeInSectionWrapper>
         </Grid>
         {/* Skills */}
         <Grid xs={4} sm={8} mdOffset={1} md={10} lgOffset={2} lg={8}>
           <div className={styles.about_section__skills}>
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={angularIcon}
-                  alt="Angular Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  Angular
+            <FadeInSectionWrapper fadeInRightSide delay="200ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={angularIcon}
+                    alt="Angular Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    Angular
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={tsIcon}
-                  alt="TypeScript Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  TypeScript
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="300ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={tsIcon}
+                    alt="TypeScript Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    TypeScript
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={reactIcon}
-                  alt="React Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  React
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="400ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={reactIcon}
+                    alt="React Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    React
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={jsIcon}
-                  alt="JavaScript Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  JavaScript
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="500ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={jsIcon}
+                    alt="JavaScript Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    JavaScript
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={htmlIcon}
-                  alt="HTML5 Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  HTML
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="600ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={htmlIcon}
+                    alt="HTML5 Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    HTML
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={cssIcon}
-                  alt="CSS3 Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  CSS
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="700ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={cssIcon}
+                    alt="CSS3 Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    CSS
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={sassIcon}
-                  alt="SASS Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  SASS
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="800ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={sassIcon}
+                    alt="SASS Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    SASS
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={bootstrapIcon}
-                  alt="Bootstrap Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  Bootstrap
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="900ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={bootstrapIcon}
+                    alt="Bootstrap Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    Bootstrap
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={materialuiIcon}
-                  alt="Materialui Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  MUI
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="1000ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={materialuiIcon}
+                    alt="Materialui Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    MUI
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={figmaIcon}
-                  alt="Figma Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  Figma
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="1100ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={figmaIcon}
+                    alt="Figma Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    Figma
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={jiraIcon}
-                  alt="Jira Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  Jira
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="1200ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={jiraIcon}
+                    alt="Jira Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    Jira
+                  </div>
                 </div>
-              </div>
-            </Tilt>
-
-            <Tilt
-              scale={currentResolution === "sm" || currentResolution === "xs" ? 1.001 : 1.3}
-              transitionSpeed={1000}
-              tiltMaxAngleX={0}
-              tiltMaxAngleY={0}
-            >
-              <div className={styles.about_section__skills__skill}>
-                <img
-                  className={styles.about_section__skills__skill__icon}
-                  src={gitIcon}
-                  alt="Git Icon"
-                ></img>
-                <div className={styles.about_section__skills__skill__text_icon}>
-                  Git
+              </Tilt>
+            </FadeInSectionWrapper>
+            <FadeInSectionWrapper fadeInRightSide delay="1300ms">
+              <Tilt
+                scale={
+                  currentResolution === "sm" || currentResolution === "xs"
+                    ? 1.001
+                    : 1.3
+                }
+                transitionSpeed={1000}
+                tiltMaxAngleX={0}
+                tiltMaxAngleY={0}
+              >
+                <div className={styles.about_section__skills__skill}>
+                  <img
+                    className={styles.about_section__skills__skill__icon}
+                    src={gitIcon}
+                    alt="Git Icon"
+                  ></img>
+                  <div
+                    className={styles.about_section__skills__skill__text_icon}
+                  >
+                    Git
+                  </div>
                 </div>
-              </div>
-            </Tilt>
+              </Tilt>
+            </FadeInSectionWrapper>
           </div>
         </Grid>
       </Grid>

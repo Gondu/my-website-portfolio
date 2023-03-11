@@ -5,6 +5,9 @@ import styles from "./App.module.scss";
 import { ThemeProvider } from "@mui/material/styles";
 import { PortfolioTheme } from "./PortfolioThemeMUI";
 import { CssBaseline } from "@mui/material";
+import { useGlitch } from "react-powerglitch";
+import useScrollDirection from "./hooks/useScrollDirection";
+import FadeInSectionWrapper from "./components/FadeInSectionWrapper/FadeInSectionWrapper";
 // Import Pages
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import Navbar from "./components/Navbar/Navbar";
@@ -12,17 +15,8 @@ import Home from "./pages/Home/Home";
 import Work from "./pages/Work/Work";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import useScrollDirection from "./hooks/useScrollDirection";
 import GridWrapper from "./components/GridWrapper/GridWrapper";
 import ScrollDownButton from "./components/ScrollDownButton/ScrollDownButton";
-import { useGlitch } from "react-powerglitch";
-
-// import Button from "@mui/material/Button";
-// import Paper from "@mui/material/Paper";
-// import imageTest from "./imageTest.jpg";
-// import Grid from "@mui/material/Grid";
-// import Grid from "@mui/material/Unstable_Grid2";
-// import g from "./global-styles/globals.scss";
 
 function App() {
   // Use array destructuring
@@ -160,15 +154,6 @@ function App() {
             </header>
             <GridWrapper>
               <main>
-                {/* <Routes>
-                  <Route path="/" element={<Navbar />}>
-                    <Route index element={<Home />} />
-                    <Route path="work" element={<Work />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="*" element={<Page404 />} />
-                  </Route>
-                </Routes> */}
                 <Home burgerNavIsOpen={burgerNavIsOpen} />
                 <About />
                 <Work />
@@ -177,118 +162,75 @@ function App() {
               <footer>
                 <div className={styles.footer}>
                   <div className={styles.footer__socials}>
-                    <div className={styles.footer__socials_item}>
-                      <a
-                        ref={glitch_socials_hover.ref}
-                        href="https://www.linkedin.com/in/victor-semencenco/"
-                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__linkedin}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i>
-                          <span></span>
-                        </i>
-                      </a>
-                    </div>
-                    <div className={styles.footer__socials_item}>
-                      <a
-                        ref={glitch_socials_hover.ref}
-                        href="https://github.com/Gondu"
-                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__github}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i>
-                          <span></span>
-                        </i>
-                      </a>
-                    </div>
-                    <div className={styles.footer__socials_item}>
-                      <a
-                        ref={glitch_socials_hover.ref}
-                        href="https://www.facebook.com/victor.semencenco"
-                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__facebook}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i>
-                          <span></span>
-                        </i>
-                      </a>
-                    </div>
-                    <div className={styles.footer__socials_item}>
-                      <a
-                        style={{ overflow: "visible" }}
-                        ref={glitch_socials_hover.ref}
-                        href="mailto:victor.semencenco@gmail.com"
-                        className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__email}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i>
-                          <span></span>
-                        </i>
-                      </a>
-                    </div>
+                    <FadeInSectionWrapper fadeInRightSide delay="200ms">
+                      <div className={styles.footer__socials_item}>
+                        <a
+                          ref={glitch_socials_hover.ref}
+                          href="https://www.linkedin.com/in/victor-semencenco/"
+                          className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__linkedin}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i>
+                            <span></span>
+                          </i>
+                        </a>
+                      </div>
+                    </FadeInSectionWrapper>
+                    <FadeInSectionWrapper fadeInRightSide delay="400ms">
+                      <div className={styles.footer__socials_item}>
+                        <a
+                          ref={glitch_socials_hover.ref}
+                          href="https://github.com/Gondu"
+                          className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__github}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i>
+                            <span></span>
+                          </i>
+                        </a>
+                      </div>
+                    </FadeInSectionWrapper>
+                    <FadeInSectionWrapper fadeInRightSide delay="600ms">
+                      <div className={styles.footer__socials_item}>
+                        <a
+                          ref={glitch_socials_hover.ref}
+                          href="https://www.facebook.com/victor.semencenco"
+                          className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__facebook}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i>
+                            <span></span>
+                          </i>
+                        </a>
+                      </div>
+                    </FadeInSectionWrapper>
+                    <FadeInSectionWrapper fadeInRightSide delay="800ms">
+                      <div className={styles.footer__socials_item}>
+                        <a
+                          style={{ overflow: "visible" }}
+                          ref={glitch_socials_hover.ref}
+                          href="mailto:victor.semencenco@gmail.com"
+                          className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__email}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i>
+                            <span></span>
+                          </i>
+                        </a>
+                      </div>
+                    </FadeInSectionWrapper>
                   </div>
-                  <div className={styles.footer__copyright}>
-                    Designed & Built by Victor Semencenco &#169; 2023
-                  </div>
+                  <FadeInSectionWrapper fadeBottomToTop>
+                    <p className={styles.footer__copyright}>
+                      Designed & Built by Victor Semencenco &#169; 2023
+                    </p>
+                  </FadeInSectionWrapper>
                 </div>
-                {/* <button
-                  className={`${styles.btn} ${styles.btn2} testGlobalSCSSVariable`}
-                  onClick={() => alert("I am globally styled")}
-                ></button> */}
               </footer>
-
-              {/* 
-              <Button color="primary" variant="contained">
-                MUI Button
-              </Button> */}
-
-              {/* <Grid
-                container
-                // 4 grid columns for Mobile, 8 for Tablet, 12 for Desktop
-                columns={{ xs: 4, sm: 8, lg: 12 }}
-                rowSpacing={PortfolioTheme.rowGutters}
-                columnSpacing={{
-                  xs: PortfolioTheme.columnGuttersDownMd,
-                  md: PortfolioTheme.columnGuttersUpMd,
-                }}
-              >
-                <Grid xs={2} sm={6} md={4} lg={8}>
-                  <Paper
-                    className={styles.paper}
-                    sx={{ bgcolor: "#cfe8fc", height: "10vh" }}
-                  >
-                    1111
-                  </Paper>
-                </Grid>
-                <Grid xs={2} sm={2} md={4} lg={4}>
-                  <Paper
-                    className={styles.paper}
-                    sx={{ bgcolor: "#cfe8fc", height: "10vh" }}
-                  >
-                    2222
-                  </Paper>
-                </Grid>
-                <Grid xs={2} sm={2} md={4} lg={3}>
-                  <Paper
-                    className={styles.paper}
-                    sx={{ bgcolor: "#cfe8fc", height: "10vh" }}
-                  >
-                    3333
-                  </Paper>
-                </Grid>
-                <Grid xs={2} sm={6} md={4} lg={9}>
-                  <Paper
-                    className={styles.paper}
-                    sx={{ bgcolor: "#cfe8fc", height: "10vh" }}
-                  >
-                    4444
-                  </Paper>
-                </Grid>
-              </Grid> */}
             </GridWrapper>
             <ScrollDownButton
               scrollDirection={scrollDirection}

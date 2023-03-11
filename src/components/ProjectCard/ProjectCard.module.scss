@@ -62,6 +62,22 @@
 
 			&__text {
 				padding-left: 8px;
+
+				&__anchor {
+					color: $aqua;
+          text-decoration: none;
+
+          &__external_link {
+            padding-left: 8px;
+            padding-right: 0;
+          }
+
+          &__external_link_reverse {
+            padding-left: 0;
+            padding-right: 8px;
+          }
+				}
+
 			}
 		}
 
@@ -179,7 +195,7 @@
 					position: relative;
 					filter: sepia(70%) hue-rotate(160deg) drop-shadow(5px 6px 6px #03071B) contrast(0.8) opacity(0.8) brightness(0.5);
 					max-height: 406px;
-					transition: all 0.65s cubic-bezier(.25,.95,.09,.9);
+					transition: transform 1.5s cubic-bezier(.25,.95,.09,.9);
 				}
 
 				@include desktop {

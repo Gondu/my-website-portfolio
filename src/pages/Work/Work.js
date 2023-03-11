@@ -1,13 +1,34 @@
 import styles from "./Work.module.scss";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
+import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
 // import Tilt from "react-parallax-tilt";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-// Import project 1 images 
+// Import Stellantis/Maserati images 
 import maseratiMobileImage from "../../assets/images/maserati_project_mobile.jpeg";
 import maseratiTabletPImage from "../../assets/images/maserati_project_tabletP.jpeg";
 import maseratiTabletLImage from "../../assets/images/maserati_project_tabletL.jpeg";
-import maseratiDesktopLgImage from "../../assets/images/maserati_project_desktop_lg.jpeg";
+import maseratiDesktopImage from "../../assets/images/maserati_project_desktop.jpeg";
+// Import Oliba images 
+import olibaMobileImage from "../../assets/images/oliba_project_mobile.jpg";
+import olibaTabletPImage from "../../assets/images/oliba_project_tabletP.jpg";
+import olibaTabletLImage from "../../assets/images/oliba_project_tabletL.jpg";
+import olibaDesktopImage from "../../assets/images/oliba_project_desktop.jpg";
+// Import Toyota images 
+import toyotaMobileImage from "../../assets/images/toyota_project_mobile.jpg";
+import toyotaTabletPImage from "../../assets/images/toyota_project_tabletP.jpg";
+import toyotaTabletLImage from "../../assets/images/toyota_project_tabletL.jpg";
+import toyotaDesktopImage from "../../assets/images/toyota_project_desktop.jpg";
+// Import Voghenza images 
+import voghenzaMobileImage from "../../assets/images/voghenza_project_mobile.jpg";
+import voghenzaTabletPImage from "../../assets/images/voghenza_project_tabletP.jpg";
+import voghenzaTabletLImage from "../../assets/images/voghenza_project_tabletL.jpg";
+import voghenzaDesktopImage from "../../assets/images/voghenza_project_desktop.jpg";
+// Import Fox images 
+import foxMobileImage from "../../assets/images/fox_project_mobile.jpg";
+import foxTabletPImage from "../../assets/images/fox_project_tabletP.jpg";
+import foxTabletLImage from "../../assets/images/fox_project_tabletL.jpg";
+import foxDesktopImage from "../../assets/images/fox_project_desktop.jpg";
 
 const Work = () => {
   const PortfolioTheme = useTheme();
@@ -28,38 +49,40 @@ const Work = () => {
           md: PortfolioTheme.columnGuttersUpMd,
         }}
       >
-        {/* Title section */}
-        <Grid
-          xsOffset={1}
-          xs={2}
-          smOffset={2}
-          sm={4}
-          mdOffset={1}
-          md={10}
-          lgOffset={2}
-          lg={8}
-        >
-          <h2 className={styles.work_section__title}>Work</h2>
-        </Grid>
+          {/* Title section */}
+          <Grid
+            xsOffset={1}
+            xs={2}
+            smOffset={2}
+            sm={4}
+            mdOffset={1}
+            md={10}
+            lgOffset={2}
+            lg={8}
+            >
+            <FadeInSectionWrapper fadeBottomToTop>
+              <h2 className={styles.work_section__title}>Work</h2>
+            </FadeInSectionWrapper>
+          </Grid>
 
-        {/* Subtitle section */}
-        <Grid
-          xsOffset={0}
-          xs={4}
-          smOffset={0}
-          sm={8}
-          mdOffset={1}
-          md={10}
-          lgOffset={2}
-          lg={8}
-        >
-          <p className={styles.work_section__subtitle}>
-            Some of the projects I’ve recently worked on either by myself or
-            with other amazing people I met from all over the world.
-          </p>
-        </Grid>
-        {/* <div style={{ width: "100%", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}> */}
-        {/* <div style={{ width: "100%", display: "flex", flexWrap: "wrap" }}> */}
+          {/* Subtitle section */}
+          <Grid
+            xsOffset={0}
+            xs={4}
+            smOffset={0}
+            sm={8}
+            mdOffset={1}
+            md={10}
+            lgOffset={2}
+            lg={8}
+          >
+            <FadeInSectionWrapper fadeBottomToTop delay="400ms">
+              <p className={styles.work_section__subtitle}>
+                Some of the projects I’ve recently worked on either by myself or
+                with other amazing people I met from all over the world.
+              </p>
+            </FadeInSectionWrapper>
+          </Grid>
 
         <ProjectCard
           number={"01"}
@@ -81,7 +104,7 @@ const Work = () => {
             maseratiMobileImage,
             maseratiTabletPImage,
             maseratiTabletLImage,
-            maseratiDesktopLgImage,
+            maseratiDesktopImage,
           ]}
           url={"https://connect.maserati.com/us/en/login"}
         />
@@ -104,11 +127,12 @@ const Work = () => {
             "Figma",
           ]}
           images={[
-            maseratiMobileImage,
-            maseratiTabletPImage,
-            maseratiTabletLImage,
-            maseratiDesktopLgImage,
+            olibaMobileImage,
+            olibaTabletPImage,
+            olibaTabletLImage,
+            olibaDesktopImage,
           ]}
+          url={"https://www.preventiontrainer.com/en"}
         />
 
         <ProjectCard
@@ -128,10 +152,10 @@ const Work = () => {
             "Figma",
           ]}
           images={[
-            maseratiMobileImage,
-            maseratiTabletPImage,
-            maseratiTabletLImage,
-            maseratiDesktopLgImage,
+            toyotaMobileImage,
+            toyotaTabletPImage,
+            toyotaTabletLImage,
+            toyotaDesktopImage,
           ]}
         />
 
@@ -153,18 +177,19 @@ const Work = () => {
             "Audacity",
           ]}
           images={[
-            maseratiMobileImage,
-            maseratiTabletPImage,
-            maseratiTabletLImage,
-            maseratiDesktopLgImage,
+            voghenzaMobileImage,
+            voghenzaTabletPImage,
+            voghenzaTabletLImage,
+            voghenzaDesktopImage,
           ]}
+          url={"http://csc.dei.unipd.it/vibra/"}
         />
 
         <ProjectCard
           number={"05"}
           title={"Unity Game"}
           text={
-            "During my Erasmus period in Denmark I collaborated with my university colleagues to design and develop a Unity 2D game called 'A Fox's Journey', using the C# programming language. The game's main objective is to increase players' motivation and sense of agency in order to address the issue of climate change. In the game, the arctic tundra has been affected by climate change, and the player must guide a little arctic fox back to her family while avoiding hostile predators and human-made pollution."
+            "During my Erasmus period in Denmark I collaborated with my university colleagues to design and develop a Unity 2D game called 'A Fox's Journey', using the C# programming language. The game's main objective is to increase players' motivation and sense of agency in delay to address the issue of climate change. In the game, the arctic tundra has been affected by climate change, and the player must guide a little arctic fox back to her family while avoiding hostile predators and human-made pollution."
           }
           technologies={[
             "Unity",
@@ -177,15 +202,13 @@ const Work = () => {
             "Discord",
           ]}
           images={[
-            maseratiMobileImage,
-            maseratiTabletPImage,
-            maseratiTabletLImage,
-            maseratiDesktopLgImage,
+            foxMobileImage,
+            foxTabletPImage,
+            foxTabletLImage,
+            foxDesktopImage,
           ]}
+          url={"http://aleflavia.com/a-foxs-journey/"}
         />
-
-        {/* </div> */}
-        {/* </div> */}
       </Grid>
     </section>
   );

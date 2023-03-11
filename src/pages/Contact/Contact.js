@@ -3,6 +3,7 @@ import { useGlitch } from "react-powerglitch";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
 import MainGlitchButton from "../../components/MainGlitchButton/MainGlitchButton";
+import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
 
 const Contact = () => {
   const PortfolioTheme = useTheme();
@@ -34,73 +35,75 @@ const Contact = () => {
 
   return (
     <section className={styles.contact_section} id="contact">
-      <Grid
-        container
-        // 4 grid columns for Mobile, 8 for Tablet, 12 for Desktop
-        columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}
-        rowSpacing={PortfolioTheme.rowGutters}
-        columnSpacing={{
-          xs: PortfolioTheme.columnGuttersDownMd,
-          md: PortfolioTheme.columnGuttersUpMd,
-        }}
-      >
-        {/* Title */}
+      <FadeInSectionWrapper fadeBottomToTop>
         <Grid
-          xsOffset={1}
-          xs={2}
-          smOffset={2}
-          sm={4}
-          mdOffset={1}
-          md={10}
-          lgOffset={2}
-          lg={8}
+          container
+          // 4 grid columns for Mobile, 8 for Tablet, 12 for Desktop
+          columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}
+          rowSpacing={PortfolioTheme.rowGutters}
+          columnSpacing={{
+            xs: PortfolioTheme.columnGuttersDownMd,
+            md: PortfolioTheme.columnGuttersUpMd,
+          }}
         >
-          <h2 className={styles.contact_section__title}>Let's talk</h2>
+          {/* Title */}
+          <Grid
+            xsOffset={1}
+            xs={2}
+            smOffset={2}
+            sm={4}
+            mdOffset={1}
+            md={10}
+            lgOffset={2}
+            lg={8}
+          >
+            <h2 className={styles.contact_section__title}>Let's talk</h2>
+          </Grid>
+          {/* Subtitle section */}
+          <Grid
+            xsOffset={0}
+            xs={4}
+            smOffset={1}
+            sm={6}
+            mdOffset={1}
+            md={10}
+            lgOffset={2}
+            lg={8}
+          >
+            <p className={styles.contact_section__subtitle}>
+              I'm passionate about what I do and I'm always eager to connect
+              with others who share that same passion. Please don't hesitate to
+              get in touch if you would like to collaborate or have any
+              questions about my work. You can drop me a message anytime at{" "}
+              <a
+                href="mailto:victor.semencenco@gmail.com"
+                className={styles.contact_section__subtitle__contact}
+                ref={glitch_links_hover.ref}
+              >
+                victor.semencenco@gmail.com
+              </a>{" "}
+              or connect with me on{" "}
+              <a
+                href={"https://www.linkedin.com/in/victor-semencenco/"}
+                ref={glitch_links_hover.ref}
+                rel="noreferrer"
+                target="_blank"
+                className={styles.contact_section__subtitle__contact}
+              >
+                LinkedIn.
+              </a>
+            </p>
+          </Grid>
+          {/* Buttons section */}
+          <div className={styles.contact_section__buttons}>
+            <MainGlitchButton
+              // showButton={showButton}
+              text="Write me an email"
+              mail="mailto:victor.semencenco@gmail.com"
+            />
+          </div>
         </Grid>
-        {/* Subtitle section */}
-        <Grid
-          xsOffset={0}
-          xs={4}
-          smOffset={1}
-          sm={6}
-          mdOffset={1}
-          md={10}
-          lgOffset={2}
-          lg={8}
-        >
-          <p className={styles.contact_section__subtitle}>
-            I'm passionate about what I do and I'm always eager to connect with
-            others who share that same passion. Please don't hesitate to get in
-            touch if you would like to collaborate or have any questions about
-            my work. You can drop me a message anytime at{" "}
-            <a
-              href="mailto:victor.semencenco@gmail.com"
-              className={styles.contact_section__subtitle__contact}
-              ref={glitch_links_hover.ref}
-            >
-              victor.semencenco@gmail.com
-            </a>{" "}
-            or connect with me on{" "}
-            <a
-              href={"https://www.linkedin.com/in/victor-semencenco/"}
-              ref={glitch_links_hover.ref}
-              rel="noreferrer"
-              target="_blank"
-              className={styles.contact_section__subtitle__contact}
-            >
-              LinkedIn.
-            </a>
-          </p>
-        </Grid>
-        {/* Buttons section */}
-        <div className={styles.contact_section__buttons}>
-          <MainGlitchButton
-            // showButton={showButton}
-            text="Write me an email"
-            mail="mailto:victor.semencenco@gmail.com"
-          />
-        </div>
-      </Grid>
+      </FadeInSectionWrapper>
     </section>
   );
 };
