@@ -60,7 +60,9 @@ const Navbar = (props) => {
   };
 
   const glitch_loading_navbar = useGlitch(glitch_loading_navbar_data);
-  const glitch_loading_logoAndResume = useGlitch(glitch_loading_logoAndResume_data);
+  const glitch_loading_logoAndResume = useGlitch(
+    glitch_loading_logoAndResume_data
+  );
   const glitchNormalNavButtons = useGlitch(glitch_desktop_navItems);
   const glitchHamburgerNavButtons = useGlitch(glitch_mobile_navItems);
 

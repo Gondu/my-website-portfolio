@@ -1,10 +1,5 @@
 @use "../../global-styles/globals.scss" as *;
 
-// Used to find the negative margin that needs to be applied to the img (which has position absolute) to be centered with the project card
-@function findCardCenter($cardHeight, $imgHeight) {
-  @return $cardHeight + (($imgHeight - $cardHeight)/2);
-}
-
 .work_section {
   margin-top: 100px;
 

@@ -97,7 +97,6 @@ const Contact = () => {
           {/* Buttons section */}
           <div className={styles.contact_section__buttons}>
             <MainGlitchButton
-              // showButton={showButton}
               text="Write me an email"
               mail="mailto:victor.semencenco@gmail.com"
             />

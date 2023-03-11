@@ -22,31 +22,31 @@ const GridWrapper = (props) => {
   }
 
   return (
-		<Container
-			sx={{
-				maxWidth: PortfolioTheme.containerBreakpointMaxWidth,
-				paddingLeft:
-					currentResolution === "xs"
-						? PortfolioTheme.marginsContainerXs
-						: currentResolution === "sm"
-						? PortfolioTheme.marginsContainerSm
-						: currentResolution === "md"
-						? PortfolioTheme.marginsContainerMd
-						: "0",
-				paddingRight:
-					currentResolution === "xs"
-						? PortfolioTheme.marginsContainerXs
-						: currentResolution === "sm"
-						? PortfolioTheme.marginsContainerSm
-						: currentResolution === "md"
-						? PortfolioTheme.marginsContainerMd
-						: "0",
-			}}
-			disableGutters={true}
-			maxWidth={false}
-		>
-			{props.children}
-		</Container>
+    <Container
+      sx={{
+        maxWidth: PortfolioTheme.containerBreakpointMaxWidth,
+        paddingLeft:
+          currentResolution === "xs"
+            ? PortfolioTheme.marginsContainerXs
+            : currentResolution === "sm"
+            ? PortfolioTheme.marginsContainerSm
+            : currentResolution === "md"
+            ? PortfolioTheme.marginsContainerMd
+            : "0",
+        paddingRight:
+          currentResolution === "xs"
+            ? PortfolioTheme.marginsContainerXs
+            : currentResolution === "sm"
+            ? PortfolioTheme.marginsContainerSm
+            : currentResolution === "md"
+            ? PortfolioTheme.marginsContainerMd
+            : "0",
+      }}
+      disableGutters={true}
+      maxWidth={false}
+    >
+      {props.children}
+    </Container>
   );
 };
 

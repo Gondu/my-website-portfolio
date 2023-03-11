@@ -61,17 +61,22 @@ const LoadingScreen = (props) => {
 
   return (
     <div
-      className={`${styles.preloader_container} ${props.fakeLoadedFadeOut && styles.preloader_container_fade_out}`}
+      className={`${styles.preloader_container} ${
+        props.fakeLoadedFadeOut && styles.preloader_container_fade_out
+      }`}
     >
       <img
-      className={`${styles.icon} ${props.fakeLoadedFadeOut && styles.icon_fade_out}`}
-        // className={styles.icon}
+        className={`${styles.icon} ${
+          props.fakeLoadedFadeOut && styles.icon_fade_out
+        }`}
         ref={glitch.ref}
         src={logo}
         alt="Logo Victor Semencenco"
       />
       <div
-        className={`${styles.text} ${props.fakeLoadedFadeOut && styles.text_fade_out}`}
+        className={`${styles.text} ${
+          props.fakeLoadedFadeOut && styles.text_fade_out
+        }`}
         data-text="Loading..."
         id="loadingScreenGlitchWriting"
       ></div>

@@ -1,28 +1,8 @@
-// Fonts - Avalon
-@font-face {
-  font-family: "Avalon Regular";
-  src: local("Avalon_Regular"),
-    url("../assets/fonts/Avalon/Avalon_Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Avalon ExtraLight";
-  src: local("Avalon-ExtraLight"),
-    url("../assets/fonts/Avalon/Avalon-ExtraLight.ttf") format("truetype");
-}
-
 // Fonts - Elianto
 @font-face {
   font-family: "Elianto";
   src: local("Elianto-Regular"),
     url("../assets/fonts/Elianto-Regular.ttf") format("truetype");
-}
-
-// Fonts - VT323
-@font-face {
-  font-family: "VT323";
-  src: local("VT323-Regular"),
-    url("../assets/fonts/VT323-Regular.ttf") format("truetype");
 }
 
 // Fonts - Cormorant Garamond
@@ -54,35 +34,4 @@
   font-family: "Garamond Bold";
   src: local("CormorantGaramond-Bold"),
     url("../assets/fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf") format("truetype");
-}
-
-// Fonts - Proxima Nova
-@font-face {
-  font-family: "ProximaNova Thin";
-  src: local("Proxima Nova Thin"),
-    url("../assets/fonts/Proxima_Nova/Proxima\ Nova\ Thin.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ProximaNova Regular";
-  src: local("ProximaNova-Regular"),
-    url("../assets/fonts/Proxima_Nova/ProximaNova-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ProximaNova Bold";
-  src: local("Proxima Nova Bold"),
-    url("../assets/fonts/Proxima_Nova/Proxima\ Nova\ Bold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ProximaNova Extrabold";
-  src: local("Proxima Nova Extrabold"),
-    url("../assets/fonts/Proxima_Nova/Proxima\ Nova\ Extrabold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "ProximaNova Black";
-  src: local("Proxima Nova Black"),
-    url("../assets/fonts/Proxima_Nova/Proxima\ Nova\ Black.otf") format("opentype");
 }

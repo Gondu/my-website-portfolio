@@ -5,7 +5,7 @@ const FadeInSectionWrapper = ({
   fadeBottomToTop,
   fadeInRightSide,
   fadeInLeftSide,
-	delay,
+  delay,
   children,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +52,7 @@ const FadeInSectionWrapper = ({
             : ""
           : isVisible && styles.fadeInVisible
       }`}
-			style={isVisible ? {transitionDelay: `${delay}`} : {}}
+      style={isVisible ? { transitionDelay: `${delay}` } : {}}
     >
       {children}
     </div>

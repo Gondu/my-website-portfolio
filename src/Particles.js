@@ -2,10 +2,6 @@ import { useCallback, useMemo } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import g from "./global-styles/globals.scss";
-// import "./global-styles/globals.scss" as *;
-// import "./App.module.scss";
-
-// import { loadFull } from "tsparticles";
 
 const ParticlesComponent = (props) => {
   const options = useMemo(() => {
@@ -70,8 +66,6 @@ const ParticlesComponent = (props) => {
   }, []);
 
   const particlesInit = useCallback(async (engine) => {
-    // console.log(engine);
-    // loadFull(engine);
     await loadSlim(engine);
   }, []);
 

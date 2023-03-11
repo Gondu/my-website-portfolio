@@ -2,8 +2,7 @@
 // files and media-queries.scss, fonts, etc will be also be imported as well
 @forward "./media-queries.scss";
 @forward "./fonts.scss";
-@use "media-queries" as *; 
-// @use "./fonts.scss";
+@use "media-queries" as *;
 
 /* These are the global css variables */
 // Colors
@@ -12,7 +11,6 @@ $black: #000000;
 $grey: #484848;
 $lightgrey: #F5F5F5;
 $blue: #151A36;
-// $darkblue: #020513;
 $darkblue: #03071B;
 $lightblue: #0A0E24;
 $aqua: #00FFFF;
@@ -33,7 +31,13 @@ $marginsContainerSm: 24px;
 $marginsContainerMd: 32px;
 
 // Reset styles
-h1,h2,h3,h4,h5,h6,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -73,7 +77,6 @@ h2 {
 
 h3 {
   font-size: 24px;
-  // font-family: 'Garamond SemiBold';
   font-family: 'Garamond Medium';
   color: $aqua;
 
@@ -104,7 +107,6 @@ p {
 }
 
 * {
-  // font-family: "Garamond Regular", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -112,26 +114,31 @@ p {
 
 html {
   height: 100%;
-  
+
   // Custom scrollbar style for most of the browsers except Firefox
   ::-webkit-scrollbar-button {
     background-color: $blue;
     height: 3px;
   }
+
   ::-webkit-scrollbar {
     width: 7px;
   }
+
   ::-webkit-scrollbar-track {
     background-color: $blue;
   }
+
   ::-webkit-scrollbar-thumb {
     background: $grey;
     border-radius: 10px;
     -webkit-border-radius: 10px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: $darkaqua;
   }
+
   ::-webkit-scrollbar-thumb:active {
     background: $aqua;
   }
@@ -151,8 +158,6 @@ html {
 
 body {
   height: 100%;
-  // line-height: 1.5;
-  // line-height: normal;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -160,13 +165,6 @@ body {
 :export {
   blue: $blue;
   aqua: $aqua;
-  grey: $grey;
-  lightgrey: $lightgrey;
-  darkblue: $darkblue;
-  lightblue: $lightblue;
-  darkaqua: $darkaqua;
-  lightaqua: $lightaqua;
-  red: $red;
   containerBreakpointMaxWidth: $containerBreakpointMaxWidth;
   rowGutters: $rowGutters;
   columnGuttersDownMd: $columnGuttersDownMd;
@@ -174,12 +172,4 @@ body {
   marginsContainerXs: $marginsContainerXs;
   marginsContainerSm: $marginsContainerSm;
   marginsContainerMd: $marginsContainerMd;
-  navbar_height: $navbar_height;
 }
-
-// This class can be used on any html component in any javascript file
-// .testGlobalSCSSVariable {
-//   padding: 40px;
-//   // roboto is the google font that is used in android
-//   font-family: "roboto";
-// }

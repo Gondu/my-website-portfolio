@@ -29,36 +29,6 @@
 		transform: scaleX(var(--scale, 1));
 		animation: glitch-p 11s infinite alternate;
 
-		// span {
-		// 	font-size: 24px;
-		// 	animation-name: blink;
-		// 	animation-duration: 1.4s;
-		// 	animation-iteration-count: infinite;
-		// 	animation-fill-mode: both;
-		// }
-
-		// span:nth-child(2) {
-		// 	animation-delay: .2s;
-		// }
-
-		// span:nth-child(3) {
-		// 	animation-delay: .4s;
-		// }
-
-		// @keyframes blink {
-		// 	0% {
-		// 		opacity: .2;
-		// 	}
-
-		// 	20% {
-		// 		opacity: 1;
-		// 	}
-
-		// 	100% {
-		// 		opacity: .2;
-		// 	}
-		// }
-
 		&::before,
 		&::after {
 			--top: 0; // offset from top [0 - 10]
@@ -108,7 +78,6 @@
 
 			100% {
 				opacity: 0;
-				// display: none;
 			}
 		}
 	}
@@ -125,7 +94,6 @@
 
 			100% {
 				opacity: 0;
-				// background-color: green;
 			}
 		}
 	}
@@ -271,83 +239,3 @@
 		}
 	}
 }
-
-.preloader_container_fade_out {
-	// background-color: black;
-	// width: 100%;
-	// height: 100%;
-	// position: relative;
-	// z-index: 1000;
-	// animation: transitionIn ease 1s;
-	// animation-iteration-count: 1;
-	// animation-fill-mode: forwards;
-
-	// // height: 100vh;
-	// // position: fixed;
-	// // top: 0;
-	// // right: 0;
-	// // z-index: 200;
-	// // transition: width 0.3s, opacity 0.3s;
-
-	// @keyframes transitionIn {
-	// 	0% {
-	// 		opacity: 1;
-	// 	}
-
-	// 	100% {
-	// 		opacity: 0;
-	// 	}
-	// }
-
-	// @-webkit-keyframes transitionIn {
-	// 	0% {
-	// 		opacity: 1;
-	// 	}
-
-	// 	100% {
-	// 		opacity: 0;
-	// 	}
-	// }
-
-	// @-moz-keyframes transitionIn {
-	// 	0% {
-	// 		opacity: 1;
-	// 	}
-
-	// 	100% {
-	// 		opacity: 0;
-	// 	}
-	// }
-
-	// @-o-keyframes transitionIn {
-	// 	0% {
-	// 		opacity: 1;
-	// 	}
-
-	// 	100% {
-	// 		opacity: 0;
-	// 	}
-	// }
-
-	// @-ms-keyframes transitionIn {
-	// 	0% {
-	// 		opacity: 1;
-	// 	}
-
-	// 	100% {
-	// 		opacity: 0;
-	// 	}
-	// }
-
-}
-
-
-// @keyframes transitionIn {
-//   from {
-// 	opacity: 1;
-//   }
-//   to {
-// 	opacity: 0;
-// 	// background-color: $black;
-//   }
-// }

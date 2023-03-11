@@ -2,29 +2,28 @@ import styles from "./Work.module.scss";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useTheme } from "@mui/material/styles";
 import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
-// import Tilt from "react-parallax-tilt";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-// Import Stellantis/Maserati images 
+// Import Stellantis/Maserati images
 import maseratiMobileImage from "../../assets/images/maserati_project_mobile.jpeg";
 import maseratiTabletPImage from "../../assets/images/maserati_project_tabletP.jpeg";
 import maseratiTabletLImage from "../../assets/images/maserati_project_tabletL.jpeg";
 import maseratiDesktopImage from "../../assets/images/maserati_project_desktop.jpeg";
-// Import Oliba images 
+// Import Oliba images
 import olibaMobileImage from "../../assets/images/oliba_project_mobile.jpg";
 import olibaTabletPImage from "../../assets/images/oliba_project_tabletP.jpg";
 import olibaTabletLImage from "../../assets/images/oliba_project_tabletL.jpg";
 import olibaDesktopImage from "../../assets/images/oliba_project_desktop.jpg";
-// Import Toyota images 
+// Import Toyota images
 import toyotaMobileImage from "../../assets/images/toyota_project_mobile.jpg";
 import toyotaTabletPImage from "../../assets/images/toyota_project_tabletP.jpg";
 import toyotaTabletLImage from "../../assets/images/toyota_project_tabletL.jpg";
 import toyotaDesktopImage from "../../assets/images/toyota_project_desktop.jpg";
-// Import Voghenza images 
+// Import Voghenza images
 import voghenzaMobileImage from "../../assets/images/voghenza_project_mobile.jpg";
 import voghenzaTabletPImage from "../../assets/images/voghenza_project_tabletP.jpg";
 import voghenzaTabletLImage from "../../assets/images/voghenza_project_tabletL.jpg";
 import voghenzaDesktopImage from "../../assets/images/voghenza_project_desktop.jpg";
-// Import Fox images 
+// Import Fox images
 import foxMobileImage from "../../assets/images/fox_project_mobile.jpg";
 import foxTabletPImage from "../../assets/images/fox_project_tabletP.jpg";
 import foxTabletLImage from "../../assets/images/fox_project_tabletL.jpg";
@@ -34,11 +33,7 @@ const Work = () => {
   const PortfolioTheme = useTheme();
 
   return (
-    <section
-      className={styles.work_section}
-      // style={{height: 500, backgroundColor: "#f0000f"}}
-      id="work"
-    >
+    <section className={styles.work_section} id="work">
       <Grid
         container
         // 4 grid columns for Mobile, 8 for Tablet, 12 for Desktop
@@ -49,40 +44,40 @@ const Work = () => {
           md: PortfolioTheme.columnGuttersUpMd,
         }}
       >
-          {/* Title section */}
-          <Grid
-            xsOffset={1}
-            xs={2}
-            smOffset={2}
-            sm={4}
-            mdOffset={1}
-            md={10}
-            lgOffset={2}
-            lg={8}
-            >
-            <FadeInSectionWrapper fadeBottomToTop>
-              <h2 className={styles.work_section__title}>Work</h2>
-            </FadeInSectionWrapper>
-          </Grid>
+        {/* Title section */}
+        <Grid
+          xsOffset={1}
+          xs={2}
+          smOffset={2}
+          sm={4}
+          mdOffset={1}
+          md={10}
+          lgOffset={2}
+          lg={8}
+        >
+          <FadeInSectionWrapper fadeBottomToTop>
+            <h2 className={styles.work_section__title}>Work</h2>
+          </FadeInSectionWrapper>
+        </Grid>
 
-          {/* Subtitle section */}
-          <Grid
-            xsOffset={0}
-            xs={4}
-            smOffset={0}
-            sm={8}
-            mdOffset={1}
-            md={10}
-            lgOffset={2}
-            lg={8}
-          >
-            <FadeInSectionWrapper fadeBottomToTop delay="400ms">
-              <p className={styles.work_section__subtitle}>
-                Some of the projects I’ve recently worked on either by myself or
-                with other amazing people I met from all over the world.
-              </p>
-            </FadeInSectionWrapper>
-          </Grid>
+        {/* Subtitle section */}
+        <Grid
+          xsOffset={0}
+          xs={4}
+          smOffset={0}
+          sm={8}
+          mdOffset={1}
+          md={10}
+          lgOffset={2}
+          lg={8}
+        >
+          <FadeInSectionWrapper fadeBottomToTop delay="400ms">
+            <p className={styles.work_section__subtitle}>
+              Some of the projects I’ve recently worked on either by myself or
+              with other amazing people I met from all over the world.
+            </p>
+          </FadeInSectionWrapper>
+        </Grid>
 
         <ProjectCard
           number={"01"}

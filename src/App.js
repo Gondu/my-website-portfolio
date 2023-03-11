@@ -131,10 +131,6 @@ function App() {
       <Particles id="tsparticles" style={{ height: "100%", width: "100%" }} />
       {loaded && fakeLoaded ? (
         <div className={styles.App}>
-          {/* <Particles
-            id="tsparticles"
-            style={{ height: "100%", width: "100%" }}
-          /> */}
           <ThemeProvider theme={PortfolioTheme}>
             <CssBaseline enableColorScheme />
             <header

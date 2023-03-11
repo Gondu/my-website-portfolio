@@ -10,7 +10,6 @@
     z-index: 300;
 
     @include tabletp {
-      // top: 24px;
       right: $marginsContainerSm;
     }
   }
@@ -18,18 +17,8 @@
   .lines {
     height: 0;
     max-height: 0;
-    // display: flex;
-    // flex-wrap: wrap;
-    // max-height: 160px;
-    // width: 640px;
-
-    // @media (max-width: 640px) {
-    //   width: 320px;
-    // }
 
     .line {
-      // height: 80px;
-      // width: 80px;
       fill: none;
       stroke: $blue;
       stroke-width: 6px;
@@ -39,27 +28,22 @@
       transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
 
       .burger {
-        transition-property: all; 
+        transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 500ms;
-        
+
         &__show_top {
           top: 24px;
         }
-      
+
         &__show {
           top: 24px;
         }
-      
+
         &__hide {
           top: -100px;
         }
       }
-
-      // .burger {
-      //   border-radius: 50%;
-      //   background-color: red;
-      // }
     }
 
     .x {
@@ -161,10 +145,6 @@
           stroke-dashoffset: -158px;
           transition-delay: 100ms;
         }
-
-        // .x {
-        //   transition: transform 400ms 50ms;
-        // }
       }
     }
   }

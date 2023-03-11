@@ -1,16 +1,9 @@
 // These are the media query breakpoints
-// $media_query_breakpoint_mobile: 0;
 $media_query_breakpoint_tabletp: 768px;
 $media_query_breakpoint_tabletl: 1024px;
 $media_query_breakpoint_desktop: 1440px;
 
 // These are the media query mixins
-// @mixin mobile {
-//   @media only screen and (min-width: $media_query_breakpoint_mobile) {
-//     @content;
-//   }
-// }
-
 // Without adding a media query the scss rules will apply from 0 to 767px and up
 // For tabletp rule, the scss rules will apply from 768px to 1023px and up
 @mixin tabletp {

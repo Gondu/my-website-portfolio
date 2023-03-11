@@ -10,7 +10,6 @@ import externalLink from "../../assets/svg/external_link_icon.svg";
 let currentResolution = "";
 
 const ProjectCard = (props) => {
-  // Object destructuring, number -> number of project (es: 01, 02, etc), reverse -> reverse the project card
   const { number, title, text, technologies, images, url, reverse } = props;
   const [hoveringImage, setHoveringImage] = useState(false);
   const PortfolioTheme = useTheme();
@@ -276,10 +275,7 @@ const ProjectCard = (props) => {
                 }
                 src={images[0]}
                 alt={`Project ${number}`}
-                // id="img"
               />
-              {/* <span className={styles.clipPath}>
-            </span> */}
             </picture>
           </a>
         </Grid>

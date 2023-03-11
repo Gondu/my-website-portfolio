@@ -1,5 +1,3 @@
-// import Navbar from "./Navbar";
-// import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import { PortfolioTheme } from "../../PortfolioThemeMUI";
 import styles from "./Home.module.scss";
@@ -23,9 +21,7 @@ const Home = (props) => {
 
   const glitch_loading_home_button = useGlitch(glitch_loading_home_button_data);
   const glitch_loading_home_title = useGlitch(glitch_loading_home_title_data);
-  const glitch_loading_home_title_hover = useGlitch(
-    glitch_loading_home_title_hover_data
-  );
+  const glitch_loading_home_title_hover = useGlitch(glitch_loading_home_title_hover_data);
 
   useEffect(() => {
     const myTextWriter = new GlitchedWriter(

@@ -1,7 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import g from "./global-styles/globals.scss";
 
-
 export const PortfolioTheme = createTheme({
   //Breakpoints of the grid system
   breakpoints: {
@@ -20,30 +19,7 @@ export const PortfolioTheme = createTheme({
   marginsContainerXs: g.marginsContainerXs,
   marginsContainerSm: g.marginsContainerSm,
   marginsContainerMd: g.marginsContainerMd,
-  // spacing: 8,
-  palette: {
-    primary: {
-      main: g.aqua,
-    },
-    secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      // dark: will be calculated from palette.secondary.main automatically
-      contrastText: '#ffcc00',
-    },
-
-    // custom variable that I created inside the theme and which can be used as the other "primary", "secondary" etc variables 
-    custom: {
-      light: '#ffa726',
-      main: '#ffffff',
-      dark: '#ef6c00',
-      contrastText: 'rgba(0, 0, 0, 0.87)',
-    },
-  },
 });
-
-// console.log('theme.spacing', PortfolioTheme);
-// console.log("g.breakpoints_sm", g.breakpoints_sm);
 
 
 
