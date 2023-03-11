@@ -56,7 +56,9 @@ const Work = () => {
           lg={8}
         >
           <FadeInSectionWrapper fadeBottomToTop>
-            <h2 className={styles.work_section__title}>Work</h2>
+            <h2 className={styles.work_section__title} aria-label="Work">
+              Work
+            </h2>
           </FadeInSectionWrapper>
         </Grid>
 
@@ -72,7 +74,11 @@ const Work = () => {
           lg={8}
         >
           <FadeInSectionWrapper fadeBottomToTop delay="400ms">
-            <p className={styles.work_section__subtitle}>
+            <p
+              className={styles.work_section__subtitle}
+              aria-label="Some of the projects I’ve recently worked on either by myself or
+              with other amazing people I met from all over the world."
+            >
               Some of the projects I’ve recently worked on either by myself or
               with other amazing people I met from all over the world.
             </p>

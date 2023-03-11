@@ -91,6 +91,7 @@ const ProjectCard = (props) => {
           >
             <div
               className={styles.project_card__project__title__number}
+              aria-label={number}
               style={
                 reverse &&
                 (currentResolution === "md" || currentResolution === "lg")
@@ -124,6 +125,8 @@ const ProjectCard = (props) => {
                   rel="noreferrer"
                   ref={glitch_external_link_hover.ref}
                   className={styles.project_card__project__title__text__anchor}
+                  aria-label={`${number} ${title}`}
+                  tabIndex="0"
                 >
                   {currentResolution === "md" || currentResolution === "lg" ? (
                     <div>
@@ -180,7 +183,10 @@ const ProjectCard = (props) => {
           md={7}
           className={styles.project_card__project__text}
         >
-          <div className={styles.project_card__project__text__body}>
+          <div
+            className={styles.project_card__project__text__body}
+            aria-label={text}
+          >
             {/* Text */}
             <div
               style={
@@ -197,42 +203,42 @@ const ProjectCard = (props) => {
           <div className={styles.project_card__project__text__tech}>
             {technologies[0] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[0]}
+                <span aria-label={technologies[0]}>{technologies[0]}</span>
               </div>
             )}
             {technologies[1] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[1]}
+                <span aria-label={technologies[1]}>{technologies[1]}</span>
               </div>
             )}
             {technologies[2] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[2]}
+                <span aria-label={technologies[2]}>{technologies[2]}</span>
               </div>
             )}
             {technologies[3] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[3]}
+                <span aria-label={technologies[3]}>{technologies[3]}</span>
               </div>
             )}
             {technologies[4] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[4]}
+                <span aria-label={technologies[4]}>{technologies[4]}</span>
               </div>
             )}
             {technologies[5] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[5]}
+                <span aria-label={technologies[5]}>{technologies[5]}</span>
               </div>
             )}
             {technologies[6] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[6]}
+                <span aria-label={technologies[6]}>{technologies[6]}</span>
               </div>
             )}
             {technologies[7] && (
               <div className={styles.project_card__project__text__tech__item}>
-                {technologies[7]}
+                <span aria-label={technologies[7]}>{technologies[7]}</span>
               </div>
             )}
           </div>
@@ -248,7 +254,13 @@ const ProjectCard = (props) => {
           md={6}
           className={styles.project_card__project__image}
         >
-          <a href={url} target="_blank" rel="noreferrer">
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Project ${number} Image`}
+            tabIndex="0"
+          >
             <picture>
               <source srcSet={images[3]} media="(min-width: 1440px)" />
               <source srcSet={images[2]} media="(min-width: 1024px)" />

@@ -152,6 +152,12 @@ html {
   scrollbar-width: thin;
 }
 
+/* Accessibility - change color of focus rectangle */
+:focus {
+  outline: 2px solid $aqua;
+  outline-offset: 2px;
+}
+
 #root {
   height: 100%;
 }

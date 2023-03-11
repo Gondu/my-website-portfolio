@@ -57,7 +57,12 @@ const Contact = () => {
             lgOffset={2}
             lg={8}
           >
-            <h2 className={styles.contact_section__title}>Let's talk</h2>
+            <h2
+              className={styles.contact_section__title}
+              aria-label="Let's talk"
+            >
+              Let's talk
+            </h2>
           </Grid>
           {/* Subtitle section */}
           <Grid
@@ -70,7 +75,13 @@ const Contact = () => {
             lgOffset={2}
             lg={8}
           >
-            <p className={styles.contact_section__subtitle}>
+            <p
+              className={styles.contact_section__subtitle}
+              aria-label="I'm passionate about what I do and I'm always eager to connect
+              with others who share that same passion. Please don't hesitate to
+              get in touch if you would like to collaborate or have any
+              questions about my work. You can drop me a message anytime at victor.semencenco@gmail.com or connect with me on LinkedIn."
+            >
               I'm passionate about what I do and I'm always eager to connect
               with others who share that same passion. Please don't hesitate to
               get in touch if you would like to collaborate or have any
@@ -79,6 +90,9 @@ const Contact = () => {
                 href="mailto:victor.semencenco@gmail.com"
                 className={styles.contact_section__subtitle__contact}
                 ref={glitch_links_hover.ref}
+                aria-label="Write mail to victor.semencenco@gmail.com"
+                title="Write mail to victor.semencenco@gmail.com"
+                tabIndex="0"
               >
                 victor.semencenco@gmail.com
               </a>{" "}
@@ -89,6 +103,9 @@ const Contact = () => {
                 rel="noreferrer"
                 target="_blank"
                 className={styles.contact_section__subtitle__contact}
+                aria-label="Go to Linkedin"
+                title="Go to Linkedin"
+                tabIndex="0"
               >
                 LinkedIn.
               </a>

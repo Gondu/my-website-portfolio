@@ -41,6 +41,8 @@ const HamburgerNavbarIcon = (props) => {
               height="100"
               width="100"
               viewBox="0 0 100 100"
+              tabIndex="0"
+              aria-label="Open Navigation Menu"
             >
               <path
                 className={`${styles.line} ${styles.line1}`}
@@ -73,6 +75,8 @@ const HamburgerNavbarIcon = (props) => {
               height="100"
               width="100"
               viewBox="0 0 100 100"
+              tabIndex="0"
+              aria-label="Close Navigation Menu"
             >
               <path className={styles.line} d="M 34,32 L 66,68" />
               <path className={styles.line} d="M 66,32 L 34,68" />

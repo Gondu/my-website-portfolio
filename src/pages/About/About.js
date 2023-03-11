@@ -59,7 +59,9 @@ const About = () => {
           lg={8}
         >
           <FadeInSectionWrapper fadeBottomToTop delay="300ms">
-            <h2 className={styles.about_section__title}>About me</h2>
+            <h2 className={styles.about_section__title} aria-label="About me">
+              About me
+            </h2>
           </FadeInSectionWrapper>
         </Grid>
         {/* Image */}
@@ -80,19 +82,27 @@ const About = () => {
               tiltMaxAngleX={5}
               tiltMaxAngleY={5}
             >
-              <img
-                onMouseEnter={() => {
-                  setHoveringImage(true);
-                }}
-                onMouseLeave={() => {
-                  setHoveringImage(false);
-                }}
-                className={`${
-                  hoveringImage && styles.about_section__image_hover
-                } ${styles.about_section__image}`}
-                alt="Victor Semencenco"
-                src={aboutMeImage}
-              />
+              <a
+                href="https://www.linkedin.com/in/victor-semencenco/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Victor Semencenco Image`}
+                tabIndex="0"
+              >
+                <img
+                  onMouseEnter={() => {
+                    setHoveringImage(true);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveringImage(false);
+                  }}
+                  className={`${
+                    hoveringImage && styles.about_section__image_hover
+                  } ${styles.about_section__image}`}
+                  alt="Victor Semencenco"
+                  src={aboutMeImage}
+                />
+              </a>
             </Tilt>
           </FadeInSectionWrapper>
         </Grid>
@@ -109,7 +119,18 @@ const About = () => {
               tiltMaxAngleX={5}
               tiltMaxAngleY={5}
             >
-              <div className={styles.about_section__text}>
+              <div
+                className={styles.about_section__text}
+                aria-label="Hi! I'm Victor, a Front-end developer with a passion for
+                  creating interesting and unique web applications. I'm a
+                  trilingual with a master degree in computer engineering and
+                  I've had the privilege of working with awesome people on
+                  enterprise level projects for important automotive brands such
+                  as Maserati, Toyota, Dodge, Fiat, Opel and many others. I'm a curious and determined person with high attention to
+                  detail. I love reading books, playing sports and apart from
+                  web development I'm also passionate about game development. If you're interested in knowing some of the technologies I've
+                  been working with, please take a look below."
+              >
                 <p>
                   Hi! I'm Victor, a Front-end developer with a passion for
                   creating interesting and unique web applications. I'm a
@@ -155,6 +176,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="Angular"
                   >
                     Angular
                   </div>
@@ -180,6 +202,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="TypeScript"
                   >
                     TypeScript
                   </div>
@@ -205,6 +228,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="React"
                   >
                     React
                   </div>
@@ -230,6 +254,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="JavaScript"
                   >
                     JavaScript
                   </div>
@@ -255,6 +280,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="HTML"
                   >
                     HTML
                   </div>
@@ -280,6 +306,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="CSS"
                   >
                     CSS
                   </div>
@@ -305,6 +332,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="SASS"
                   >
                     SASS
                   </div>
@@ -330,6 +358,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="Bootstrap"
                   >
                     Bootstrap
                   </div>
@@ -355,6 +384,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="MUI"
                   >
                     MUI
                   </div>
@@ -380,6 +410,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="Figma"
                   >
                     Figma
                   </div>
@@ -405,6 +436,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="Jira"
                   >
                     Jira
                   </div>
@@ -430,6 +462,7 @@ const About = () => {
                   ></img>
                   <div
                     className={styles.about_section__skills__skill__text_icon}
+                    aria-label="Git"
                   >
                     Git
                   </div>

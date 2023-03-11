@@ -78,6 +78,7 @@ const LoadingScreen = (props) => {
           props.fakeLoadedFadeOut && styles.text_fade_out
         }`}
         data-text="Loading..."
+        aria-label="Loading..."
         id="loadingScreenGlitchWriting"
       ></div>
     </div>

@@ -91,6 +91,9 @@ const Navbar = (props) => {
                   id="homeNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
+                  tabIndex="0"
+                  role="link"
+                  aria-label="Home"
                 >
                   Home
                 </Link>
@@ -103,6 +106,9 @@ const Navbar = (props) => {
                   id="aboutNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
+                  tabIndex="0"
+                  role="link"
+                  aria-label="About"
                 >
                   About
                 </Link>
@@ -115,6 +121,9 @@ const Navbar = (props) => {
                   id="workNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
+                  tabIndex="0"
+                  role="link"
+                  aria-label="Work"
                 >
                   Work
                 </Link>
@@ -127,6 +136,9 @@ const Navbar = (props) => {
                   id="contactNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
+                  tabIndex="0"
+                  role="link"
+                  aria-label="Contact"
                 >
                   Contact
                 </Link>
@@ -158,6 +170,9 @@ const Navbar = (props) => {
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
                 to="#home"
+                tabIndex="0"
+                role="link"
+                aria-label="Home"
               >
                 Home
               </Link>
@@ -168,6 +183,9 @@ const Navbar = (props) => {
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
                 to="#about"
+                tabIndex="0"
+                role="link"
+                aria-label="About"
               >
                 About
               </Link>
@@ -178,6 +196,9 @@ const Navbar = (props) => {
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
                 to="#work"
+                tabIndex="0"
+                role="link"
+                aria-label="Work"
               >
                 Work
               </Link>
@@ -188,6 +209,9 @@ const Navbar = (props) => {
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
                 to="#contact"
+                tabIndex="0"
+                role="link"
+                aria-label="Contact"
               >
                 Contact
               </Link>

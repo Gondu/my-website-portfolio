@@ -21,7 +21,9 @@ const Home = (props) => {
 
   const glitch_loading_home_button = useGlitch(glitch_loading_home_button_data);
   const glitch_loading_home_title = useGlitch(glitch_loading_home_title_data);
-  const glitch_loading_home_title_hover = useGlitch(glitch_loading_home_title_hover_data);
+  const glitch_loading_home_title_hover = useGlitch(
+    glitch_loading_home_title_hover_data
+  );
 
   useEffect(() => {
     const myTextWriter = new GlitchedWriter(
@@ -85,7 +87,11 @@ const Home = (props) => {
             lgOffset={1}
             lg={11}
           >
-            <div id="homeTextGlitchWriting" className={styles.text}></div>
+            <div
+              id="homeTextGlitchWriting"
+              className={styles.text}
+              aria-label="Hi, my name is"
+            ></div>
           </Grid>
           <Grid
             xs={4}
@@ -105,7 +111,10 @@ const Home = (props) => {
                     className={`${styles.title__outer__glitch_title} ${styles.glitch} ${styles.layers}`}
                     data-text="Victor Semencenco"
                   >
-                    <h1 className={styles.title__outer__glitch_title__text}>
+                    <h1
+                      className={styles.title__outer__glitch_title__text}
+                      aria-label="Victor Semencenco"
+                    >
                       Victor Semencenco
                     </h1>
                   </div>
@@ -131,10 +140,12 @@ const Home = (props) => {
             <div className={styles.description}>
               <span
                 className={styles.description__role}
+                aria-label="Front-end Developer "
                 id="homeRoleGlitchWriting"
               ></span>
               <p
                 className={styles.description__info}
+                aria-label="based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
                 id="homeInfoGlitchWriting"
               ></p>
             </div>

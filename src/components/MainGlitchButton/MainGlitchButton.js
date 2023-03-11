@@ -80,6 +80,8 @@ const MainGlitchButton = (props) => {
             props.blue ? styles.btn_glitch_fill__blue : ""
           }`}
           ref={glitch.ref}
+          type="button"
+          aria-label={props.text}
         >
           {/*eslint-disable-next-line*/}
           <span className={styles.text}>{props.text}</span>
@@ -97,6 +99,8 @@ const MainGlitchButton = (props) => {
             props.blue ? styles.btn_glitch_fill__blue : ""
           }`}
           ref={glitch.ref}
+          type="button"
+          aria-label={props.text}
         >
           {/*eslint-disable-next-line*/}
           <span className={styles.text}>{props.text}</span>

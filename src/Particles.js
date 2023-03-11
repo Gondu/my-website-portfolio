@@ -27,7 +27,7 @@ const ParticlesComponent = (props) => {
         },
         modes: {
           push: {
-            quantity: 2,
+            quantity: 1,
           },
           repulse: {
             distance: 110,
@@ -36,7 +36,7 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         number: {
-          value: 40,
+          value: 30,
           // density: {
           //   enable: true,
           //   value_area: 800
@@ -52,9 +52,6 @@ const ParticlesComponent = (props) => {
           speed: { min: 1, max: 5 },
           out_mode: "bounce",
         },
-        // zIndex: {
-        // 	value: 20,
-        // },
         size: {
           value: { min: 1, max: 3 },
         },

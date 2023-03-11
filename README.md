@@ -1,6 +1,6 @@
-# Victor Semencenco Website Portfolio
+# Victor Semencenco | Personal Website Portfolio
 
-This project was designed and developed by myself (Victor Semencenco). 
+I'm a frontend developer that creates beautiful, functional websites that captivate users. Check out my website portfolio to view my latest projects and get in touch.
 
 ## Credits
 

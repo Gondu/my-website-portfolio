@@ -26,57 +26,57 @@ function App() {
   const [fakeLoaded, setFakeLoaded] = useState(false);
   const [fakeLoadedFadeOut, setFakeLoadedFadeOut] = useState(false);
 
-  const glitch_loading_home_screen1 = useGlitch({
-    playMode: "always",
-    createContainers: true,
-    hideOverflow: true,
-    timing: {
-      duration: 3000,
-      iterations: 1,
-    },
-    glitchTimeSpan: {
-      start: 0.15,
-      end: 0.25,
-    },
-    shake: {
-      velocity: 90,
-      amplitudeX: 0.01,
-      amplitudeY: 0.03,
-    },
-    slice: {
-      count: 3,
-      velocity: 5,
-      minHeight: 0.01,
-      maxHeight: 0.02,
-      hueRotate: true,
-    },
-  });
+  // const glitch_loading_home_screen1 = useGlitch({
+  //   playMode: "always",
+  //   createContainers: true,
+  //   hideOverflow: true,
+  //   timing: {
+  //     duration: 3000,
+  //     iterations: 1,
+  //   },
+  //   glitchTimeSpan: {
+  //     start: 0.15,
+  //     end: 0.25,
+  //   },
+  //   shake: {
+  //     velocity: 90,
+  //     amplitudeX: 0.01,
+  //     amplitudeY: 0.03,
+  //   },
+  //   slice: {
+  //     count: 3,
+  //     velocity: 5,
+  //     minHeight: 0.01,
+  //     maxHeight: 0.02,
+  //     hueRotate: true,
+  //   },
+  // });
 
-  const glitch_loading_home_screen2 = useGlitch({
-    playMode: "always",
-    createContainers: true,
-    hideOverflow: true,
-    timing: {
-      duration: 3000,
-      iterations: 1,
-    },
-    glitchTimeSpan: {
-      start: 0.75,
-      end: 0.95,
-    },
-    shake: {
-      velocity: 90,
-      amplitudeX: 0.01,
-      amplitudeY: 0.03,
-    },
-    slice: {
-      count: 5,
-      velocity: 5,
-      minHeight: 0.01,
-      maxHeight: 0.02,
-      hueRotate: true,
-    },
-  });
+  // const glitch_loading_home_screen2 = useGlitch({
+  //   playMode: "always",
+  //   createContainers: true,
+  //   hideOverflow: true,
+  //   timing: {
+  //     duration: 3000,
+  //     iterations: 1,
+  //   },
+  //   glitchTimeSpan: {
+  //     start: 0.75,
+  //     end: 0.95,
+  //   },
+  //   shake: {
+  //     velocity: 90,
+  //     amplitudeX: 0.01,
+  //     amplitudeY: 0.03,
+  //   },
+  //   slice: {
+  //     count: 5,
+  //     velocity: 5,
+  //     minHeight: 0.01,
+  //     maxHeight: 0.02,
+  //     hueRotate: true,
+  //   },
+  // });
 
   const glitch_socials_hover = useGlitch({
     playMode: "hover",
@@ -120,15 +120,16 @@ function App() {
 
   return (
     <>
-      <div
+      {/* Animation screen after load */}
+      {/* <div
         ref={glitch_loading_home_screen1.ref}
         className={styles.home_screen_glitch1}
       ></div>
       <div
         ref={glitch_loading_home_screen2.ref}
         className={styles.home_screen_glitch2}
-      ></div>
-      <Particles id="tsparticles" style={{ height: "100%", width: "100%" }} />
+      ></div> */}
+      <Particles id="tsparticles" className={styles.particles_ctn} />
       {loaded && fakeLoaded ? (
         <div className={styles.App}>
           <ThemeProvider theme={PortfolioTheme}>
@@ -166,6 +167,9 @@ function App() {
                           className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__linkedin}`}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Linkedin"
+                          title="Linkedin"
+                          tabIndex="0"
                         >
                           <i>
                             <span></span>
@@ -181,6 +185,9 @@ function App() {
                           className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__github}`}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Github"
+                          title="Github"
+                          tabIndex="0"
                         >
                           <i>
                             <span></span>
@@ -196,6 +203,9 @@ function App() {
                           className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__facebook}`}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Facebook"
+                          title="Facebook"
+                          tabIndex="0"
                         >
                           <i>
                             <span></span>
@@ -212,6 +222,9 @@ function App() {
                           className={`${styles.footer__socials_item_icon} ${styles.footer__socials_item_icon__email}`}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Email"
+                          title="Email"
+                          tabIndex="0"
                         >
                           <i>
                             <span></span>
@@ -221,7 +234,7 @@ function App() {
                     </FadeInSectionWrapper>
                   </div>
                   <FadeInSectionWrapper fadeBottomToTop>
-                    <p className={styles.footer__copyright}>
+                    <p className={styles.footer__copyright} aria-label="Designed & Built by Victor Semencenco &#169; 2023">
                       Designed & Built by Victor Semencenco &#169; 2023
                     </p>
                   </FadeInSectionWrapper>
