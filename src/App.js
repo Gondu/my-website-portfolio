@@ -67,7 +67,7 @@ function App() {
 
   return (
     <>
-      <Particles id="tsparticles" className={styles.particles_ctn} />
+      <Particles id="tsparticles" />
       {loaded && fakeLoaded ? (
         <div className={styles.App}>
           <ThemeProvider theme={PortfolioTheme}>
