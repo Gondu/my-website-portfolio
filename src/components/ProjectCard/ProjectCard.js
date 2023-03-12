@@ -254,13 +254,45 @@ const ProjectCard = (props) => {
           md={6}
           className={styles.project_card__project__image}
         >
-          <a
-            href={url}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Project ${number} Image`}
-            tabIndex="0"
-          >
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Project ${number} Image`}
+              tabIndex="0"
+            >
+              <picture>
+                <source srcSet={images[3]} media="(min-width: 1440px)" />
+                <source srcSet={images[2]} media="(min-width: 1024px)" />
+                <source srcSet={images[1]} media="(min-width: 768px)" />
+                <img
+                  onMouseEnter={() => {
+                    setHoveringImage(true);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveringImage(false);
+                  }}
+                  className={`${
+                    hoveringImage &&
+                    (currentResolution === "md" ||
+                      currentResolution === "lg") &&
+                    styles.project_card__project__image__img_hover
+                  } ${styles.project_card__project__image__img}`}
+                  // to find the right negative margin to center the image -> height_text_card + ((height_img - height_text_card)/2)
+                  style={
+                    currentResolution === "md"
+                      ? { marginTop: -353 }
+                      : currentResolution === "lg"
+                      ? { marginTop: -315 }
+                      : { marginTop: 0 }
+                  }
+                  src={images[0]}
+                  alt={`Project ${number}`}
+                />
+              </picture>
+            </a>
+          ) : (
             <picture>
               <source srcSet={images[3]} media="(min-width: 1440px)" />
               <source srcSet={images[2]} media="(min-width: 1024px)" />
@@ -289,7 +321,7 @@ const ProjectCard = (props) => {
                 alt={`Project ${number}`}
               />
             </picture>
-          </a>
+          )}
         </Grid>
       </FadeInSectionWrapper>
     </div>

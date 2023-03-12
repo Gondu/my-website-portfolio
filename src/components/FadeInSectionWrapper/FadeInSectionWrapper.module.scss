@@ -7,13 +7,13 @@
 .fade_left_to_right {
 	opacity: 0;
 	filter: blur(2px);
-	transform: translateX(5%);
+	transform: translateX(1%);
 }
 
 .fade_right_to_left {
 	opacity: 0;
 	filter: blur(2px);
-	transform: translateX(-5%);
+	transform: translateX(-1%);
 }
 
 .fadeInVisible {

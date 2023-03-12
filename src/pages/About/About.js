@@ -157,7 +157,7 @@ const About = () => {
         {/* Skills */}
         <Grid xs={4} sm={8} mdOffset={1} md={10} lgOffset={2} lg={8}>
           <div className={styles.about_section__skills}>
-            <FadeInSectionWrapper fadeInRightSide delay="200ms">
+            <FadeInSectionWrapper fadeInRightSide delay="350ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -183,7 +183,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="300ms">
+            <FadeInSectionWrapper fadeInRightSide delay="400ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -209,7 +209,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="400ms">
+            <FadeInSectionWrapper fadeInRightSide delay="450ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -261,7 +261,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="600ms">
+            <FadeInSectionWrapper fadeInRightSide delay="550ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -287,7 +287,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="700ms">
+            <FadeInSectionWrapper fadeInRightSide delay="600ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -313,7 +313,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="800ms">
+            <FadeInSectionWrapper fadeInRightSide delay="650ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -339,7 +339,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="900ms">
+            <FadeInSectionWrapper fadeInRightSide delay="700ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -365,7 +365,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="1000ms">
+            <FadeInSectionWrapper fadeInRightSide delay="750ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -391,7 +391,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="1100ms">
+            <FadeInSectionWrapper fadeInRightSide delay="800ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -417,7 +417,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="1200ms">
+            <FadeInSectionWrapper fadeInRightSide delay="850ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
@@ -443,7 +443,7 @@ const About = () => {
                 </div>
               </Tilt>
             </FadeInSectionWrapper>
-            <FadeInSectionWrapper fadeInRightSide delay="1300ms">
+            <FadeInSectionWrapper fadeInRightSide delay="900ms">
               <Tilt
                 scale={
                   currentResolution === "sm" || currentResolution === "xs"
