@@ -14,7 +14,7 @@ const ParticlesComponent = (props) => {
         zIndex: -1,
       },
       interactivity: {
-        detectsOn: "window",
+        detectsOn: "canvas",
         events: {
           onHover: {
             enable: true,
