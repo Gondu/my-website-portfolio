@@ -165,6 +165,7 @@ html {
 body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
+  height: 100vh; height: calc(var(--vh, 1vh) * 100) !important;
 }
 
 // This is used to export the scss variables into javascript files
