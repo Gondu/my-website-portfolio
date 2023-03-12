@@ -11,7 +11,7 @@ const ParticlesComponent = (props) => {
       },
       fullScreen: {
         enable: true,
-        zIndex: -1,
+        zIndex: 0,
       },
       interactivity: {
         // detectsOn: "canvas",
@@ -48,7 +48,7 @@ const ParticlesComponent = (props) => {
           value: { min: 0.2, max: 1 },
         },
       },
-      detectRetina: true,
+      // detectRetina: true,
     };
   }, []);
 
