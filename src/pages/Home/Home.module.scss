@@ -3,9 +3,16 @@
 .home_section {
   height: 100vh;
   min-height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @include desktop {
+    height: 100vh;
+    min-height: 100vh;
+  }
 
   &__top {
     height: 360px;
