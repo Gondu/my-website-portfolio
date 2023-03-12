@@ -56,7 +56,7 @@ const Home = (props) => {
       myInfoWriter.write(
         "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
       );
-      await wait(800);
+      await wait(500);
       setShowButton(true);
       await wait(1000);
       setShowTitle(true);

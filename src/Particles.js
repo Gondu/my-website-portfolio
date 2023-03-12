@@ -6,7 +6,7 @@ import g from "./global-styles/globals.scss";
 const ParticlesComponent = (props) => {
   const options = useMemo(() => {
     return {
-      fpsLimit: 60,
+      fpsLimit: 30,
       background: {
         color: g.blue,
       },
@@ -16,49 +16,39 @@ const ParticlesComponent = (props) => {
       },
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
           onHover: {
             enable: true,
             mode: "repulse",
           },
         },
         modes: {
-          push: {
-            quantity: 1,
-          },
           repulse: {
-            distance: 110,
+            distance: 130,
           },
         },
       },
       particles: {
         number: {
-          value: 30,
-          // density: {
-          //   enable: true,
-          //   value_area: 800
-          // }
+          value: 26,
         },
         links: {
           enable: true,
-          color: "#00FFFF",
-          distance: 100, // maximum distance for linking the particles
+          color: g.darkaqua,
+          distance: 167, // maximum distance for linking the particles
         },
         move: {
           enable: true,
-          speed: { min: 1, max: 5 },
+          speed: { min: 1, max: 2 },
           out_mode: "bounce",
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 1, max: 2 },
         },
         opacity: {
-          value: { min: 0.3, max: 0.7 },
+          value: { min: 0.2, max: 1 },
         },
       },
+      detectRetina: true,
     };
   }, []);
 

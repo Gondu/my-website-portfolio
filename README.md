@@ -6,6 +6,7 @@ I'm a frontend developer that creates beautiful, functional websites that captiv
 
 Some of the libraries and code I've used:
 
+### `background particles:` https://www.npmjs.com/package/react-tsparticles
 ### `glitch writer animation:` https://github.com/thetarnav/glitched-writer
 ### `glitch text/images/svg:` https://github.com/7PH/react-powerglitch
 ### `glitch button:` https://codepen.io/hirodashi/pen/YzGBYBY
