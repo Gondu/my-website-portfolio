@@ -114,6 +114,7 @@ p {
 
 html {
   height: 100%;
+  min-height: -webkit-fill-available;
 
   // Custom scrollbar style for most of the browsers except Firefox
   ::-webkit-scrollbar-button {
@@ -165,6 +166,7 @@ html {
 body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
+  min-height: -webkit-fill-available;
 }
 
 // This is used to export the scss variables into javascript files
