@@ -75,7 +75,7 @@
           }
 
           &__text {
-            animation: paths 5s step-end infinite;
+            animation: paths 25s step-end infinite;
           }
         }
 
@@ -104,13 +104,13 @@
         }
 
         .glitch::before {
-          animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-            font 8s step-end infinite, movement 10s step-end infinite;
+          animation: paths 25s step-end infinite, opacity 25s step-end infinite,
+            font 28s step-end infinite, movement 30s step-end infinite;
         }
 
         .glitch::after {
-          animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-            font 7s step-end infinite, movement 8s step-end infinite;
+          animation: paths 25s step-end infinite, opacity 25s step-end infinite,
+            font 27s step-end infinite, movement 28s step-end infinite;
         }
 
         &__inner {

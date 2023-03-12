@@ -6,7 +6,7 @@ const ScrollDownButton = (props) => {
     useState(false);
 
   useEffect(() => {
-    setTimeout(() => setHomeGlitchWritingFinished(true), 6500);
+    setTimeout(() => setHomeGlitchWritingFinished(true), 5500);
   }, []);
 
   return (

@@ -47,16 +47,16 @@ const Home = (props) => {
     );
 
     const beginGlitchWriting = async () => {
-      await wait(350);
+      await wait(250);
       await myTextWriter.write("Hi, my name is");
-      await wait(450);
+      await wait(350);
       await myNameWriter.write("Victor Semencenco");
-      await wait(300);
+      await wait(200);
       myRoleWriter.write("Front-end Developer ");
       myInfoWriter.write(
         "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
       );
-      await wait(500);
+      await wait(400);
       setShowButton(true);
       await wait(1000);
       setShowTitle(true);

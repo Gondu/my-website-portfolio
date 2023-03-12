@@ -32,7 +32,7 @@ export const glitch_loading_home_title_data = {
   createContainers: true,
   hideOverflow: true,
   timing: {
-    duration: 8000,
+    duration: 15000,
     iterations: Infinity,
   },
   glitchTimeSpan: {
@@ -87,10 +87,10 @@ export const glitch_loading_home_title_hover_data = {
 export const home_text_glitch_writer_data = {
   maxGhosts: 0.3,
   ghostChance: 0.1,
-  changeChance: 0.6,
-  steps: 4,
-  interval: 8,
-  delay: [10, 25],
+  changeChance: 0.75,
+  steps: 3,
+  interval: 5,
+  delay: [5, 10],
   oneAtATime: 1,
   glyphs: "!<>-_/[]{}—=+*^?#________大左",
   fillSpace: true,
