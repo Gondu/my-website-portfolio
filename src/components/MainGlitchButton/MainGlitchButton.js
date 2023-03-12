@@ -91,7 +91,7 @@ const MainGlitchButton = (props) => {
         // Download Button
         <a
           href={`${
-            props.mail ? props.mail : process.env.PUBLIC_URL + "/resume.pdf"
+            props.mail ? props.mail : process.env.PUBLIC_URL + "/Victor_Semencenco_Resume.pdf"
           }`}
           target="_blank"
           rel="noopener noreferrer"
