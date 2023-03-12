@@ -15,6 +15,7 @@ const ParticlesComponent = (props) => {
         zIndex: -1,
       },
       interactivity: {
+        detectsOn: "window",
         events: {
           onHover: {
             enable: true,
@@ -33,7 +34,7 @@ const ParticlesComponent = (props) => {
         },
         links: {
           enable: true,
-          color: g.darkaqua,
+          color: "#008080",
           distance: 167, // maximum distance for linking the particles
         },
         move: {
