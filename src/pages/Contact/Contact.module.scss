@@ -3,13 +3,15 @@
 .contact_section {
   width: 100%;
   margin-top: 90px;
-  margin-bottom: 140px;
+  margin-bottom: 0;
 
   @include tabletl {
     margin-top: 35px;
+    margin-bottom: 80px;
   }
 
   @include desktop {
+    margin-bottom: 140px;
     margin-top: 85px;
   }
 
@@ -25,7 +27,7 @@
     margin-bottom: 32px;
     font-size: 18px;
     text-align: center;
-    font-family: "Garamond Light";
+    font-family: "Manrope Light";
 
     @include tabletl {
       margin-bottom: 40px;
@@ -34,11 +36,7 @@
     &__contact {
       color: $aqua;
       font-size: 18px;
-      font-family: "Garamond Bold";
-
-      @include tabletl {
-        font-size: 20px;
-      }
+      font-family: "Manrope SemiBold";
     }
   }
 

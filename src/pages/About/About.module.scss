@@ -16,14 +16,6 @@
     text-align: center;
     margin-bottom: 32px;
     border-bottom: 3px solid $darkaqua;
-
-    @include tabletp {
-      font-size: 40px;
-    }
-
-    @include tabletl {
-      font-size: 48px;
-    }
   }
 
   &__image_ctn {
@@ -67,20 +59,31 @@
     margin-top: 16px;
     line-height: normal;
     filter: drop-shadow(5px 6px 6px $darkblue);
-
+    
     @include tabletp {
       margin-top: 24px;
     }
 
     @include tabletl {
       margin: 0;
-      padding: 24px;
+      // padding: 24px;
+      padding: 20px;
       min-height: 312px;
+    }
+
+    @media only screen and (min-width: 1250px) {
+      padding: 32px;
     }
 
     @include desktop {
       padding: 20px;
       height: 320px;
+    }
+
+    &__href {
+      color: $aqua;
+      font-size: 16px;
+      font-family: "Manrope SemiBold";
     }
   }
 
@@ -125,13 +128,13 @@
       }
 
       &__text_icon {
-        font-family: "Garamond Regular";
-        font-size: 14px;
+        font-family: "Manrope Regular";
+        font-size: 12px;
         padding-top: 6px;
         color: $lightgrey;
 
         @include tabletp {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }

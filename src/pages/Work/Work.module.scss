@@ -18,10 +18,12 @@
   }
 
   &__subtitle {
-    margin-bottom: 32px;
-    font-size: 18px;
+    // margin-bottom: 32px;
+    margin-bottom: 60px;
+    // font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    font-family: "Garamond Light";
+    font-family: "Manrope Light";
 
     @include tabletl {
       margin-bottom: 60px;
@@ -49,7 +51,7 @@
 
       &__number {
         font-size: 24px;
-        font-family: "Garamond Thin";
+        font-family: "Manrope Thin";
         color: $aqua;
         border-right: 1px solid $darkaqua;
         padding-right: 8px;
@@ -116,7 +118,7 @@
         }
 
         &__item {
-          font-family: "Garamond Regular";
+          font-family: "Manrope Regular";
           font-size: 14px;
           display: flex;
           align-items: center;

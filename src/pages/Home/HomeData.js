@@ -32,7 +32,7 @@ export const glitch_loading_home_title_data = {
   createContainers: true,
   hideOverflow: true,
   timing: {
-    duration: 15000,
+    duration: 25000,
     iterations: Infinity,
   },
   glitchTimeSpan: {

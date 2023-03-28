@@ -115,7 +115,7 @@ const Work = () => {
           number={"02"}
           title={"Oliba"}
           text={
-            "Oliba is a consulting company that provides scientific and strategic advice in the healthcare and pharmaceuticals sectors. I have been in charge of building the frontend side of their new health-related information website. The website provides articles about non-communicable diseases, how to prevent them and the risk factors and symptoms associated with them. Users can search for specific articles, filter and read them. For development I have primarily used React, JavaScript, Bootstrap, HTML and SCSS."
+            "Oliba is a consulting company that provides scientific and strategic advice in the healthcare and pharmaceuticals sectors. Working for Xister Reply, I have been responsible for building the frontend side of Oliba's new health-related information website. The website provides articles about non-communicable diseases, how to prevent them and the risk factors and symptoms associated with them. Users can search for specific articles, filter and read them. For development I have primarily used React and JavaScript."
           }
           technologies={[
             "React",
@@ -140,7 +140,7 @@ const Work = () => {
           number={"03"}
           title={"Toyota"}
           text={
-            "I have been part of the frontend development team for Toyota's new dealer portal. The portal serves as a hub area where all the company apps that are used by their internal employees are displayed. Toyota dealers can easily search for any apps and download them. It also shows their future appointments, reports and documents. Moreover it allows them to display, manage and edit various information about their clients. For development we have used React with CSS Modules, TypeScript and Fluent UI."
+            "At Xister Reply, I have been part of the frontend development team for Toyota's new dealer portal, which is currently under NDA. The portal serves as a hub area where company apps that are used by employees are displayed. Toyota dealers can easily search for any apps and download them. It also shows their future appointments, reports and documents. Moreover it allows them to display, manage and edit various information about their clients. For development we have primarily used React and TypeScript."
           }
           technologies={[
             "React",
@@ -163,7 +163,7 @@ const Work = () => {
         <ProjectCard
           reverse
           number={"04"}
-          title={"Ancient instrument"}
+          title={"Ancient artifact"}
           text={
             "In 1984, an ancient Roman musical instrument was discovered during an excavation in the Italian city of Voghenza. Today, its remains are on display at the Civic Museum of Belriguardo. To help people learn more about this unique instrument, I created a website that showcases its history, virtually reconstructed 3D models, and simulated sounds. The website was built using JavaScript and jQuery, and I used the Unity Engine and C# programming language to create the 3D models and simulate the sounds."
           }

@@ -4,6 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Tilt from "react-parallax-tilt";
+import { useGlitch } from "react-powerglitch";
 import aboutMeImage from "../../assets/images/victor_semencenco_photo.jpg";
 import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
 
@@ -26,6 +27,32 @@ let currentResolution = "";
 const About = () => {
   const PortfolioTheme = useTheme();
   const [hoveringImage, setHoveringImage] = useState(false);
+
+  const glitch_links_hover = useGlitch({
+    playMode: "hover",
+    createContainers: true,
+    hideOverflow: false,
+    timing: {
+      duration: 2000,
+      iterations: Infinity,
+    },
+    glitchTimeSpan: {
+      start: 0,
+      end: 1,
+    },
+    shake: {
+      velocity: 20,
+      amplitudeX: 0.005,
+      amplitudeY: 0.015,
+    },
+    slice: {
+      count: 3,
+      velocity: 5,
+      minHeight: 0.005,
+      maxHeight: 0.085,
+      hueRotate: true,
+    },
+  });
 
   if (useMediaQuery(PortfolioTheme.breakpoints.only("sm"))) {
     currentResolution = "sm";
@@ -121,29 +148,37 @@ const About = () => {
             >
               <div
                 className={styles.about_section__text}
-                aria-label="Hi! I'm Victor, a Front-end developer with a passion for
-                  creating interesting and unique web applications. I'm a
-                  trilingual with a master degree in computer engineering and
-                  I've had the privilege of working with awesome people on
-                  enterprise level projects for important automotive brands such
-                  as Maserati, Toyota, Dodge, Fiat, Opel and many others. I'm a curious and determined person with high attention to
+                aria-label="Hi! I'm Victor, a Front-end developer with a passion for creating unique web applications. I'm a trilingual with a master degree in computer engineering and I'm currently working for Xister Reply. I've had the privilege of working on enterprise level projects for important industry leaders such as Maserati, Toyota, Fiat, Dodge and many others. I'm a curious and determined person with high attention to
                   detail. I love reading books, playing sports and apart from
                   web development I'm also passionate about game development. If you're interested in knowing some of the technologies I've
                   been working with, please take a look below."
               >
                 <p>
                   Hi! I'm Victor, a Front-end developer with a passion for
-                  creating interesting and unique web applications. I'm a
-                  trilingual with a master degree in computer engineering and
-                  I've had the privilege of working with awesome people on
-                  enterprise level projects for important automotive brands such
-                  as Maserati, Toyota, Dodge, Fiat, Opel and many others.
+                  creating unique web applications. I'm a trilingual with a
+                  master degree in computer engineering and I'm currently
+                  working for{" "}
+                  <a
+                    href={"https://www.xister.com/en/"}
+                    ref={glitch_links_hover.ref}
+                    rel="noreferrer"
+                    target="_blank"
+                    className={styles.about_section__text__href}
+                    aria-label="Go to Xister Reply"
+                    title="Go to Xister Reply"
+                    tabIndex="0"
+                  >
+                    Xister Reply
+                  </a>
+                  . I've had the privilege of working on enterprise level
+                  projects for important industry leaders such as Maserati,
+                  Toyota, Fiat, Dodge and many others.
                 </p>
                 <br />
                 <p>
                   I'm a curious and determined person with high attention to
-                  detail. I love reading books, playing sports and apart from
-                  web development I'm also passionate about game development.
+                  detail and apart from web development I'm also passionate
+                  about game development.
                 </p>
                 <br />
                 <p>

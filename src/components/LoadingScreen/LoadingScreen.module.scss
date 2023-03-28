@@ -15,7 +15,7 @@
 	}
 
 	.text {
-		font-family: "Garamond Regular";
+		font-family: "Manrope Regular";
 		padding-top: 16px;
 		padding-left: 16px;
 		--f-size: 15;
@@ -23,11 +23,15 @@
 		--f: calc(var(--f-size) * var(--f-unit));
 		--bg: #181717;
 		line-height: .75;
-		font-size: 36px;
+		font-size: 32px;
 		color: $aqua;
 		text-align: center;
 		transform: scaleX(var(--scale, 1));
 		animation: glitch-p 11s infinite alternate;
+
+		@include tabletl {
+			font-size: 36px;
+		}
 
 		&::before,
 		&::after {
