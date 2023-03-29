@@ -156,7 +156,7 @@
         }
 
         &__item {
-          font-family: "Manrope Thin";
+          font-family: "Manrope Light";
           font-size: 14px;
           display: flex;
           align-items: center;
@@ -165,7 +165,7 @@
 
           @include tabletl {
             color: $white;
-            font-family: "Manrope Thin";
+            font-family: "Manrope Light";
           }
 
           @include desktop {
