@@ -25,9 +25,9 @@
     position: relative;
     z-index: 10;
     margin-bottom: 32px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    font-family: "Manrope Light";
+    font-family: "Manrope Regular";
 
     @include tabletl {
       margin-bottom: 40px;
@@ -35,7 +35,7 @@
 
     &__contact {
       color: $aqua;
-      font-size: 18px;
+      font-size: 16px;
       font-family: "Manrope SemiBold";
     }
   }
