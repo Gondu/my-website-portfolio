@@ -173,7 +173,7 @@ function App() {
                   </div>
                   <FadeInSectionWrapper fadeBottomToTop>
                     <p className={styles.footer__copyright} aria-label="Designed & Built by Victor Semencenco &#169; 2023">
-                      Designed & Built by Victor Semencenco &#169; 2023
+                      Designed & Built by Victor Semencenco &#169; 2025
                     </p>
                   </FadeInSectionWrapper>
                 </div>
