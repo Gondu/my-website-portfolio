@@ -4,8 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Tilt from "react-parallax-tilt";
-import { useGlitch } from "react-powerglitch";
-import aboutMeImage from "../../assets/images/victor_semencenco_photo.jpg";
+import aboutMeImage from "../../assets/images/victor_semencenco_photo.jpeg";
 import FadeInSectionWrapper from "../../components/FadeInSectionWrapper/FadeInSectionWrapper";
 
 // Icons
@@ -27,32 +26,6 @@ let currentResolution = "";
 const About = () => {
   const PortfolioTheme = useTheme();
   const [hoveringImage, setHoveringImage] = useState(false);
-
-  const glitch_links_hover = useGlitch({
-    playMode: "hover",
-    createContainers: true,
-    hideOverflow: false,
-    timing: {
-      duration: 2000,
-      iterations: Infinity,
-    },
-    glitchTimeSpan: {
-      start: 0,
-      end: 1,
-    },
-    shake: {
-      velocity: 20,
-      amplitudeX: 0.005,
-      amplitudeY: 0.015,
-    },
-    slice: {
-      count: 3,
-      velocity: 5,
-      minHeight: 0.005,
-      maxHeight: 0.085,
-      hueRotate: true,
-    },
-  });
 
   if (useMediaQuery(PortfolioTheme.breakpoints.only("sm"))) {
     currentResolution = "sm";
@@ -148,42 +121,24 @@ const About = () => {
             >
               <div
                 className={styles.about_section__text}
-                aria-label="Hi! I'm Victor, a Front-end developer with a passion for creating unique web applications. I'm a trilingual with a master degree in computer engineering and I'm currently working for Xister Reply. I've had the privilege of working on enterprise level projects for important industry leaders such as Maserati, Toyota, Fiat, Dodge and many others. I'm a curious and determined person with high attention to
-                  detail. I love reading books, playing sports and apart from
-                  web development I'm also passionate about game development. If you're interested in knowing some of the technologies I've
-                  been working with, please take a look below."
+                aria-label="Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
+                I thrive at the intersection of product vision and technical execution, turning user pain points into impactful solutions. 
+                Over the years, I've delivered enterprise-level products for industry leaders like Stellantis, Redcare Pharmacy, Maserati, and Toyota. 
+                I bring a sharp eye for detail, a collaborative mindset, and a drive to lead with clarity and empathy. 
+                My leadership style focuses on setting high standards and creating a supportive environment where everyone feels empowered and valued."
               >
                 <p>
-                  Hi! I'm Victor, a Front-end developer with a passion for
-                  creating unique web applications. I'm a trilingual with a
-                  master degree in computer engineering and I'm currently
-                  working for{" "}
-                  <a
-                    href={"https://www.xister.com/en/"}
-                    ref={glitch_links_hover.ref}
-                    rel="noreferrer"
-                    target="_blank"
-                    className={styles.about_section__text__href}
-                    aria-label="Go to Xister Reply"
-                    title="Go to Xister Reply"
-                    tabIndex="0"
-                  >
-                    Xister Reply
-                  </a>
-                  . I've had the privilege of working on enterprise level
-                  projects for important industry leaders such as Maserati,
-                  Toyota, Fiat, Dodge and many others.
+                Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
                 </p>
                 <br />
                 <p>
-                  I'm a curious and determined person with high attention to
-                  detail and apart from web development I'm also passionate
-                  about game development.
+                I thrive at the intersection of product vision and technical execution, turning user pain points into impactful solutions. 
+                Over the years, I've delivered enterprise-level products for industry leaders like Stellantis, Redcare Pharmacy, Maserati, and Toyota.                 
                 </p>
                 <br />
                 <p>
-                  If you're interested in knowing some of the technologies I've
-                  been working with, please take a look below.
+                  I bring a sharp eye for detail, a collaborative mindset, and a drive to lead with clarity and empathy. 
+                  My leadership style focuses on setting high standards and creating a supportive environment where everyone feels empowered and valued.
                 </p>
               </div>
             </Tilt>

@@ -52,9 +52,9 @@ const Home = (props) => {
       await wait(350);
       await myNameWriter.write("Victor Semencenco");
       await wait(200);
-      myRoleWriter.write("Front-end Developer ");
+      myRoleWriter.write("Product Manager ");
       myInfoWriter.write(
-        "based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
+        "with deep technical expertise in web development, leading cross-functional teams to deliver high-impact, user-centric products from concept to launch."
       );
       await wait(650);
       setShowButton(true);
@@ -140,12 +140,12 @@ const Home = (props) => {
             <div className={styles.description}>
               <span
                 className={styles.description__role}
-                aria-label="Front-end Developer "
+                aria-label="Product Manager"
                 id="homeRoleGlitchWriting"
               ></span>
               <p
                 className={styles.description__info}
-                aria-label="based in Venice, Italy specialized in creating interactive and engaging pixel perfect digital experiences, working with industry leaders such as Stellantis, Maserati and Toyota."
+                aria-label="with deep technical expertise in web development, leading cross-functional teams to deliver high-impact, user-centric products from concept to launch."
                 id="homeInfoGlitchWriting"
               ></p>
             </div>

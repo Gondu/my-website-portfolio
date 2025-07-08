@@ -1,6 +1,7 @@
 # Victor Semencenco | Personal Website Portfolio
 
-I'm a frontend developer that creates beautiful, functional websites that captivate users. Check out my website portfolio to view my latest projects and get in touch.
+I'm a Product Manager who drives the delivery of high-impact, user-centric products from concept to launch.
+Check out my website portfolio to explore my latest work and get in touch.
 
 ## Credits
 
