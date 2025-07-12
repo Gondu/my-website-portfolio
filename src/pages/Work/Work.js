@@ -76,10 +76,10 @@ const Work = () => {
           <FadeInSectionWrapper fadeBottomToTop delay="400ms">
             <p
               className={styles.work_section__subtitle}
-              aria-label="Some of the projects I’ve recently worked on either by myself or
+              aria-label="Some of the products I’ve worked on either by myself or
               with other amazing people I met from all over the world."
             >
-              Some of the projects I’ve recently worked on either by myself or
+              Some of the products I’ve worked on either by myself or
               with other amazing people I met from all over the world.
             </p>
           </FadeInSectionWrapper>
