@@ -1,24 +1,24 @@
 .fade_bottom_to_top {
 	opacity: 0;
-	filter: blur(2px);
-	transform: translateY(30%);
+	filter: blur(1px);
+	transform: translateY(16px);
 }
 
 .fade_left_to_right {
 	opacity: 0;
-	filter: blur(2px);
-	transform: translateX(1%);
+	filter: blur(1px);
+	transform: translateX(16px);
 }
 
 .fade_right_to_left {
 	opacity: 0;
-	filter: blur(2px);
-	transform: translateX(-1%);
+	filter: blur(1px);
+	transform: translateX(-16px);
 }
 
 .fadeInVisible {
 	opacity: 1;
 	filter: blur(0);
 	transform: translate(0);
-	transition: all 0.7s ease-out;
+	transition: all 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }

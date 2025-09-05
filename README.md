@@ -1,7 +1,7 @@
 # Victor Semencenco | Personal Website Portfolio
 
 I'm a Product Manager who drives the delivery of high-impact, user-centric products from concept to launch.
-Check out my website portfolio to explore my latest work and get in touch.
+Check out my website portfolio to explore my latest products and get in touch.
 
 ## Credits
 

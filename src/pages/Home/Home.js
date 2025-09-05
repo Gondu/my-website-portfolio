@@ -165,8 +165,8 @@ const Home = (props) => {
               <div ref={glitch_loading_home_button.ref}>
                 <MainGlitchButton
                   showButton={showButton}
-                  text="My Projects"
-                  link="#work"
+                  text="My Products"
+                  link="#products"
                 />
               </div>
             )}

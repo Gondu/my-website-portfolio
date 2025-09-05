@@ -7,6 +7,7 @@ const FadeInSectionWrapper = ({
   fadeInLeftSide,
   delay,
   children,
+  className,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -23,7 +24,7 @@ const FadeInSectionWrapper = ({
       },
       {
         rootMargin: "0px",
-        threshold: 0.4,
+        threshold: 0.1,
       }
     );
 
@@ -51,7 +52,7 @@ const FadeInSectionWrapper = ({
             ? styles.fade_right_to_left
             : ""
           : isVisible && styles.fadeInVisible
-      }`}
+      } ${className || ''}`}
       style={isVisible ? { transitionDelay: `${delay}` } : {}}
     >
       {children}

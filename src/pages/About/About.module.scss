@@ -14,7 +14,7 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     border-bottom: 3px solid $darkaqua;
   }
 
@@ -29,7 +29,13 @@
     height: 100%;
     max-height: 350px;
     max-width: 350px;
-    filter: sepia(70%) hue-rotate(160deg) drop-shadow(5px 6px 6px $darkblue) contrast(0.8) opacity(0.8);
+    border-radius: 8px; 
+
+    /*&:hover, &:focus {
+      box-shadow: 0 8px 32px $aqua;
+      border-color: $aqua;
+      transform: translateY(-4px) scale(1.01);
+    }*/
 
     @include tabletp {
       max-height: 100%;
@@ -47,21 +53,18 @@
     }
   }
 
-  &__image_hover {
-    filter: none;
-    filter: brightness(0.8);
-  }
-
   &__text {
     height: 100%;
     background-color: $darkblue;
-    padding: 24px;
-    margin-top: 16px;
+    padding: 16px;
+    margin-top: 0;
     line-height: normal;
-    filter: drop-shadow(5px 6px 6px $darkblue);
+    filter: drop-shadow(3px 3px 3px $darkblue);
+    border-radius: 8px; 
     
     @include tabletp {
-      margin-top: 24px;
+      margin-top: 0;
+      padding: 24px;
     }
 
     @include tabletl {

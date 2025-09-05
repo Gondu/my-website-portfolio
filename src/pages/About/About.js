@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./About.module.scss";
 import Grid from "@mui/material/Unstable_Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -25,7 +24,6 @@ let currentResolution = "";
 
 const About = () => {
   const PortfolioTheme = useTheme();
-  const [hoveringImage, setHoveringImage] = useState(false);
 
   if (useMediaQuery(PortfolioTheme.breakpoints.only("sm"))) {
     currentResolution = "sm";
@@ -77,10 +75,12 @@ const About = () => {
         >
           <FadeInSectionWrapper fadeBottomToTop delay="300ms">
             <Tilt
-              scale={currentResolution === "xs" ? 1.001 : 1.05}
-              transitionSpeed={2000}
+              scale={currentResolution === "xs" ? 1.001 : 1.04}
+              transitionSpeed={250}
+              transitionEasing="ease-out"
               tiltMaxAngleX={5}
               tiltMaxAngleY={5}
+              className="tilt-aqua-hover"
             >
               <a
                 href="https://www.linkedin.com/in/victor-semencenco/"
@@ -90,15 +90,7 @@ const About = () => {
                 tabIndex="0"
               >
                 <img
-                  onMouseEnter={() => {
-                    setHoveringImage(true);
-                  }}
-                  onMouseLeave={() => {
-                    setHoveringImage(false);
-                  }}
-                  className={`${
-                    hoveringImage && styles.about_section__image_hover
-                  } ${styles.about_section__image}`}
+                  className={styles.about_section__image}
                   alt="Victor Semencenco"
                   src={aboutMeImage}
                 />
@@ -109,26 +101,16 @@ const About = () => {
         {/* Text */}
         <Grid xs={4} sm={8} md={6} lg={5}>
           <FadeInSectionWrapper fadeBottomToTop delay="300ms">
-            <Tilt
-              scale={
-                currentResolution === "sm" || currentResolution === "xs"
-                  ? 1
-                  : 1.05
-              }
-              transitionSpeed={2000}
-              tiltMaxAngleX={5}
-              tiltMaxAngleY={5}
-            >
               <div
                 className={styles.about_section__text}
-                aria-label="Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
+                aria-label="Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building great products people love.         
                 I thrive at the intersection of product vision and technical execution, turning user pain points into impactful solutions. 
                 Over the years, I've delivered enterprise-level products for industry leaders like Stellantis, Redcare Pharmacy, Maserati, and Toyota. 
                 I bring a sharp eye for detail, a collaborative mindset, and a drive to lead with clarity and empathy. 
                 My leadership style focuses on setting high standards and creating a supportive environment where everyone feels empowered and valued."
               >
                 <p>
-                Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
+                Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building great products people love.         
                 </p>
                 <br />
                 <p>
@@ -141,23 +123,12 @@ const About = () => {
                   My leadership style focuses on setting high standards and creating a supportive environment where everyone feels empowered and valued.
                 </p>
               </div>
-            </Tilt>
           </FadeInSectionWrapper>
         </Grid>
         {/* Skills */}
         <Grid xs={4} sm={8} mdOffset={1} md={10} lgOffset={2} lg={8}>
           <div className={styles.about_section__skills}>
             <FadeInSectionWrapper fadeInRightSide delay="350ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -171,19 +142,8 @@ const About = () => {
                     Angular
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="400ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -197,19 +157,8 @@ const About = () => {
                     TypeScript
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="450ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -223,19 +172,8 @@ const About = () => {
                     React
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="500ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -249,19 +187,8 @@ const About = () => {
                     JavaScript
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="550ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -275,19 +202,8 @@ const About = () => {
                     HTML
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="600ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -301,19 +217,8 @@ const About = () => {
                     CSS
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="650ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -327,19 +232,8 @@ const About = () => {
                     SASS
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="700ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -353,19 +247,8 @@ const About = () => {
                     Bootstrap
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="750ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -379,19 +262,8 @@ const About = () => {
                     MUI
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="800ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -405,19 +277,8 @@ const About = () => {
                     Figma
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="850ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -431,19 +292,8 @@ const About = () => {
                     Jira
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
             <FadeInSectionWrapper fadeInRightSide delay="900ms">
-              <Tilt
-                scale={
-                  currentResolution === "sm" || currentResolution === "xs"
-                    ? 1.001
-                    : 1.3
-                }
-                transitionSpeed={1000}
-                tiltMaxAngleX={0}
-                tiltMaxAngleY={0}
-              >
                 <div className={styles.about_section__skills__skill}>
                   <img
                     className={styles.about_section__skills__skill__icon}
@@ -457,7 +307,6 @@ const About = () => {
                     Git
                   </div>
                 </div>
-              </Tilt>
             </FadeInSectionWrapper>
           </div>
         </Grid>

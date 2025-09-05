@@ -6,19 +6,19 @@
   margin-bottom: 0;
 
   @include tabletl {
-    margin-top: 35px;
+    margin-top: 110px;
     margin-bottom: 80px;
   }
 
   @include desktop {
     margin-bottom: 140px;
-    margin-top: 85px;
+    margin-top: 140px;
   }
 
   &__title {
     text-align: center;
     border-bottom: 3px solid $darkaqua;
-    margin-bottom: 12px;
+    margin-bottom: 24px; 
   }
 
   &__subtitle {

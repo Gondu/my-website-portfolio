@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ProjectCard.module.scss";
+import styles from "./ProductCard.module.scss";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useGlitch } from "react-powerglitch";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -9,7 +9,7 @@ import externalLink from "../../assets/svg/external_link_icon.svg";
 
 let currentResolution = "";
 
-const ProjectCard = (props) => {
+const ProductCard = (props) => {
   const { number, title, text, technologies, images, url, reverse } = props;
   const [hoveringImage, setHoveringImage] = useState(false);
   const PortfolioTheme = useTheme();
@@ -65,7 +65,7 @@ const ProjectCard = (props) => {
   }
 
   return (
-    <div className={styles.project_card__project}>
+    <div className={styles.product_card__product}>
       <FadeInSectionWrapper
         fadeInRightSide={fadeInRightSide}
         fadeInLeftSide={fadeInLeftSide}
@@ -81,7 +81,7 @@ const ProjectCard = (props) => {
         >
           {/* Title */}
           <div
-            className={styles.project_card__project__title}
+            className={styles.product_card__product__title}
             style={
               reverse &&
               (currentResolution === "md" || currentResolution === "lg")
@@ -90,7 +90,7 @@ const ProjectCard = (props) => {
             }
           >
             <div
-              className={styles.project_card__project__title__number}
+              className={styles.product_card__product__title__number}
               aria-label={number}
               style={
                 reverse &&
@@ -110,7 +110,7 @@ const ProjectCard = (props) => {
               {number}
             </div>
             <h3
-              className={styles.project_card__project__title__text}
+              className={styles.product_card__product__title__text}
               style={
                 reverse &&
                 (currentResolution === "md" || currentResolution === "lg")
@@ -124,7 +124,7 @@ const ProjectCard = (props) => {
                   target="_blank"
                   rel="noreferrer"
                   ref={glitch_external_link_hover.ref}
-                  className={styles.project_card__project__title__text__anchor}
+                  className={styles.product_card__product__title__text__anchor}
                   aria-label={`${number} ${title}`}
                   tabIndex="0"
                 >
@@ -133,10 +133,10 @@ const ProjectCard = (props) => {
                       {reverse ? (
                         <img
                           className={
-                            styles.project_card__project__title__text__anchor__external_link_reverse
+                            styles.product_card__product__title__text__anchor__external_link_reverse
                           }
                           src={externalLink}
-                          alt="External project link"
+                          alt="External product link"
                         ></img>
                       ) : (
                         title
@@ -144,10 +144,10 @@ const ProjectCard = (props) => {
                       {!reverse ? (
                         <img
                           className={
-                            styles.project_card__project__title__text__anchor__external_link
+                            styles.product_card__product__title__text__anchor__external_link
                           }
                           src={externalLink}
-                          alt="External project link"
+                          alt="External product link"
                         ></img>
                       ) : (
                         title
@@ -158,10 +158,10 @@ const ProjectCard = (props) => {
                       {title}
                       <img
                         className={
-                          styles.project_card__project__title__text__anchor__external_link
+                          styles.product_card__product__title__text__anchor__external_link
                         }
                         src={externalLink}
-                        alt="External project link"
+                        alt="External product link"
                       ></img>
                     </div>
                   )}
@@ -173,7 +173,7 @@ const ProjectCard = (props) => {
           </div>
         </Grid>
 
-        {/* Project text section */}
+        {/* product text section */}
         <Grid
           xsOffset={0}
           xs={4}
@@ -181,10 +181,10 @@ const ProjectCard = (props) => {
           sm={6}
           mdOffset={reverse ? 5 : 0}
           md={7}
-          className={styles.project_card__project__text}
+          className={styles.product_card__product__text}
         >
           <div
-            className={styles.project_card__project__text__body}
+            className={styles.product_card__product__text__body}
             aria-label={text}
           >
             {/* Text */}
@@ -200,44 +200,44 @@ const ProjectCard = (props) => {
             </div>
           </div>
           {/* Technologies */}
-          <div className={styles.project_card__project__text__tech}>
+          <div className={styles.product_card__product__text__tech}>
             {technologies[0] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[0]}>{technologies[0]}</span>
               </div>
             )}
             {technologies[1] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[1]}>{technologies[1]}</span>
               </div>
             )}
             {technologies[2] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[2]}>{technologies[2]}</span>
               </div>
             )}
             {technologies[3] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[3]}>{technologies[3]}</span>
               </div>
             )}
             {technologies[4] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[4]}>{technologies[4]}</span>
               </div>
             )}
             {technologies[5] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[5]}>{technologies[5]}</span>
               </div>
             )}
             {technologies[6] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[6]}>{technologies[6]}</span>
               </div>
             )}
             {technologies[7] && (
-              <div className={styles.project_card__project__text__tech__item}>
+              <div className={styles.product_card__product__text__tech__item}>
                 <span aria-label={technologies[7]}>{technologies[7]}</span>
               </div>
             )}
@@ -252,14 +252,14 @@ const ProjectCard = (props) => {
           sm={8}
           mdOffset={reverse ? 0 : 6}
           md={6}
-          className={styles.project_card__project__image}
+          className={styles.product_card__product__image}
         >
           {url ? (
             <a
               href={url}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Project ${number} Image`}
+              aria-label={`Product ${number} Image`}
               tabIndex="0"
             >
               <picture>
@@ -277,8 +277,8 @@ const ProjectCard = (props) => {
                     hoveringImage &&
                     (currentResolution === "md" ||
                       currentResolution === "lg") &&
-                    styles.project_card__project__image__img_hover
-                  } ${styles.project_card__project__image__img}`}
+                    styles.product_card__product__image__img_hover
+                  } ${styles.product_card__product__image__img}`}
                   // to find the right negative margin to center the image -> height_text_card + ((height_img - height_text_card)/2)
                   style={
                     currentResolution === "md"
@@ -288,7 +288,7 @@ const ProjectCard = (props) => {
                       : { marginTop: 0 }
                   }
                   src={images[0]}
-                  alt={`Project ${number}`}
+                  alt={`Product ${number}`}
                 />
               </picture>
             </a>
@@ -307,8 +307,8 @@ const ProjectCard = (props) => {
                 className={`${
                   hoveringImage &&
                   (currentResolution === "md" || currentResolution === "lg") &&
-                  styles.project_card__project__image__img_hover
-                } ${styles.project_card__project__image__img}`}
+                  styles.product_card__product__image__img_hover
+                } ${styles.product_card__product__image__img}`}
                 // to find the right negative margin to center the image -> height_text_card + ((height_img - height_text_card)/2)
                 style={
                   currentResolution === "md"
@@ -318,7 +318,7 @@ const ProjectCard = (props) => {
                     : { marginTop: 0 }
                 }
                 src={images[0]}
-                alt={`Project ${number}`}
+                alt={`Product ${number}`}
               />
             </picture>
           )}
@@ -328,4 +328,4 @@ const ProjectCard = (props) => {
   );
 };
 
-export default ProjectCard;
+export default ProductCard;

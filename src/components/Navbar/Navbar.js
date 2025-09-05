@@ -23,8 +23,8 @@ const Navbar = (props) => {
       navbarGlitchWritingOptions
     );
 
-    const myWorkNavbarWriter = new GlitchedWriter(
-      "#workNavbarGlitchWriting",
+    const myProductsNavbarWriter = new GlitchedWriter(
+      "#productsNavbarGlitchWriting",
       navbarGlitchWritingOptions
     );
 
@@ -40,7 +40,7 @@ const Navbar = (props) => {
 
     const beginNavbarGlitchWriting = () => {
       myHomeNavbarWriter.write("Home");
-      myWorkNavbarWriter.write("Work");
+      myProductsNavbarWriter.write("Products");
       myAboutNavbarWriter.write("About");
       myContactNavbarWriter.write("Contact");
     };
@@ -74,7 +74,7 @@ const Navbar = (props) => {
           className={styles.normal_navbar__icon}
           ref={glitch_loading_logoAndResume.ref}
         >
-          <Link reloadDocument ref={glitchNormalNavButtons.ref}>
+          <Link to="/#home" ref={glitchNormalNavButtons.ref}>
             <img
               className={styles.normal_navbar__icon__img}
               src={logo}
@@ -87,7 +87,7 @@ const Navbar = (props) => {
             <li>
               <div ref={glitch_loading_navbar.ref}>
                 <Link
-                  to="#home"
+                  to="/#home"
                   id="homeNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
@@ -102,7 +102,7 @@ const Navbar = (props) => {
             <li>
               <div ref={glitch_loading_navbar.ref}>
                 <Link
-                  to="#about"
+                  to="/#about"
                   id="aboutNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
@@ -117,22 +117,22 @@ const Navbar = (props) => {
             <li>
               <div ref={glitch_loading_navbar.ref}>
                 <Link
-                  to="#work"
-                  id="workNavbarGlitchWriting"
+                  to="/#products"
+                  id="productsNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
                   tabIndex="0"
                   role="link"
-                  aria-label="Work"
+                  aria-label="Products"
                 >
-                  Work
+                  Products
                 </Link>
               </div>
             </li>
             <li>
               <div ref={glitch_loading_navbar.ref}>
                 <Link
-                  to="#contact"
+                  to="/#contact"
                   id="contactNavbarGlitchWriting"
                   smooth
                   ref={glitchNormalNavButtons.ref}
@@ -169,7 +169,7 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#home"
+                to="/#home"
                 tabIndex="0"
                 role="link"
                 aria-label="Home"
@@ -182,7 +182,7 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#about"
+                to="/#about"
                 tabIndex="0"
                 role="link"
                 aria-label="About"
@@ -195,12 +195,12 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#work"
+                to="/#products"
                 tabIndex="0"
                 role="link"
-                aria-label="Work"
+                aria-label="Products"
               >
-                Work
+                Products
               </Link>
             </li>
             <li>
@@ -208,7 +208,7 @@ const Navbar = (props) => {
                 ref={glitchHamburgerNavButtons.ref}
                 className={styles.hamburger_navbar__nav__ul__link}
                 onClick={handleburgerNavIsOpen}
-                to="#contact"
+                to="/#contact"
                 tabIndex="0"
                 role="link"
                 aria-label="Contact"
@@ -231,7 +231,7 @@ const Navbar = (props) => {
               : styles.hamburger_navbar__icon__hide
           }`}
         >
-          <Link reloadDocument ref={glitchNormalNavButtons.ref}>
+          <Link to="/#home" ref={glitchNormalNavButtons.ref}>
             <img
               className={styles.hamburger_navbar__icon__img}
               src={logo}

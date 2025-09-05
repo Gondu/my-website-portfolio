@@ -12,11 +12,13 @@ import FadeInSectionWrapper from "./components/FadeInSectionWrapper/FadeInSectio
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import Work from "./pages/Work/Work";
+import Products from "./pages/Products/Products";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import GridWrapper from "./components/GridWrapper/GridWrapper";
 import ScrollDownButton from "./components/ScrollDownButton/ScrollDownButton";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import ProductDetails from "./pages/Products/ProductDetails";
 
 function App() {
   // Use array destructuring
@@ -50,6 +52,8 @@ function App() {
       hueRotate: true,
     },
   });
+
+  const location = useLocation();
 
   // This will run one time after the component mounts
   useEffect(() => {
@@ -85,14 +89,23 @@ function App() {
                 burgerNavIsOpen={burgerNavIsOpen}
                 setburgerNavIsOpen={setburgerNavIsOpen}
                 scrollDirection={scrollDirection}
+                location={location}
               />
             </header>
             <GridWrapper>
               <main>
+                <Routes>
+                  <Route path="/" element={
+                    <>
                 <Home burgerNavIsOpen={burgerNavIsOpen} />
                 <About />
-                <Work />
+                <Products />
                 <Contact />
+                    </>
+                  } />
+                  <Route path=":productId" element={<ProductDetails />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
+                </Routes>
               </main>
               <footer>
                 <div className={styles.footer}>

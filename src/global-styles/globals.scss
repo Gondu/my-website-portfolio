@@ -23,7 +23,7 @@ $navbar_height: 88px;
 
 // These are the Material UI breakpoints and theme variables
 $containerBreakpointMaxWidth: 1320px; // after this breakpoint value, the container is not fluid and is fixed to this max-width value
-$rowGutters: 2px; //4px for padding-top, 4px for padding-bottom
+$rowGutters: 16px; //4px for padding-top, 4px for padding-bottom
 $columnGuttersDownMd: 16px; //column gutters for the grid - 8px for padding-left, 8px for padding-right
 $columnGuttersUpMd: 24px;
 $marginsContainerXs: 16px; //container margins for the grid - 8px for margin-right, 8px for margin-left
@@ -208,4 +208,19 @@ body {
   marginsContainerXs: $marginsContainerXs;
   marginsContainerSm: $marginsContainerSm;
   marginsContainerMd: $marginsContainerMd;
+}
+
+.tilt-aqua-hover {
+  @include desktop {
+    transition: border 0.25s ease-out;
+    border: 1px solid transparent;
+    border-radius: 8px; /* adjust as needed */
+  }
+}
+
+.tilt-aqua-hover:hover {
+  @include desktop {
+    border: 1px solid aqua;
+    box-shadow: 0 2px 10px $aqua;
+  }
 }
