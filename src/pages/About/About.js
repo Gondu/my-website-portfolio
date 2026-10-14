@@ -121,14 +121,14 @@ const About = () => {
             >
               <div
                 className={styles.about_section__text}
-                aria-label="Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
+                aria-label="Hi, I’m Victor — a trilingual Product Manager based in Seattle, with a Master’s in Computer Engineering and a passion for building products people love.         
                 I thrive at the intersection of product vision and technical execution, turning user pain points into impactful solutions. 
                 Over the years, I've delivered enterprise-level products for industry leaders like Stellantis, Redcare Pharmacy, Maserati, and Toyota. 
                 I bring a sharp eye for detail, a collaborative mindset, and a drive to lead with clarity and empathy. 
                 My leadership style focuses on setting high standards and creating a supportive environment where everyone feels empowered and valued."
               >
                 <p>
-                Hi, I’m Victor — a trilingual Product Manager based in Berlin, with a Master’s in Computer Engineering and a passion for building products people love.         
+                Hi, I’m Victor — a trilingual Product Manager based in Seattle, with a Master’s in Computer Engineering and a passion for building products people love.         
                 </p>
                 <br />
                 <p>
